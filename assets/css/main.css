@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+}
+section:nth-child(1) {
+    background-color: #3498db;
+}
+section:nth-child(2) {
+    background-color: #e74c3c;
+}
+section:nth-child(3) {
+    background-color: #2ecc71;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+}
