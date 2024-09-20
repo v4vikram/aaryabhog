@@ -103,7 +103,7 @@ img {
     z-index: 9;
 }
 
-.owl-items {
+.banner-owl-wrapper .owl-items {
     border-bottom-right-radius: 522px;
     overflow: hidden;
     margin-top: 57px;
@@ -117,8 +117,8 @@ img {
 }
 
 .banner-owl-wrapper .owl-dots span {
-    width: 2.5vh !important;
-    height: 2.5vh !important;
+    width: 2vh !important;
+    height: 2vh !important;
     background: var(--white) !important;
     margin: 1vh !important;
 }
@@ -154,11 +154,111 @@ img {
     font-size: 36px;
     /* opacity: 0; */
     /* background: red; */
-    /* background: var(--orange); */
+    background: var(--orange);
 }
 .first .process-items{
     /* opacity: 1 !important; */
 }
+
+/* ========== Product Slider =============== */
+/* .product-slider .owl-items {
+    position: relative;
+}
+.product-slider .owl-items::before {
+    content: "v";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-bottom-right-radius: 522px;
+    overflow: hidden;
+    background-color: var(--dark-brown);
+} */
+
+
+.product-section {
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.product-section::after {
+    background: url(../img/red-shape-2.webp);
+    background-repeat: repeat-x;
+    position: absolute;
+    content: "";
+    top: -232px;
+    left: 0px;
+    width: 100%;
+    height: 47vh;
+    z-index: 1;
+}
+.product-section {
+    position: relative;
+}
+.product-section::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    /* z-index: -1; */
+    border-bottom-right-radius: 60vh;
+    overflow: hidden;
+    background-color: var(--dark-brown);
+}
+.product-slider img{
+    width: 65% !important;
+}
+ /* Basic styling for slides */
+ .owl-carousel .item {
+    background: #4a90e2;
+    padding: 40px;
+    color: white;
+    text-align: center;
+}
+
+/* Custom dots styling */
+.custom-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.custom-dots .owl-dot {
+    position: relative;
+    color: var(--white);
+    font-size: 2.2vh;
+    font-weight: 700;
+}
+.custom-dots .owl-dot::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    width: 3vh;
+    height: 0.3vh;
+    background-color: var(--white);
+    transform: translateY(-50%);
+    right: -6.5vh;
+
+}
+.custom-dots .owl-dot.active {
+   color: var(--orange);
+
+}
+.custom-dots .owl-dot.active::after {
+    background-color: var(--orange);
+
+}
+.custom-dots .owl-dot:last-child::after{
+    display: none;
+}
+
+/* ========== Recipie Slider =============== */
+
+
+
 
 @media(max-width: 1024px) {
 

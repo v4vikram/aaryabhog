@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aloo Paratha Carousel</title>
+
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <style>
+        .custom-card {
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #F97316; /* Orange */
+            color: white;
+            text-align: center;
+        }
+
+        .card-image {
+            border-radius: 10px 10px 0 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <div class="container mx-auto p-4">
+        <div class="owl-carousel owl-theme">
+            <!-- Slide 1 -->
+            <div class="custom-card">
+                <img src="image.png" alt="Aloo Paratha" class="w-full card-image">
+                <div class="p-4">
+                    <h3>Aloo Paratha</h3>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="custom-card">
+                <img src="image.png" alt="Aloo Paratha" class="w-full card-image">
+                <div class="p-4">
+                    <h3>Aloo Paratha</h3>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="custom-card">
+                <img src="image.png" alt="Aloo Paratha" class="w-full card-image">
+                <div class="p-4">
+                    <h3>Aloo Paratha</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

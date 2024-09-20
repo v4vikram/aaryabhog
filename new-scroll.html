@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Column Scroll Animation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* .pin-image {
+      position: sticky;
+      top: 0;
+    } */
+        section {
+            height: 100vh;
+        }
+
+        .container {
+            border: 2px solid red;
+            background-color: rgb(141, 27, 122);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+
+    <div class="container mx-auto px-4 py-10">
+        <div class="grid grid-cols-3 gap-6">
+
+            <!-- Column 1: Titles -->
+            <div class="space-y-10">
+                <section class="title-section" id="section-1">
+                    <h2 class="text-4xl font-bold mb-4">Title 1</h2>
+                    <p class="text-lg">This is the first section description.</p>
+                </section>
+                <section class="title-section" id="section-2">
+                    <h2 class="text-4xl font-bold mb-4">Title 2</h2>
+                    <p class="text-lg">This is the second section description.</p>
+                </section>
+                <section class="title-section" id="section-3">
+                    <h2 class="text-4xl font-bold mb-4">Title 3</h2>
+                    <p class="text-lg">This is the third section description.</p>
+                </section>
+                <section class="title-section" id="section-4">
+                    <h2 class="text-4xl font-bold mb-4">Title 4</h2>
+                    <p class="text-lg">This is the fourth section description.</p>
+                </section>
+            </div>
+
+            <!-- Column 2: Sticky Image -->
+            <div>
+                <div class="pin-image">
+                    <img src="https://via.placeholder.com/300x400" alt="Dummy Image" class="w-full h-auto">
+                </div>
+            </div>
+
+            <!-- Column 3: Paragraphs -->
+            <div class="space-y-10">
+                <section>
+                    <p class="text-lg paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                        vehicula.</p>
+                </section>
+                <section>
+                    <p class="text-lg paragraph">Praesent suscipit urna et massa posuere, non ultricies mi scelerisque.
+                    </p>
+                </section>
+                <section>
+                    <p class="text-lg paragraph">Curabitur aliquam dui vitae eros fermentum, a consequat erat pretium.
+                    </p>
+                </section>
+                <section>
+                    <p class="text-lg paragraph">Vivamus scelerisque turpis nec sem tincidunt, eget suscipit velit
+                        mattis.</p>
+                </section>
+            </div>
+        </div>
+    </div>
+    <section>content</section>
+
+    <script>
+        // Initialize GSAP ScrollTrigger animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        let para = document.querySelectorAll('.paragraph')
+
+
+        para.forEach(item => {
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: item,
+                    start: "top center",
+                    end: "bottom 20%",
+                    pin: true,
+                    pinSpacing: false,
+                    markers:true,
+                    scrub: true,
+                }
+            })
+            tl.to(item, {
+                duration: 1,
+                ease: "power1.out",
+                background: "red"
+                // transform: "rotateY(90deg)",
+            });
+
+        });
+
+        // Pin the image while scrolling through the sections
+        ScrollTrigger.create({
+            trigger: '.container',
+            start: "top top",
+            end: "bottom center",
+            pin: ".pin-image",
+            pinSpacing: false
+        });
+
+    </script>
+
+</body>
+
+</html>
