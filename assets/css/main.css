@@ -1,26 +1,186 @@
-body {
+@import url('./font.css');
+
+:root {
+    --orange: #F04E23;
+    --yellow: #E99D23;
+    --mehroon: #981B1E;
+    --dark-brown: #501B15;
+    --white: #ffffff;
+    --black: #000000;
+
+    /* --montserrat-100: "Montserrat", sans-serif, normal, 100;
+    --montserrat-200: "Montserrat", sans-serif, normal, 200;
+    --montserrat-300: "Montserrat", sans-serif, normal, 300;
+    --montserrat-400: "Montserrat", sans-serif, normal, 400;
+    --montserrat-500: "Montserrat", sans-serif, normal, 500;
+    --montserrat-600: "Montserrat", sans-serif, normal, 600;
+    --montserrat-700: "Montserrat", sans-serif, normal, 700;
+    --montserrat-800: "Montserrat", sans-serif, normal, 800;
+    --montserrat-900: "Montserrat", sans-serif, normal, 900; */
+
+    --h-lg-h2: 50px;
+    --h-md-h2: 40px;
+    --h-sm-h2: 43px;
+
+    --h-lg-h3: 30px;
+    --h-md-h3: 30px;
+    --h-sm-h3: 20px;
+
+    --h-lg-h4: 50px;
+    --h-md-h4: 40px;
+    --h-sm-h4: 20px;
+
+    --p-18: 18px;
+    --p-20: 18px;
+    --transition: all 0.6s ease
+}
+
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    /* Medium weight */
 }
-section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    color: white;
+
+
+
+body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    /* Medium weight */
 }
-section:nth-child(1) {
-    background-color: #3498db;
+
+::-webkit-scrollbar {
+    width: 1.3vh
 }
-section:nth-child(2) {
-    background-color: #e74c3c;
+
+::-webkit-scrollbar-track {
+    background: var(--white)
 }
-section:nth-child(3) {
-    background-color: #2ecc71;
+
+::-webkit-scrollbar-thumb {
+    background: var(--mehroon)
 }
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: yellow;
+
+main {
+    /* background: linear-gradient(180deg, rgba(240, 78, 35, 1), rgba(233, 157, 35, 1)) */
+}
+
+/* =========== Default ============ */
+header,
+section,
+footer {
+    width: calc(100% - 15vw);
+    border: 2px solid green;
+    margin: auto;
+}
+
+img {
+    width: 100%;
+}
+
+
+/* =========== Banner ============ */
+
+.banner-owl-wrapper {
+    position: relative;
+}
+
+.banner-owl-wrapper::before {
+    background: url('../img/red-shape-1.webp');
+    background-repeat: repeat-x;
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 15vh;
+    z-index: 9;
+}
+
+.owl-items {
+    border-bottom-right-radius: 522px;
+    overflow: hidden;
+    margin-top: 57px;
+}
+
+.banner-owl-wrapper .owl-dots {
+    position: absolute;
+    bottom: 2vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.banner-owl-wrapper .owl-dots span {
+    width: 2.5vh !important;
+    height: 2.5vh !important;
+    background: var(--white) !important;
+    margin: 1vh !important;
+}
+
+.banner-owl-wrapper .owl-dots .active span {
+    background: var(--mehroon) !important;
+}
+.owl-items-content{
+    position: absolute;
+    top: 50%;
+    z-index: 99;
+    /* width: 100%;
+    max-width: 55%; */
+    transform: translateY(-50%);
+}
+
+/* process */
+.process-content-wrapper {
+    /* display: flex;
+    flex-direction: column;
+    padding-bottom: 100px; */
+}
+
+.cards {
+    margin-left: 100px;
+}
+
+.process-items {
+    /* height: 60vh; */
+    /* width: 400px; */
+    margin-bottom: 50px;
+    /* background: white; */
+    font-size: 36px;
+    /* opacity: 0; */
+    /* background: red; */
+    /* background: var(--orange); */
+}
+.first .process-items{
+    /* opacity: 1 !important; */
+}
+
+@media(max-width: 1024px) {
+
+    header,
+    section,
+    footer {
+        width: calc(100% - 100px);
+    }
+}
+@media(max-width: 768px) {
+
+    header,
+    section,
+    footer {
+        width: calc(100% - 50px);
+    }
+}
+@media(max-width: 767px) {
+
+    header,
+    section,
+    footer {
+        width: calc(100% - 30px);
+    }
 }

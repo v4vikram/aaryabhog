@@ -1,41 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Aaryabhog</title>
     <!-- Bootstrap.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap-grid.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap-grid.min.css"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Owl.css -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" />
+
+    <!-- Tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        orange: '#F04E23',
+                        yellow: '#E99D23',
+                        mehroon: '#981B1E',
+                        darkBrown: '#501B15'
+                    },
+                    backgroundImage: {
+                        'custom-gradient': 'linear-gradient(180deg, rgba(240, 78, 35, 1), rgba(233, 157, 35, 1))',
+                    },
+                    fontSize: {
+                        'p': '18px',
+                        'h2': '50px',
+                        'h3': '35px',
+                        '20px': "20px",
+                        "75px": "75px",
+                        "50px": "50px"
+                    },
+                    lineHeight: {
+                        '39px': '39px',
+                        '75px': '75px',
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
     <!-- Font Awesome.css -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-     <!-- Main.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Font.css -->
+    <link rel="stylesheet" href="assets/css/font.css">
+    <!-- Main.css -->
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
+
 <body>
     <header></header>
-    <main>
-        <section>
-            <h1>Scroll down to see the animation</h1>
+    <main class="home-page bg-custom-gradient">
+        <section class="">
+            <div class="banner-owl-wrapper">
+                <div class="banner-shape">
+                    <!-- <img src="assets/img/red-shape-1.webp" alt="red-shape-1"> -->
+                </div>
+                <div class="owl-carousel owl-theme" id="banner-slider">
+                    <div class="owl-items">
+                        <img src="assets/img/banner-slider-1.webp" alt="banner-slider-1">
+                        <div class="owl-items-content w-[35vw] ml-[15vh]">
+                            <div class="">
+                                <h1
+                                    class="text-white text-[11vh] leading-[12vh] xl:text-[9vh] xl:leading-[11vh] font-bold">
+                                    The Aaryabhog
+                                    Promise</h1>
+                                <p class="text-[2.8vh] text-white mt-3">Hand-picked ingredients, careful processing and
+                                    untouched packaging ensuring superior quality.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-items">
+                        <img src="assets/img/banner-slider-1.webp" alt="banner-slider-1">
+                    </div>
+                    <div class="owl-items">
+                        <img src="assets/img/banner-slider-1.webp" alt="banner-slider-1">
+                    </div>
+
+                </div>
+            </div>
         </section>
-        <section>
-            <div class="box"></div>
+        <section class="min-h-screen py-[12vh]">
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="">
+                    <div class="wheat-img-wrapper mr-[13vw] relative">
+                        <img src="assets/img/wheat.webp" alt="wheat">
+                        <div class="absolute left-[50%] top-[70%] w-[75%]">
+
+                            <img src="assets/img/green-wheat.webp" alt="green-wheat">
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <span class="uppercase text-white text-[2.8vh]">ABOUT AARYABHOG</span>
+                    <h2 class="text-white uppercase lg:text-[6.5vh] lg:leading-[7.5vh]">WE’RE LEADER IN AGRICULTURE
+                        MARKET
+                    </h2>
+                    <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[4vh]">
+                    <p class="text-white text-[2.8vh] mb-[4vh]">
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form, by injected humour, or randomised words which don’t look even slightly
+                        believable.
+
+                    </p>
+                    <div class="grid lg:grid-cols-2 mt-[4vh]">
+                        <div class="flex items-center">
+                            <span class="w-[4vw] h-[4vw] bg-mehroon block rounded-full mr-[1vh]"></span>
+                            <p class="text-white bold text-[3vh]">Our Main Unique<br>
+                                Selling Point</p>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-[4vw] h-[4vw] bg-mehroon block rounded-full mr-[1vh]"></span>
+                            <p class="text-white bold text-[3vh]">Our Main Unique<br>
+                                Selling Point</p>
+                        </div>
+                        <p class="text-white text-[2.8vh] mt-[2vh] col-span-full mt-[4vh]">
+                            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything
+                            embarrassing hidden in the middle of text.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section>
-            <h1>End of the page</h1>
+        <section class="process-section py-[12vh] min-h-[200vh]">
+            <div class="text-center w-[40%] m-auto pin-box1">
+                <span class="uppercase text-white text-[2.8vh]">OUR PROCESS</span>
+                <h2 class="text-white uppercase lg:text-[6.5vh] lg:leading-[7.5vh] font-semibold">MAKING ATTA FROM FARM TO TABLE</h2>
+                <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[4vh] m-auto">
+            </div>
+
+            <div class="grid grid-cols-3 mt-[4vh] container">
+                <!-- Left -->
+                <div>
+                  <div class="process-content-wrapper first">
+                    <div class="process-items" animation-item="10px">
+                      <h2 class="text-white lg:text-[6.5vh] lg:leading-[7.5vh] font-semibold">Wheat <br> Cultivation</h2>
+                      <img src="assets/img/red-village.webp" alt="red-village" class="mt-[12vh]">
+                    </div>
+                    <div class="process-items" animation-item="30px">
+                      <h2 class="text-white lg:text-[6.5vh] lg:leading-[7.5vh] font-semibold">Wheat <br> Cultivation</h2>
+                      <img src="assets/img/red-village.webp" alt="red-village" class="mt-[12vh]">
+                    </div>
+                    <div class="process-items" animation-item="50px">
+                      <h2 class="text-white lg:text-[6.5vh] lg:leading-[7.5vh] font-semibold">Wheat <br> Cultivation</h2>
+                      <img src="assets/img/red-village.webp" alt="red-village" class="mt-[12vh]">
+                    </div>
+                  </div>
+                </div>
+                <!-- Middle Image -->
+                <div class="flex items-start justify-center pin-box2">
+                  <img src="assets/img/aaryabhog-pack.webp" alt="aaryabhog-pack" class="w-[65%] aaryabhog-pack">
+                </div>
+                <!-- Right -->
+                <div>
+                  <div class="process-content-wrapper first">
+                    <div class="process-items" animation-item="10px">
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Soil Preparation: The process starts with selecting fertile soil for growing wheat. The soil is plowed and leveled to ensure good drainage and proper aeration.
+
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Sowing Wheat Seeds: Farmers sow wheat seeds using traditional or modern machinery, usually after the monsoon or during the Rabi season (winter in India).
+
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Irrigation: Wheat requires moderate water, so farmers irrigate the fields periodically based on the soil and weather conditions.
+
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Fertilization and Pest Control: Organic or chemical fertilizers are added for better crop yield. Pest control measures are also taken to protect the wheat from insects and diseases.
+
+                        </p>
+                    </div>
+                    <div class="process-items" animation-item="20px">
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Soil Preparation: The process starts with selecting fertile soil for growing wheat. The soil is plowed and leveled to ensure good drainage and proper aeration.
+
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Sowing Wheat Seeds: Farmers sow wheat seeds using traditional or modern machinery, usually after the monsoon or during the Rabi season (winter in India).
+
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Irrigation: Wheat requires moderate water, so farmers irrigate the fields periodically based on the soil and weather conditions.
+
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Fertilization and Pest Control: Organic or chemical fertilizers are added for better crop yield. Pest control measures are also taken to protect the wheat from insects and diseases.
+
+                        </p>
+                    </div>
+                    <div class="process-items" animation-item="30px">
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Soil Preparation: The process starts with selecting fertile soil for growing wheat. The soil is plowed and leveled to ensure good drainage and proper aeration.
+
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Sowing Wheat Seeds: Farmers sow wheat seeds using traditional or modern machinery, usually after the monsoon or during the Rabi season (winter in India).
+
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Irrigation: Wheat requires moderate water, so farmers irrigate the fields periodically based on the soil and weather conditions.
+
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Fertilization and Pest Control: Organic or chemical fertilizers are added for better crop yield. Pest control measures are also taken to protect the wheat from insects and diseases.
+
+                        </p>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              
         </section>
-    
+        <section class="container2 min-h-screen bg-red-600"></section>
+
     </main>
     <footer>
 
     </footer>
     <!-- Jquery.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- Bootstrap.cs -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <!-- Bootstrap.js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script> -->
+    <!-- Owl.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <!-- GSAP and ScrollTrigger.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Lenis -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.js"></script>
     <!-- Main.js -->
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
