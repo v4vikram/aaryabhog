@@ -28,7 +28,7 @@
                         orange_: '#F04E23',
                         yellow: '#E99D23',
                         mehroon: '#981B1E',
-                        darkBrown: '#501B15'
+                        darkMehroon: '#501B15'
                     },
                     backgroundImage: {
                         'custom-gradient': 'linear-gradient(180deg, rgba(240, 78, 35, 1), rgba(233, 157, 35, 1))',
@@ -60,10 +60,43 @@
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
-<body>
-    <header></header>
-    <main class="home-page bg-custom-gradient">
-        <section class="">
+<body class="bg-custom-gradient">
+    <header class="custom-width">
+        <div class="header-top-wrapper">
+            <div class="flex justify-between">
+                <div class="cta-header flex items-center gap-x-[2vh]">
+                    <a href="mailto:info@aaryabhog.com" class="flex items-center gap-x-[1vh]">
+                        <img src="assets/img/mail-red-icon.webp" alt="mail-red-icon" class="w-auto">
+                        <span class="text-[2vh]">info@aaryabhog.com</span>
+                    </a>
+                    <a href="tel:918824892796" class="flex items-center gap-x-[1vh]">
+                        <img src="assets/img/call-red-icon.webp" alt="call-red-icon" class="w-auto">
+                        <span class="text-[2vh]"> +91 - 8824892796</span>
+
+                    </a>
+                </div>
+                <div class="social-header flex items-center gap-x-[0vh]">
+                    <a href="#">
+                        <img src="assets/img/facebook-icon.webp" alt="facebook-icon"
+                            class="w-[70%] ml-[0vh] float-right">
+                    </a>
+                    <a href="#">
+                        <img src="assets/img/facebook-icon.webp" alt="facebook-icon"
+                            class="w-[70%] ml-[0vh] float-right">
+                    </a>
+                    <a href="#">
+                        <img src="assets/img/insta-icon.webp" alt="insta-icon" class="w-[70%] ml-[0vh] float-right">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="header-wrapper">
+
+        </div>
+    </header>
+    <main class="home-page">
+        <!-- ========= Banner =========== -->
+        <section class="custom-width">
             <div class="banner-owl-wrapper">
                 <div class="banner-shape">
                     <!-- <img src="assets/img/red-shape-1.webp" alt="red-shape-1"> -->
@@ -92,7 +125,8 @@
                 </div>
             </div>
         </section>
-        <section class="min-h-screen py-[12vh]">
+        <!-- ========= About =========== -->
+        <section class="custom-width min-h-screen py-[12vh]">
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="">
@@ -127,7 +161,7 @@
                             <p class="text-white bold text-[2.5vh]">Our Main Unique<br>
                                 Selling Point</p>
                         </div>
-                        <p class="text-white text-[2.2vh] mt-[2vh] col-span-full mt-[4vh]">
+                        <p class="text-white text-[2.2vh] col-span-full mt-[4vh]">
                             If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything
                             embarrassing hidden in the middle of text.
                         </p>
@@ -135,7 +169,8 @@
                 </div>
             </div>
         </section>
-        <section class="process-section py-[12vh]">
+        <!-- ========= Proccess =========== -->
+        <section class="custom-width process-section py-[12vh]">
             <div class="text-center w-[40%] m-auto pin-box1">
                 <span class="uppercase text-white text-[2.2vh]">OUR PROCESS</span>
                 <h2 class="text-white uppercase lg:text-[5.5vh] lg:leading-[7vh] font-semibold">MAKING ATTA FROM FARM
@@ -246,9 +281,9 @@
             </div>
 
         </section>
-      <!-- ========= Product =========== -->
-    
-        <section class="container2 product-section pt-[18vh] pl-[13vh]">
+        <!-- ========= Product =========== -->
+
+        <section class="custom-width container2 product-section pt-[18vh] pl-[13vh]">
             <div>
                 <div class="owl-carousel owl-theme product-slider">
                     <div class="owl-items grid grid-cols-2">
@@ -274,7 +309,7 @@
                     <div class="owl-items grid grid-cols-2">
                         <div class="">
                             <h2 class="text-white uppercase lg:text-[5.5vh] lg:leading-[7vh] font-semibold">OUR
-                                PRODUCTS</h2>
+                                PRODUCTS 2</h2>
 
                             <span class=" text-white text-[2.2vh] mt-[6vh] block">Premium Sortex Wheat</span>
                             <h2 class="text-white uppercase lg:text-[5.5vh] lg:leading-[7vh] font-semibold">MP
@@ -294,7 +329,7 @@
                     <div class="owl-items grid grid-cols-2">
                         <div class="">
                             <h2 class="text-white uppercase lg:text-[5.5vh] lg:leading-[7vh] font-semibold">OUR
-                                PRODUCTS</h2>
+                                PRODUCTS 3</h2>
 
                             <span class=" text-white text-[2.2vh] mt-[6vh] block">Premium Sortex Wheat</span>
                             <h2 class="text-white uppercase lg:text-[5.5vh] lg:leading-[7vh] font-semibold">MP
@@ -320,49 +355,275 @@
             </div>
         </section>
 
-          <!-- ========= Recipie =========== -->
-        <section class="process-section py-[12vh]">
-            <div class="text-center w-[40%] m-auto pin-box1">
-                <span class="uppercase text-white text-[2.2vh]">CHECK OUT</span>
-                <h2 class="text-white uppercase lg:text-[5.5vh] lg:leading-[7vh] font-semibold">OUR FAVOURITE RECIPES</h2>
-                <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[6vh] m-auto">
+        <!-- ========= Recipe =========== -->
+        <section class="recipe-section py-[12vh]">
+            <div class="custom-width">
+                <div class="text-center w-[40%] m-auto pin-box1">
+                    <span class="uppercase text-white text-[2.2vh]">CHECK OUT</span>
+                    <h2 class="text-white uppercase lg:text-[5.5vh] lg:leading-[7vh] font-semibold">OUR FAVOURITE
+                        RECIPES</h2>
+                    <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[6vh] m-auto">
+                </div>
             </div>
 
-            <div class="owl-carousel owl-theme recipie-slider">
-                <!-- Slide 1 -->
-                <div class="">
-                    <img src="assets/img/recipie-slider-1.webp" alt="recipie-slider-1" class="w-full card-image rounded-tr-[14vh]">
-                    <div class="bg-orange_ py-[3vh] pl-[3vh]">
-                        <h3 class="text-[4vh] text-white">Aloo Paratha</h3>
+            <!-- recipe slider -->
+            <div class="custom-width">
+                <div class="owl-carousel owl-theme recipe-slider">
+                    <!-- Slide 1 -->
+                    <div class="">
+                        <img src="assets/img/recipe-slider-1.webp" alt="recipe-slider-1"
+                            class="w-full card-image rounded-tr-[14vh]">
+                        <div class="bg-orange_ py-[3vh] pl-[3vh]">
+                            <h3 class="text-[4vh] text-white">Aloo Paratha</h3>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="">
+                        <img src="assets/img/recipe-slider-1.webp" alt="recipe-slider-1"
+                            class="w-full card-image rounded-tr-[14vh]">
+                        <div class="bg-orange_ py-[3vh] pl-[3vh]">
+                            <h3 class="text-[4vh] text-white">Aloo Paratha</h3>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="">
+                        <img src="assets/img/recipe-slider-1.webp" alt="recipe-slider-1"
+                            class="w-full card-image rounded-tr-[14vh]">
+                        <div class="bg-orange_ py-[3vh] pl-[3vh]">
+                            <h3 class="text-[4vh] text-white">Aloo Paratha</h3>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- recipe tabs -->
+            <div class="bg-mehroon min-h-screen mt-[-12.2vh]  pb-[18vh]">
+
+                <div class="custom-width pt-[24.4vh]">
+                    <!-- Tab Content -->
+                    <!-- 1st -->
+                    <div class="tab-content grid grid-cols-2 active" id="tab1">
+                        <div class="col-span-4">
+                            <span class="text-white text-[2.2vh]">Reciepe</span>
+                            <h2 class="text-yellow uppercase lg:text-[5.5vh] lg:leading-[7vh] font-semibold">Aloo<br>
+                                Paratha</h2>
+                            <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[3vh]">
+                        </div>
+                        <div class="col-end-8">
+                            <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                <li>Divide the dough into small lemon-sized balls and do the same with the potato
+                                    stuffing.</li>
+                                <li>Roll out one dough ball into a small circle (about 4-5 inches in diameter) using a
+                                    rolling pin.</li>
+                                <li>Place a portion of the potato mixture in the center of the rolled-out dough.</li>
+                                <li>Gather the edges of the dough and seal it over the filling, pinching to close.</li>
+                                <li>Gently press the filled dough ball and flatten it slightly with your fingers.</li>
+                                <li>Roll it out again carefully into a larger circle (about 6-7 inches), ensuring the
+                                    stuffing doesn't spill out.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 2nd -->
+                    <div class="tab-content grid grid-cols-2 hidden" id="tab2">
+                        <div class="col-span-4">
+                            <span class="text-white text-[2.2vh]">Reciepe</span>
+                            <h2 class="text-yellow uppercase lg:text-[5.5vh] lg:leading-[7vh] font-semibold">Aloo<br>
+                                Paratha</h2>
+                            <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[3vh]">
+                        </div>
+                        <div class="col-end-8">
+                            <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                <li>Divide the dough into small lemon-sized balls and do the same with the potato
+                                    stuffing.</li>
+                                <li>Roll out one dough ball into a small circle (about 4-5 inches in diameter) using a
+                                    rolling pin.</li>
+                                <li>Place a portion of the potato mixture in the center of the rolled-out dough.</li>
+                                <li>Gather the edges of the dough and seal it over the filling, pinching to close.</li>
+                                <li>Gently press the filled dough ball and flatten it slightly with your fingers.</li>
+                                <li>Roll it out again carefully into a larger circle (about 6-7 inches), ensuring the
+                                    stuffing doesn't spill out.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 3th -->
+                    <div class="tab-content grid grid-cols-2 hidden" id="tab3">
+                        <div class="col-span-4">
+                            <span class="text-white text-[2.2vh]">Reciepe</span>
+                            <h2 class="text-yellow uppercase lg:text-[5.5vh] lg:leading-[7vh] font-semibold">Aloo<br>
+                                Paratha</h2>
+                            <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[3vh]">
+                        </div>
+                        <div class="col-end-8">
+                            <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                <li>Divide the dough into small lemon-sized balls and do the same with the potato
+                                    stuffing.</li>
+                                <li>Roll out one dough ball into a small circle (about 4-5 inches in diameter) using a
+                                    rolling pin.</li>
+                                <li>Place a portion of the potato mixture in the center of the rolled-out dough.</li>
+                                <li>Gather the edges of the dough and seal it over the filling, pinching to close.</li>
+                                <li>Gently press the filled dough ball and flatten it slightly with your fingers.</li>
+                                <li>Roll it out again carefully into a larger circle (about 6-7 inches), ensuring the
+                                    stuffing doesn't spill out.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 4th -->
+                    <div class="tab-content grid grid-cols-2 hidden" id="tab4">
+                        <div class="col-span-4">
+                            <span class="text-white text-[2.2vh]">Reciepe</span>
+                            <h2 class="text-yellow uppercase lg:text-[5.5vh] lg:leading-[7vh] font-semibold">Aloo<br>
+                                Paratha</h2>
+                            <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[3vh]">
+                        </div>
+                        <div class="col-end-8">
+                            <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                <li>Divide the dough into small lemon-sized balls and do the same with the potato
+                                    stuffing.</li>
+                                <li>Roll out one dough ball into a small circle (about 4-5 inches in diameter) using a
+                                    rolling pin.</li>
+                                <li>Place a portion of the potato mixture in the center of the rolled-out dough.</li>
+                                <li>Gather the edges of the dough and seal it over the filling, pinching to close.</li>
+                                <li>Gently press the filled dough ball and flatten it slightly with your fingers.</li>
+                                <li>Roll it out again carefully into a larger circle (about 6-7 inches), ensuring the
+                                    stuffing doesn't spill out.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 5th -->
+                    <div class="tab-content grid grid-cols-2 hidden" id="tab5">
+                        <div class="col-span-4">
+                            <span class="text-white text-[2.2vh]">Reciepe</span>
+                            <h2 class="text-yellow uppercase lg:text-[5.5vh] lg:leading-[7vh] font-semibold">Aloo<br>
+                                Paratha</h2>
+                            <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[3vh]">
+                        </div>
+                        <div class="col-end-8">
+                            <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                <li>Divide the dough into small lemon-sized balls and do the same with the potato
+                                    stuffing.</li>
+                                <li>Roll out one dough ball into a small circle (about 4-5 inches in diameter) using a
+                                    rolling pin.</li>
+                                <li>Place a portion of the potato mixture in the center of the rolled-out dough.</li>
+                                <li>Gather the edges of the dough and seal it over the filling, pinching to close.</li>
+                                <li>Gently press the filled dough ball and flatten it slightly with your fingers.</li>
+                                <li>Roll it out again carefully into a larger circle (about 6-7 inches), ensuring the
+                                    stuffing doesn't spill out.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Tabs Button-->
+                    <div class="tabs grid grid-cols-5 gap-x-[2vh] mt-[20vh]">
+                        <!-- 1st -->
+                        <button class="tab-link active bg-yellow pt-[5vh] px-[2vh] pb-[2vh]" data-tab="tab1">
+                            <div
+                                class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                1</div>
+                            <p
+                                class="uppercase text-mehroon text-[2.2vh] text-left font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                Prepare<br> the Dough</p>
+                        </button>
+                        <!-- 2ndt -->
+                        <button class="tab-link bg-yellow pt-[5vh] px-[2vh] pb-[2vh]" data-tab="tab2">
+                            <div
+                                class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                2</div>
+                            <p
+                                class="uppercase text-mehroon text-[2.2vh] text-left font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                Prepare the Aloo<br>
+                                (Potato) Stuffing</p>
+                        </button>
+                        <!-- 3rd -->
+                        <button class="tab-link bg-yellow pt-[5vh] px-[2vh] pb-[2vh]" data-tab="tab3">
+                            <div
+                                class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                3</div>
+                            <p
+                                class="uppercase text-mehroon text-[2.2vh] text-left font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                Stuff the<br>
+                                Parathas</p>
+                        </button>
+                        <!-- 4th -->
+                        <button class="tab-link bg-yellow pt-[5vh] px-[2vh] pb-[2vh]" data-tab="tab4">
+                            <div
+                                class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                4</div>
+                            <p
+                                class="uppercase text-mehroon text-[2.2vh] text-left font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                Cook<br>
+                                the Parathas</p>
+                        </button>
+                        <!-- 5th -->
+                        <button class="tab-link bg-yellow pt-[5vh] px-[2vh] pb-[2vh]" data-tab="tab5">
+                            <div
+                                class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                5</div>
+                            <p
+                                class="uppercase text-mehroon text-[2.2vh] text-left font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                Serve</p>
+                        </button>
+
                     </div>
                 </div>
-                <!-- Slide 2 -->
-                <div class="">
-                    <img src="assets/img/recipie-slider-1.webp" alt="recipie-slider-1" class="w-full card-image rounded-tr-[14vh]">
-                    <div class="bg-orange_ py-[3vh] pl-[3vh]">
-                        <h3 class="text-[4vh] text-white">Aloo Paratha</h3>
-                    </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="">
-                    <img src="assets/img/recipie-slider-1.webp" alt="recipie-slider-1" class="w-full card-image rounded-tr-[14vh]">
-                    <div class="bg-orange_ py-[3vh] pl-[3vh]">
-                        <h3 class="text-[4vh] text-white">Aloo Paratha</h3>
-                    </div>
-                </div>
-              
             </div>
 
 
 
         </section>
 
+        <!-- ========= Testimonial =========== -->
+        <section class="custom-width testimonial-section relative bottom-[-15vh] mt-[-15vh]">
+            <div class="grid grid-cols-2">
+                <div class="grid-span-4">
+                    <div class="">
+                        <span class="uppercase text-darkMehroon text-[2.2vh] ">Testimonials</span>
+                        <h2 class="text-darkMehroon uppercase lg:text-[5.5vh] lg:leading-[7vh] font-bold w">What our
+                            Customers<br>
+                            are Talking About</h2>
+                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[6vh]">
+                        <p class="text-darkMehroon text-[2.2vh] col-span-full mt-[4vh]">
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form, by injected humour, or randomised words which don’t look even slightly
+                        believable.
 
 
-
+                        </p>
+                    </div>
+                </div>
+                <div class="grid-span-8">
+                    <div class="owl-carousel owl-theme testimonial-slider">
+                        <div class="item bg-orange_ p-[10vh] pl-[15vh] pr-[15vh]  rounded-tr-[50vh]">
+                            <div class="text-white">
+                                <p class="text-[4.5vh] font-normal">This is due to their excellent service, competitive
+                                    pricing and customer support. It's thoroughly refreshing to get such a personal
+                                    touch.</p>
+                                <hr class="w-full bg-white h-[0.3vh] my-[7vh]">
+                                <div class="flex gap-x-[2vh] items-center">
+                                    <div class="w-[20%] h-[20%] rounded-full overflow-hidden">
+                                        <img src="assets/img/user-placeholder.png" alt="user-placeholder">
+                                    </div>
+                                    <div class="text-[3vh]">
+                                        <h2 class="font-medium">GOVIND GARKOTI</h2>
+                                        <p class="text-[2vh]">CUSTOMER</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer>
-
+    <footer class="min-h-screen bg-darkMehroon relative overflow-hidden">
+       
+       
+       <div class="custom-width relative">
+        <div class="footer-bg"></div>
+        <div class="grid grid-cols-4">
+            <div class="grid-col-4"></div>
+        </div>
+       </div>
     </footer>
     <!-- Jquery.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

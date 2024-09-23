@@ -72,9 +72,12 @@ $(document).ready(function () {
       margin: 10,
       dots: true,
       loop: true,
-      // animateOut: 'fadeOut', 
-      // animateIn: 'fadeIn',
-      dotsContainer: '.custom-dots', 
+      touchDrag: false,
+      pullDrag: false,
+      mouseDrag: false,
+      animateOut: "fadeOut",
+      animateIn: "fadeIn",
+      dotsContainer: ".custom-dots",
 
       responsive: {
         0: {
@@ -89,7 +92,7 @@ $(document).ready(function () {
       },
     });
     const vhMargin = window.innerHeight * 0.02; // 5vh
-    $(".recipie-slider").owlCarousel({
+    $(".recipe-slider").owlCarousel({
       autoplay: false,
       autoplaySpeed: 2000,
       autoplayTimeout: 2000,
@@ -100,7 +103,7 @@ $(document).ready(function () {
       nav: false,
       margin: vhMargin,
       dots: false,
-      loop: false,// Disable touch dragging
+      loop: false, // Disable touch dragging
       mouseDrag: false,
 
       responsive: {
@@ -119,67 +122,102 @@ $(document).ready(function () {
       },
     });
 
-      // Custom text for each dot
-      var customTexts = ["Product_1", "Product_2", "Product_3"];
+    $(".testimonial-slider").owlCarousel({
+      autoplay: false,
+      autoplaySpeed: 2000,
+      autoplayTimeout: 2000,
+      smartSpeed: 2000,
+      items: 1,
+      stagePadding: 0,
+      center: true,
+      nav: false,
+      margin: 10,
+      dots: true,
+      loop: true,
 
-      // Add custom text to each dot after Owl Carousel initializes
-      $('.custom-dots .owl-dot').each(function(index) {
-          $(this).text(customTexts[index]);
-      });
+      responsive: {
+        0: {
+          items: 1,
+        },
+        768: {
+          items: 1,
+        },
+        1000: {
+          items: 1,
+        },
+      },
+    });
+
+    // Custom text for each dot
+    var customTexts = ["Product_1", "Product_2", "Product_3"];
+
+    // Add custom text to each dot after Owl Carousel initializes
+    $(".custom-dots .owl-dot").each(function (index) {
+      $(this).text(customTexts[index]);
+    });
   }
   sliders();
 
-  const processItems = gsap.utils.toArray(".process-items");
+  function process() {
+    processItems.forEach((item, index) => {
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: item,
+          start: "top 20%", // Adjust this to match both sides
+          // endTrigger: ".container",
+          end: "bottom top",
+          pin: true,
+          pinSpacing: false, // Removes the pin space
+          scrub: true,
+          // markers: true,       // Enable markers to debug if necessary
+        },
+      });
 
-  // Select the first item
-  const firstItem = processItems[0];
-
-  // Animate the first item immediately on page load
-  // gsap.to(firstItem,
-  //   {
-  //     opacity: 1,
-  //     background: "green",
-  //     scale: 0.7,
-  //     transformOrigin: "center center",
-  //   }
-  // );
-
-function process(){
-  processItems.forEach((item, index) => {
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: item,
-        start: "top 20%", // Adjust this to match both sides
-        // endTrigger: ".container",
-        end: "bottom top",
-        pin: true,
-        pinSpacing: false,   // Removes the pin space
-        scrub: true,
-        // markers: true,       // Enable markers to debug if necessary
-      },
+      // Animate the current item
+      tl.to(item, {
+        opacity: 0,
+        scale: 0,
+        duration: 1,
+        ease: "power1.out",
+        background: "rgba(0, 0, 0, 0)",
+        // transform: "rotateY(90deg)",
+      });
     });
-  
-    // Animate the current item
-    tl.to(item, {
-      opacity: 0,
-      scale: 0,
-      duration: 1,
-      ease: "power1.out",
-      background: "rgba(0, 0, 0, 0)"
-      // transform: "rotateY(90deg)",
-    });
-  });
-  
 
-  ScrollTrigger.create({
-    trigger: ".process-section",
-    start: "10% 0%",
-    endTrigger: ".container2",
-    end: "top -50%",
-    pin: ".pin-box2",
-    // pinSpacing: false,
-    markers: true,
-  });
+    ScrollTrigger.create({
+      trigger: ".process-section",
+      start: "10% 0%",
+      endTrigger: ".container2",
+      end: "top -50%",
+      pin: ".pin-box2",
+      // pinSpacing: false,
+      markers: true,
+    });
+  }
+  // process()
+
+  function tabs() {
+    $(".recipe-section .tab-link").on("click", function () {
+        var tabId = $(this).data("tab");
+
+        // Remove active class from all buttons
+        $(".recipe-section .tab-link").removeClass("active");
+
+        // Fade out the current active tab content
+        $(".recipe-section .tab-content.active").css("opacity", 1).animate({ opacity: 0 }, 200, function () {
+            $(this).removeClass("active").css("visibility", "hidden");
+
+            // Fade in the new tab content
+            $("#" + tabId).css("visibility", "visible").css("opacity", 0).animate({ opacity: 1 }, 200).addClass("active");
+        });
+
+        // Add active class to the clicked button
+        $(this).addClass("active");
+    });
 }
-// process()
+
+// Initialize the tabs function
+tabs();
+
+
 });

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple jQuery Tabs</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .tab-content {
+            display: none; /* Hide all tab content by default */
+        }
+        .tab-content.active {
+            display: block; /* Show active tab content */
+        }
+        .tabs button.active {
+            background-color: #ddd; /* Styling active tab */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tab Buttons -->
+    <div class="tabs">
+        <button class="tab-link active" data-tab="tab1">Tab 1</button>
+        <button class="tab-link" data-tab="tab2">Tab 2</button>
+        <button class="tab-link" data-tab="tab3">Tab 3</button>
+    </div>
+
+    <!-- Tab Content -->
+    <div class="tab-content active" id="tab1">
+        <h2>Tab 1 Content</h2>
+        <p>This is the content for Tab 1.</p>
+    </div>
+    <div class="tab-content" id="tab2">
+        <h2>Tab 2 Content</h2>
+        <p>This is the content for Tab 2.</p>
+    </div>
+    <div class="tab-content" id="tab3">
+        <h2>Tab 3 Content</h2>
+        <p>This is the content for Tab 3.</p>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Handle tab clicks
+            $('.tab-link').on('click', function() {
+                var tabId = $(this).data('tab');
+
+                // Remove active class from all buttons and contents
+                $('.tab-link').removeClass('active');
+                $('.tab-content').removeClass('active');
+
+                // Add active class to clicked button and related tab content
+                $(this).addClass('active');
+                $('#' + tabId).addClass('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
