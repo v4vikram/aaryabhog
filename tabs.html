@@ -3,59 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple jQuery Tabs</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Grid Example</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .tab-content {
-            display: none; /* Hide all tab content by default */
-        }
-        .tab-content.active {
-            display: block; /* Show active tab content */
-        }
-        .tabs button.active {
-            background-color: #ddd; /* Styling active tab */
-        }
+        /* @tailwind base;
+        @tailwind components;
+        @tailwind utilities; */
     </style>
 </head>
-<body>
+<body class="bg-gray-100">
 
-    <!-- Tab Buttons -->
-    <div class="tabs">
-        <button class="tab-link active" data-tab="tab1">Tab 1</button>
-        <button class="tab-link" data-tab="tab2">Tab 2</button>
-        <button class="tab-link" data-tab="tab3">Tab 3</button>
-    </div>
-
-    <!-- Tab Content -->
-    <div class="tab-content active" id="tab1">
-        <h2>Tab 1 Content</h2>
-        <p>This is the content for Tab 1.</p>
-    </div>
-    <div class="tab-content" id="tab2">
-        <h2>Tab 2 Content</h2>
-        <p>This is the content for Tab 2.</p>
-    </div>
-    <div class="tab-content" id="tab3">
-        <h2>Tab 3 Content</h2>
-        <p>This is the content for Tab 3.</p>
-    </div>
-
-    <script>
-        $(document).ready(function() {
-            // Handle tab clicks
-            $('.tab-link').on('click', function() {
-                var tabId = $(this).data('tab');
-
-                // Remove active class from all buttons and contents
-                $('.tab-link').removeClass('active');
-                $('.tab-content').removeClass('active');
-
-                // Add active class to clicked button and related tab content
-                $(this).addClass('active');
-                $('#' + tabId).addClass('active');
-            });
-        });
-    </script>
+    <footer class="min-h-screen bg-darkMehroon relative overflow-hidden">
+        <div class="custom-width relative">
+            <div class="footer-bg"></div>
+            <div class="grid grid-cols-5 gap-4 p-8"> <!-- 5 column grid -->
+                <div class="col-span-1 bg-red-500 text-white p-4">Item 1</div> <!-- Spans 1 column -->
+                <div class="col-span-3 bg-blue-500 text-white p-4">Item 2</div> <!-- Spans 2 columns -->
+                <div class="col-span-1 bg-green-500 text-white p-4">Item 3</div> <!-- Spans 1 column -->
+                <div class="col-span-1 bg-yellow-500 text-black p-4">Item 4</div> <!-- Spans 1 column -->
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>

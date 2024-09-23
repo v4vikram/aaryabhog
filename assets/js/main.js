@@ -91,36 +91,49 @@ $(document).ready(function () {
         },
       },
     });
-    const vhMargin = window.innerHeight * 0.02; // 5vh
-    $(".recipe-slider").owlCarousel({
-      autoplay: false,
-      autoplaySpeed: 2000,
-      autoplayTimeout: 2000,
-      smartSpeed: 2000,
-      items: 1,
-      stagePadding: 0,
-      center: false,
-      nav: false,
-      margin: vhMargin,
-      dots: false,
-      loop: false, // Disable touch dragging
-      mouseDrag: false,
 
-      responsive: {
-        0: {
+    // recipe slider
+    function initializeCarousel() {
+      const vhMargin = window.innerHeight * 0.02; // Calculate margin based on viewport height
+      $(".recipe-slider").owlCarousel({
+          autoplay: false,
+          autoplaySpeed: 2000,
+          autoplayTimeout: 2000,
+          smartSpeed: 2000,
           items: 1,
-        },
-        768: {
-          items: 1,
-        },
-        1000: {
-          items: 3,
-        },
-        1366: {
-          items: 3,
-        },
-      },
-    });
+          stagePadding: 0,
+          center: false,
+          nav: false,
+          margin: vhMargin, // Set margin dynamically
+          dots: false,
+          loop: false, // Disable touch dragging
+          mouseDrag: false,
+  
+          responsive: {
+              0: {
+                  items: 1,
+              },
+              768: {
+                  items: 1,
+              },
+              1000: {
+                  items: 3,
+              },
+              1366: {
+                  items: 3,
+              },
+          },
+      });
+  }
+  
+  // Initial call to set up the carousel
+  initializeCarousel();
+  
+  // Reinitialize on window resize
+  window.addEventListener('resize', () => {
+      $(".recipe-slider").trigger('destroy.owl.carousel'); // Destroy the existing carousel
+      initializeCarousel(); // Re-initialize with the new margin
+  });
 
     $(".testimonial-slider").owlCarousel({
       autoplay: false,
