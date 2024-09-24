@@ -159,7 +159,7 @@ img {
     height: 56vh;
     /* opacity: 0; */
     /* background: red; */
-    background: var(--orange);
+    /* background: var(--orange); */
 }
 .first .process-items{
     /* opacity: 1 !important; */

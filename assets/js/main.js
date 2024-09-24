@@ -172,31 +172,55 @@ $(document).ready(function () {
   sliders();
 
   function process() {
-    // Animate the left and right columns
-    gsap.utils
-      .toArray(".process-items")
-      .forEach((section, i) => {
-        gsap.from(section, {
-          y: 100,
-          opacity: 0,
-          duration: 1,
-          scrollTrigger: {
-            trigger: section,
-            start: "top 80%",
-            end: "top 20%",
-            scrub: true,
+    // Get all the process items
+    const processItems = gsap.utils.toArray(".process-items");
+
+    processItems.forEach((section, i) => {
+      // Animate each section
+      gsap.from(section, {
+        y: 100,
+        // opacity: 0,
+        // duration: 1,
+        scrollTrigger: {
+          trigger: section,
+          start: "top 80%",
+          end: "top 20%",
+          scrub: true,
+          onEnter: () => {
+            // When the current section enters, fade it in
+            gsap.to(section, { opacity: 1, duration: 1 });
+
+            // If there is a previous section, fade it out
+            if (i > 0) {
+              gsap.to(processItems[i - 1], { opacity: 0, duration: 0.5 });
+            }
           },
-        });
+          onLeave: () => {
+            // When the section leaves (scrolls past), fade it out
+            gsap.to(section, { opacity: 0, duration: 0.5 });
+          },
+          onEnterBack: () => {
+            // When scrolling back, fade the section in
+            gsap.to(section, { opacity: 1, duration: 1 });
+
+            // If there is a next section, fade it out
+            if (i < processItems.length - 1) {
+              gsap.to(processItems[i + 1], { opacity: 0, duration: 0.5 });
+            }
+          },
+          onLeaveBack: () => {
+            // When scrolling back past the section, fade it out
+            gsap.to(section, { opacity: 0, duration: 1 });
+          },
+        },
       });
+    });
 
-  // Pin the middle column
-  const processItems = document.querySelector(".process-left-wrapper");
+    // Pin the middle column
+    const processWrapper = document.querySelector(".process-left-wrapper");
 
-  // Calculate total height, adjusting based on viewport height
-  const totalHeight = processItems.scrollHeight - (window.innerHeight * (86 / 100));
-
-  console.log(totalHeight);
-
+    // Calculate total height, adjusting based on viewport height
+    const totalHeight = processWrapper.scrollHeight - window.innerHeight * 0.86;
 
     ScrollTrigger.create({
       trigger: ".pin-box2",
@@ -206,9 +230,10 @@ $(document).ready(function () {
       end: `+=${totalHeight}`, // Pin until the total height of all process items
       scrub: true,
     });
-}
-process();
+  }
 
+  // Initial call to process
+  process();
 
   function tabs() {
     let isAnimating = false; // Animation lock
