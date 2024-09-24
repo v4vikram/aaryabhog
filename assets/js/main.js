@@ -172,42 +172,43 @@ $(document).ready(function () {
   sliders();
 
   function process() {
-    processItems.forEach((item, index) => {
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: item,
-          start: "top 20%", // Adjust this to match both sides
-          // endTrigger: ".container",
-          end: "bottom top",
-          pin: true,
-          pinSpacing: false, // Removes the pin space
-          scrub: true,
-          // markers: true,       // Enable markers to debug if necessary
-        },
+    // Animate the left and right columns
+    gsap.utils
+      .toArray(".process-items")
+      .forEach((section, i) => {
+        gsap.from(section, {
+          y: 100,
+          opacity: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: section,
+            start: "top 80%",
+            end: "top 20%",
+            scrub: true,
+          },
+        });
       });
 
-      // Animate the current item
-      tl.to(item, {
-        opacity: 0,
-        scale: 0,
-        duration: 1,
-        ease: "power1.out",
-        background: "rgba(0, 0, 0, 0)",
-        // transform: "rotateY(90deg)",
-      });
-    });
+    // Pin the middle column
+    const processItems = document.querySelectorAll(".left-process");
+    const totalHeight = processItems[0].scrollHeight - 550
+    // const totalHeight = Array.from(processItems).reduce((acc, item) => {
+    //     return acc + item.scrollHeight;
+    // }, 0);
+
+    console.log(totalHeight)
 
     ScrollTrigger.create({
-      trigger: ".process-section",
-      start: "10% 0%",
-      endTrigger: ".container2",
-      end: "top -50%",
-      pin: ".pin-box2",
-      // pinSpacing: false,
+      trigger: ".pin-box2",
+      pin: true,
+      start: "center center",
       markers: true,
+      end: `+=${totalHeight}`, // Pin until the total height of all process items
+      scrub: true,
     });
-  }
-  // process()
+}
+process();
+
 
   function tabs() {
     let isAnimating = false; // Animation lock
