@@ -189,14 +189,14 @@ $(document).ready(function () {
         });
       });
 
-    // Pin the middle column
-    const processItems = document.querySelectorAll(".left-process");
-    const totalHeight = processItems[0].scrollHeight - 550
-    // const totalHeight = Array.from(processItems).reduce((acc, item) => {
-    //     return acc + item.scrollHeight;
-    // }, 0);
+  // Pin the middle column
+  const processItems = document.querySelector(".process-left-wrapper");
 
-    console.log(totalHeight)
+  // Calculate total height, adjusting based on viewport height
+  const totalHeight = processItems.scrollHeight - (window.innerHeight * (86 / 100));
+
+  console.log(totalHeight);
+
 
     ScrollTrigger.create({
       trigger: ".pin-box2",
