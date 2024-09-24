@@ -62,9 +62,9 @@ $(document).ready(function () {
     });
     $(".product-slider").owlCarousel({
       autoplay: false,
-      autoplaySpeed: 2000,
-      autoplayTimeout: 2000,
-      smartSpeed: 2000,
+      // autoplaySpeed: 2000,
+      // autoplayTimeout: 2000,
+      smartSpeed: 5000,
       items: 1,
       stagePadding: 0,
       center: true,
@@ -96,44 +96,44 @@ $(document).ready(function () {
     function initializeCarousel() {
       const vhMargin = window.innerHeight * 0.02; // Calculate margin based on viewport height
       $(".recipe-slider").owlCarousel({
-          autoplay: false,
-          autoplaySpeed: 2000,
-          autoplayTimeout: 2000,
-          smartSpeed: 2000,
-          items: 1,
-          stagePadding: 0,
-          center: false,
-          nav: false,
-          margin: vhMargin, // Set margin dynamically
-          dots: false,
-          loop: false, // Disable touch dragging
-          mouseDrag: false,
-  
-          responsive: {
-              0: {
-                  items: 1,
-              },
-              768: {
-                  items: 1,
-              },
-              1000: {
-                  items: 3,
-              },
-              1366: {
-                  items: 3,
-              },
+        autoplay: false,
+        autoplaySpeed: 2000,
+        autoplayTimeout: 2000,
+        smartSpeed: 2000,
+        items: 1,
+        stagePadding: 0,
+        center: false,
+        nav: false,
+        margin: vhMargin, // Set margin dynamically
+        dots: false,
+        loop: false, // Disable touch dragging
+        mouseDrag: false,
+
+        responsive: {
+          0: {
+            items: 1,
           },
+          768: {
+            items: 1,
+          },
+          1000: {
+            items: 3,
+          },
+          1366: {
+            items: 3,
+          },
+        },
       });
-  }
-  
-  // Initial call to set up the carousel
-  initializeCarousel();
-  
-  // Reinitialize on window resize
-  window.addEventListener('resize', () => {
-      $(".recipe-slider").trigger('destroy.owl.carousel'); // Destroy the existing carousel
+    }
+
+    // Initial call to set up the carousel
+    initializeCarousel();
+
+    // Reinitialize on window resize
+    window.addEventListener("resize", () => {
+      $(".recipe-slider").trigger("destroy.owl.carousel"); // Destroy the existing carousel
       initializeCarousel(); // Re-initialize with the new margin
-  });
+    });
 
     $(".testimonial-slider").owlCarousel({
       autoplay: false,
@@ -210,27 +210,38 @@ $(document).ready(function () {
   // process()
 
   function tabs() {
+    let isAnimating = false; // Animation lock
+
     $(".recipe-section .tab-link").on("click", function () {
-        var tabId = $(this).data("tab");
+      if (isAnimating) return; // Prevent click if animation is running
 
-        // Remove active class from all buttons
-        $(".recipe-section .tab-link").removeClass("active");
+      var tabId = $(this).data("tab");
 
-        // Fade out the current active tab content
-        $(".recipe-section .tab-content.active").css("opacity", 1).animate({ opacity: 0 }, 200, function () {
-            $(this).removeClass("active").css("visibility", "hidden");
+      // Remove active class from all buttons
+      $(".recipe-section .tab-link").removeClass("active");
 
-            // Fade in the new tab content
-            $("#" + tabId).css("visibility", "visible").css("opacity", 0).animate({ opacity: 1 }, 200).addClass("active");
+      // Fade out the current active tab content
+      isAnimating = true; // Lock animations
+      $(".recipe-section .tab-content.active")
+        .css("opacity", 1)
+        .animate({ opacity: 0 }, 100, function () {
+          $(this).removeClass("active").css("visibility", "hidden");
+
+          // Fade in the new tab content
+          $("#" + tabId)
+            .css("visibility", "visible")
+            .css("opacity", 0)
+            .animate({ opacity: 1 }, 100, function () {
+              isAnimating = false; // Unlock animations
+            })
+            .addClass("active");
         });
 
-        // Add active class to the clicked button
-        $(this).addClass("active");
+      // Add active class to the clicked button
+      $(this).addClass("active");
     });
-}
+  }
 
-// Initialize the tabs function
-tabs();
-
-
+  // Initialize the tabs function
+  tabs();
 });
