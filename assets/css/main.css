@@ -52,8 +52,11 @@ body {
     position: relative;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    overflow: hidden;
+    /* overflow-y: hidden; */
     /* Medium weight */
+}
+.home-page{
+    overflow: hidden;
 }
 
 ::-webkit-scrollbar {
