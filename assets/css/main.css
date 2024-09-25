@@ -516,6 +516,7 @@ img {
     }
     .footer-bg {
         height: 210vh;
+        display: none;
     }
 
 }
