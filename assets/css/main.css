@@ -416,6 +416,7 @@ img {
     }
     .testimonial-slider .owl-dots {
         right: 5vh;
+        bottom: 3vh;
     }
 }
 @media(max-width: 767px) {
