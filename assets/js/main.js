@@ -44,7 +44,7 @@ $(document).ready(function () {
       stagePadding: 0,
       center: true,
       nav: false,
-      margin: 10,
+      margin: 0,
       dots: true,
       loop: true,
 
