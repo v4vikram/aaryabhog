@@ -494,6 +494,9 @@ img {
         right: 5vh;
         bottom: 3vh;
     }
+    .textimonial-bg::after{
+        display: none;
+    }
 }
 
 @media(max-width: 767px) {

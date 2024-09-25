@@ -98,9 +98,9 @@ $(document).ready(function () {
       const vhMargin = window.innerHeight * 0.02; // Calculate margin based on viewport height
       $(".recipe-slider").owlCarousel({
         autoplay: false,
-        autoplaySpeed: 2000,
-        autoplayTimeout: 2000,
-        smartSpeed: 2000,
+        autoplaySpeed: 500,
+        // autoplayTimeout: 00,
+        // smartSpeed: ,
         items: 1,
         stagePadding: 0,
         center: false,
