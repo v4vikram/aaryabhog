@@ -57,6 +57,9 @@ body {
     /* overflow-y: hidden; */
     /* Medium weight */
 }
+html.lenis {
+    overflow-x: hidden;
+}
 .home-page{
     /* overflow: hidden; */
 }
@@ -90,6 +93,21 @@ img {
 
 
 /* =========== Banner ============ */
+/* =========== Mobile Menu ============ */
+.mobile-menu{
+    position: fixed;
+    left: -100%;
+}
+.mobile-menu ul li{
+    border: 1px solid red;
+    margin-top: 4vh;
+    overflow: hidden;
+}
+.mobile-menu ul li a{
+    /* transform: translateY(22px); */
+    display: block;
+}
+
 
 .banner-owl-wrapper {
     position: relative;
@@ -301,7 +319,7 @@ img {
     background: url(../img/red-shape-2.webp);
     width: 100%;
     height: 15vh;
-    z-index: 99;
+    z-index: 1;
     background-size: contain;
     background-repeat: no-repeat;
     
@@ -374,17 +392,60 @@ img {
 }
 @media(max-width: 768px) {
 
-    header,
-    section,
-    footer {
+    .custom-width{
         width: calc(100% - 50px);
+    }
+    .product-section::before {
+        border-bottom-right-radius: 75vh;
+    }
+    .product-slider img{
+        width: 90% !important;
+        margin: auto;
+    }
+    .banner-owl-wrapper::before {
+        top: -2px;
+        background-repeat: no-repeat;
+    }
+    .product-section::after {
+        top: -102px;
+        background-size: contain;
+       
+    }
+    .footer-bg {
+        height: 125vh;
+    }
+    .testimonial-slider .owl-dots {
+        right: 5vh;
     }
 }
 @media(max-width: 767px) {
 
-    header,
-    section,
-    footer {
+  .custom-width{
         width: calc(100% - 30px);
+    }
+    .product-slider img{
+        width: 60% !important;
+        margin: auto;
+    }
+}
+@media(max-width: 576px) {
+
+    .product-section::after {
+        top: -55px;
+       
+    }
+}
+@media(max-width: 375px) {
+
+    .product-section::after {
+        top: -48px;
+       
+    }
+}
+@media(max-width: 320px) {
+
+    .product-section::after {
+        top: -41px;
+       
     }
 }

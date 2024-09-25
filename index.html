@@ -28,10 +28,14 @@
                         orange_: '#F04E23',
                         yellow: '#E99D23',
                         mehroon: '#981B1E',
-                        darkMehroon: '#501B15'
+                        darkMehroon: '#501B15',
+                        green: "#12743b"
                     },
                     backgroundImage: {
                         'custom-gradient': 'linear-gradient(180deg, rgba(240, 78, 35, 1), rgba(233, 157, 35, 1))',
+                    },
+                    backgroundImage: {
+                        'mobile-gradient': 'linear-gradient(0deg, rgba(240, 78, 35, 1), rgba(233, 157, 35, 1))',
                     },
                     fontSize: {
                         'p': '18px',
@@ -48,6 +52,10 @@
                     fontFamily: {
                         montserrat: ['Montserrat', 'sans-serif'],
                     },
+                    display: {
+                        unset: 'unset',
+                        initial: 'initial',
+                    },
                 }
             }
         }
@@ -61,7 +69,8 @@
 </head>
 
 <body class="bg-darkMehroon">
-    <header class="custom-width">
+    <!-- ========= lg Header =========== -->
+    <header class="custom-width hidden lg:block">
         <div class="header-top-wrapper mt-[4vh] mb-[6vh]">
             <div class="flex justify-between">
                 <div class="cta-header flex items-center gap-x-[2vh]">
@@ -80,12 +89,10 @@
                 </div>
                 <div class="social-header flex items-center gap-x-[2vh]">
                     <a href="#" class="w-[6vh]">
-                        <img src="assets/img/facebook-icon.webp" alt="facebook-icon"
-                            class="ml-[0vh] float-right">
+                        <img src="assets/img/facebook-icon.webp" alt="facebook-icon" class="ml-[0vh] float-right">
                     </a>
                     <a href="#" class="w-[6vh]">
-                        <img src="assets/img/insta-icon.webp" alt="insta-icon"
-                            class="ml-[0vh] float-right">
+                        <img src="assets/img/insta-icon.webp" alt="insta-icon" class="ml-[0vh] float-right">
                     </a>
                     <a href="#" class="w-[6vh]">
                         <img src="assets/img/twitter-icon.webp" alt="twitter-icon" class="ml-[0vh] float-right">
@@ -112,14 +119,51 @@
                         <a href="index.html" class="text-white text-[2.2vh] px-[3vh]">Testimonials</a>
                     </li>
                     <li>
-                        
+
                         <a href="index.html" class="text-white text-[2.2vh] px-[3vh]">Contact Us</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
-    <main class="home-page">
+    <!-- ========= sm Header =========== -->
+    <header class="mobile-menu fixed left-[-100%] top-[0] z-40 w-[100%] h-[100vh] bg-mobile-gradient">
+        <div class="mobile-wrapper flex flex-col justify-evenly items-center min-h-screen">
+            <div class="text-center">
+                <img src="assets/img/header-logo.webp" alt="header-logo" class="w-[80%] m-auto">
+            </div>
+            <nav>
+                <ul class="block text-center items-center justify-center">
+                    <li>
+                        <a href="index.html" class="text-green text-[3.8vh] px-[3vh]">Home</a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="text-white text-[3.8vh] px-[3vh]">Our Story</a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="text-white text-[3.8vh] px-[3vh]">Our Products</a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="text-white text-[3.8vh] px-[3vh]">Recipe</a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="text-white text-[3.8vh] px-[3vh]">Testimonials</a>
+                    </li>
+                    <li>
+
+                        <a href="index.html" class="text-white text-[3.8vh] px-[3vh]">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="hamburger-wrapper absolute right-[5vh] top-[5vh] z-50 lg:hidden">
+        <div class="toggle-btn">
+
+            <i class="fa-solid fa-bars text-white text-[5vh]"></i>
+        </div>
+    </div>
+    <main class="home-page relative top-[10vh]">
         <!-- ========= Banner =========== -->
         <section class="custom-width">
             <div class="banner-owl-wrapper">
@@ -129,43 +173,33 @@
                 <div class="owl-carousel owl-theme" id="banner-slider">
                     <div class="owl-items">
                         <img src="assets/img/banner-slider-1.webp" alt="banner-slider-1">
-                        <div class="owl-items-content w-[35vw] ml-[15vh]">
+                        <div class="owl-items-content w-[50vh] md:w-[35vw] ml-[5vh] lg:ml-[15vh]">
                             <div class="">
                                 <h1
-                                    class="text-white text-[11vh] leading-[12vh] xl:text-[9vh] xl:leading-[11vh] font-bold">
+                                    class="text-white text-[3vh] md:text-[7vh] md:leading-[7vh] lg:text-[11vh] lg:leading-[12vh] xl:text-[9vh] xl:leading-[11vh] font-bold">
                                     The Aaryabhog
                                     Promise</h1>
-                                <p class="text-[2.2vh] text-white mt-3">Hand-picked ingredients, careful processing and
+                                <p class="text-[2.2vh] text-white mt-0 md:mt-[1vh]">Hand-picked ingredients, careful
+                                    processing and
                                     untouched packaging ensuring superior quality.</p>
                             </div>
                         </div>
                     </div>
                     <div class="owl-items">
                         <img src="assets/img/banner-slider-1.webp" alt="banner-slider-1">
-                        <div class="owl-items-content w-[35vw] ml-[15vh]">
+                        <div class="owl-items-content w-[50vh] md:w-[35vw] ml-[5vh] lg:ml-[15vh]">
                             <div class="">
                                 <h1
-                                    class="text-white text-[11vh] leading-[12vh] xl:text-[9vh] xl:leading-[11vh] font-bold">
+                                    class="text-white text-[3vh] md:text-[7vh] md:leading-[7vh] lg:text-[11vh] lg:leading-[12vh] xl:text-[9vh] xl:leading-[11vh] font-bold">
                                     The Aaryabhog
                                     Promise</h1>
-                                <p class="text-[2.2vh] text-white mt-3">Hand-picked ingredients, careful processing and
+                                <p class="text-[2.2vh] text-white mt-0 md:mt-[1vh]">Hand-picked ingredients, careful
+                                    processing and
                                     untouched packaging ensuring superior quality.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="owl-items">
-                        <img src="assets/img/banner-slider-1.webp" alt="banner-slider-1">
-                        <div class="owl-items-content w-[35vw] ml-[15vh]">
-                            <div class="">
-                                <h1
-                                    class="text-white text-[11vh] leading-[12vh] xl:text-[9vh] xl:leading-[11vh] font-bold">
-                                    The Aaryabhog
-                                    Promise</h1>
-                                <p class="text-[2.2vh] text-white mt-3">Hand-picked ingredients, careful processing and
-                                    untouched packaging ensuring superior quality.</p>
-                            </div>
-                        </div>
-                    </div>
+
 
                 </div>
             </div>
@@ -173,19 +207,22 @@
         <!-- ========= About =========== -->
         <section class="custom-width min-h-screen pt-[16vh]">
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div class="flex flex-col-reverse md:grid md:grid-cols-2 lg:grid-cols-2 gap-6">
                 <div class="">
-                    <div class="wheat-img-wrapper mr-[13vw] relative">
+                    <div class="wheat-img-wrapper lg:mr-[13vw] relative">
                         <img src="assets/img/wheat.webp" alt="wheat">
-                        <div class="absolute left-[50%] top-[70%] w-[75%]">
+                        <div class="absolute left-[50%] top-[70%] w-[75%] hidden lg:block">
 
                             <img src="assets/img/green-wheat.webp" alt="green-wheat">
                         </div>
                     </div>
                 </div>
-                <div class="mr-[10vh]">
+                <div class="lg:mr-[10vh]">
                     <span class="uppercase text-white text-[2.2vh]">ABOUT AARYABHOG</span>
-                    <h2 class="text-yellow uppercase lg:text-[5.5vh] lg:leading-[7vh] font-bold">WE’RE LEADER IN<br> AGRICULTURE
+                    <h2
+                        class="text-yellow uppercase text-[4vh] leading-[5vh] md:text-[5.5vh] md:leading-[7vh] font-bold">
+                        WE’RE LEADER IN<br>
+                        AGRICULTURE
                         MARKET
                     </h2>
                     <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[4vh]">
@@ -195,7 +232,7 @@
                         believable.
 
                     </p>
-                    <div class="grid lg:grid-cols-2 mt-[4vh]">
+                    <div class="grid grid-cols-2 mt-[4vh]">
                         <div class="flex items-center">
                             <span class="w-[4vw] h-[4vw] bg-yellow block rounded-full mr-[1vh]"></span>
                             <p class="text-white bold text-[2.5vh]">Our Main Unique<br>
@@ -217,44 +254,50 @@
         </section>
         <!-- ========= Proccess =========== -->
         <section class="custom-width process-section pt-[12vh] 2xl:pt-[20vh] pb-[40vh]">
-            <div class="text-center w-full max-w-xl m-auto pin-box1">
+            <div class="text-center w-full max-w-xl m-auto">
                 <span class="uppercase text-white text-[2.2vh]">OUR PROCESS</span>
-                <h2 class="text-yellow uppercase lg:text-[5.5vh] lg:leading-[7vh] font-bold">
+                <h2 class="text-yellow uppercase text-[4vh] leading-[5vh] md:text-[5.5vh] md:leading-[7vh] font-bold">
                     MAKING ATTA<br> FROM FARM TO TABLE
                 </h2>
                 <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] mt-[6vh] mb-[8vh] m-auto">
             </div>
-        
-            <div class="grid grid-cols-3 mt-[4vh] container gap-4">
+
+            <div class="hidden  md:grid grid-cols-3 mt-[4vh] container gap-4">
                 <!-- Left -->
                 <div class="process-content-wrapper process-left-wrapper">
                     <div class="process-items process-items-left" animation-item="10px">
-                        <h2 class="text-yellow lg:text-[5.5vh] lg:leading-[7vh] font-semibold">Wheat <br> Cultivation</h2>
+                        <h2 class="text-yellow lg:text-[5.5vh] lg:leading-[7vh] font-semibold">Wheat <br> Cultivation
+                        </h2>
                         <img src="assets/img/red-village.webp" alt="red-village" class="mt-[10vh]">
                     </div>
                     <div class="process-items process-items-left" animation-item="30px">
-                        <h2 class="text-yellow lg:text-[5.5vh] lg:leading-[7vh] font-semibold">Wheat <br> Cultivation</h2>
+                        <h2 class="text-yellow lg:text-[5.5vh] lg:leading-[7vh] font-semibold">Wheat <br> Cultivation
+                        </h2>
                         <img src="assets/img/red-village.webp" alt="red-village" class="mt-[10vh]">
                     </div>
                     <div class="process-items process-items-left" animation-item="50px">
-                        <h2 class="text-yellow lg:text-[5.5vh] lg:leading-[7vh] font-semibold">Wheat <br> Cultivation</h2>
+                        <h2 class="text-yellow lg:text-[5.5vh] lg:leading-[7vh] font-semibold">Wheat <br> Cultivation
+                        </h2>
                         <img src="assets/img/red-village.webp" alt="red-village" class="mt-[10vh]">
                     </div>
                     <div class="process-items process-items-left" animation-item="50px">
-                        <h2 class="text-yellow lg:text-[5.5vh] lg:leading-[7vh] font-semibold">Wheat <br> Cultivation</h2>
+                        <h2 class="text-yellow lg:text-[5.5vh] lg:leading-[7vh] font-semibold">Wheat <br> Cultivation
+                        </h2>
                         <img src="assets/img/red-village.webp" alt="red-village" class="mt-[10vh]">
                     </div>
                     <div class="process-items process-items-left" animation-item="50px">
-                        <h2 class="text-yellow lg:text-[5.5vh] lg:leading-[7vh] font-semibold">Wheat <br> Cultivation</h2>
+                        <h2 class="text-yellow lg:text-[5.5vh] lg:leading-[7vh] font-semibold">Wheat <br> Cultivation
+                        </h2>
                         <img src="assets/img/red-village.webp" alt="red-village" class="mt-[10vh]">
                     </div>
                 </div>
-        
+
                 <!-- Middle Image -->
                 <div class="flex items-start justify-center">
-                    <img src="assets/img/aaryabhog-pack.webp" alt="aaryabhog-pack" class="w-[80%] max-w-md aaryabhog-pack pin-box2">
+                    <img src="assets/img/aaryabhog-pack.webp" alt="aaryabhog-pack"
+                        class="w-[80%] max-w-md aaryabhog-pack pin-box2">
                 </div>
-        
+
                 <!-- Right -->
                 <div class="process-content-wrapper">
                     <div class="process-items" animation-item="10px">
@@ -355,68 +398,42 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- ========= Product =========== -->
 
-        <section class="custom-width container2 product-section pt-[18vh] pl-[13vh]">
-            <h2 class="text-darkMehroon uppercase lg:text-[5.5vh] lg:leading-[7vh] font-bold">OUR
+        <section
+            class="custom-width container2 product-section pt-[5vh] md:pt-[18vh] px-[2vh] md:px-[6vh] lg:pl-[13vh] pb-[10vh]">
+            <h2 class="text-darkMehroon uppercase  md:text-[5.5vh] md::leading-[7vh] font-bold">OUR
                 PRODUCTS</h2>
             <div>
                 <div class="owl-carousel owl-theme product-slider">
-                   
-                    <div class="owl-items grid grid-cols-2">
-                        <div class="">
+
+                    <div class="owl-items grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-2">
+                        <div class="col-span-7 xl:col-span-1">
                             <span class=" text-darkMehroon text-[2.2vh] mt-[6vh] block">Premium Sortex Wheat</span>
-                            <h2 class="text-darkMehroon uppercase lg:text-[5.5vh] lg:leading-[7vh] font-bold">MP
+                            <h2 class="text-darkMehroon uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">MP
                                 SHARBATI<br> SEHORI</h2>
                             <span class=" text-darkMehroon text-[2.2vh] block mt-[2vh] font-semibold">
                                 Quality grains for delicious &<br> healthy food
                             </span>
-                            <p class="text-[2.2vh] text-darkMehroon mt-[5vh] font-medium leading-[5vh] max-w-[60%]">There are many
+                            <p class="text-[2.2vh] text-darkMehroon mt-[5vh] font-medium leading-[5vh]  md:max-w-[60%]">
+                                There are many
                                 variations of passages of Lorem Ipsum
                                 available, but the majority have suffered alteration in some form, by injected humour,
                                 or randomised words which don’t look even slightly believable.</p>
                         </div>
-                        <div>
+                        <div class="col-span-5 xl:col-span-1 pt-[4vh] md:pt-[0vh]">
                             <img src="assets/img/aaryabhog-pack.webp" alt="aaryabhog-pack">
                         </div>
                     </div>
-                    <div class="owl-items grid grid-cols-2">
-                        <div class="">
-                            <span class=" text-darkMehroon text-[2.2vh] mt-[6vh] block">Premium Sortex Wheat</span>
-                            <h2 class="text-darkMehroon uppercase lg:text-[5.5vh] lg:leading-[7vh] font-bold">MP
-                                SHARBATI<br> SEHORI</h2>
-                            <span class=" text-darkMehroon text-[2.2vh] block mt-[2vh] font-semibold">
-                                Quality grains for delicious &<br> healthy food
-                            </span>
-                            <p class="text-[2.2vh] text-darkMehroon mt-[5vh] font-medium leading-[5vh] max-w-[60%]">There are many
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolore debitis iusto eveniet eum quas labore error ea quis. Dolore!</p>
-                        </div>
-                        <div>
-                            <img src="assets/img/aaryabhog-pack.webp" alt="aaryabhog-pack">
-                        </div>
-                    </div>
-                    <div class="owl-items grid grid-cols-2">
-                        <div class="">
-                            <span class=" text-darkMehroon text-[2.2vh] mt-[6vh] block">Premium Sortex Wheat</span>
-                            <h2 class="text-darkMehroon uppercase lg:text-[5.5vh] lg:leading-[7vh] font-bold">MP
-                                SHARBATI<br> SEHORI</h2>
-                            <span class=" text-darkMehroon text-[2.2vh] block mt-[2vh] font-semibold">
-                                Quality grains for delicious &<br> healthy food
-                            </span>
-                            <p class="text-[2.2vh] text-darkMehroon mt-[5vh] font-medium leading-[5vh] max-w-[60%]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore nemo aspernatur ea laboriosam eius voluptas perferendis obcaecati hic optio quis consequuntur voluptatem, excepturi temporibus itaque.</p>
-                        </div>
-                        <div>
-                            <img src="assets/img/aaryabhog-pack.webp" alt="aaryabhog-pack">
-                        </div>
-                    </div>
-                    
-                   
+
+
+
 
 
                 </div>
                 <!-- Product Custom dots -->
-                <div class="custom-dots absolute bottom-0 flex z-[999] gap-[10vh] pb-[6vh]">
+                <div class="custom-dots absolute bottom-0 flex z-[999] gap-[10vh] pb-[6vh] hidden lg:block">
                 </div>
             </div>
         </section>
@@ -424,9 +441,12 @@
         <!-- ========= Recipe =========== -->
         <section class="recipe-section pt-[12vh]">
             <div class="custom-width">
-                <div class="text-center w-[40%] m-auto pin-box1">
+                <div class="text-center md:w-[40%] m-auto pin-box1">
                     <span class="uppercase text-white text-[2.2vh]">CHECK OUT</span>
-                    <h2 class="text-yellow uppercase lg:text-[5.5vh] lg:leading-[7vh] font-bold">OUR FAVOURITE<br>
+
+                    <h2
+                        class=" text-yellow uppercase text-[4vh] leading-[5vh] md:text-[5.5vh] md:leading-[7vh] font-bold">
+                        OUR FAVOURITE<br>
                         RECIPES</h2>
                     <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] mt-[6vh] mb-[8vh] m-auto">
                 </div>
@@ -440,7 +460,7 @@
                         <img src="assets/img/recipe-slider-1.webp" alt="recipe-slider-1"
                             class="w-full card-image rounded-tr-[14vh]">
                         <div class="bg-orange_ py-[3vh] pl-[3vh]">
-                            <h3 class="text-[4vh] text-white">Aloo Paratha</h3>
+                            <h3 class="text-[3vh]  md:text-[4vh] text-white">Aloo Paratha</h3>
                         </div>
                     </div>
                     <!-- Slide 2 -->
@@ -448,7 +468,7 @@
                         <img src="assets/img/recipe-slider-1.webp" alt="recipe-slider-1"
                             class="w-full card-image rounded-tr-[14vh]">
                         <div class="bg-orange_ py-[3vh] pl-[3vh]">
-                            <h3 class="text-[4vh] text-white">Aloo Paratha</h3>
+                            <h3 class="text-[3vh]  md:text-[4vh] text-white">Aloo Paratha</h3>
                         </div>
                     </div>
                     <!-- Slide 3 -->
@@ -456,7 +476,7 @@
                         <img src="assets/img/recipe-slider-1.webp" alt="recipe-slider-1"
                             class="w-full card-image rounded-tr-[14vh]">
                         <div class="bg-orange_ py-[3vh] pl-[3vh]">
-                            <h3 class="text-[4vh] text-white">Aloo Paratha</h3>
+                            <h3 class="text-[3vh]  md:text-[4vh] text-white">Aloo Paratha</h3>
                         </div>
                     </div>
 
@@ -470,13 +490,13 @@
                     <!-- Tab Content -->
                     <!-- 1st -->
                     <span class="text-white text-[2.2vh]">Reciepe</span>
-                    <div class="tab-content grid grid-cols-2 active" id="tab1">
+                    <div class="tab-content grid grid-cols-12 active" id="tab1">
                         <div class="col-span-4">
-                            <h2 class="text-yellow uppercase lg:text-[5.5vh] lg:leading-[7vh] font-bold">Aloo<br>
+                            <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">Aloo<br>
                                 Paratha</h2>
                             <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[3vh]">
                         </div>
-                        <div class="col-end-8">
+                        <div class="col-span-8">
                             <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
                                 <li>Divide the dough into small lemon-sized balls and do the same with the potato
                                     stuffing.</li>
@@ -491,13 +511,13 @@
                         </div>
                     </div>
                     <!-- 2nd -->
-                    <div class="tab-content grid grid-cols-2 hidden" id="tab2">
+                    <div class="tab-content grid grid-cols-12 hidden" id="tab2">
                         <div class="col-span-4">
-                            <h2 class="text-yellow uppercase lg:text-[5.5vh] lg:leading-[7vh] font-bold">Aloo<br>
+                            <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">Aloo<br>
                                 Paratha</h2>
                             <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[3vh]">
                         </div>
-                        <div class="col-end-8">
+                        <div class="col-span-8">
                             <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
                                 <li>Divide the dough into small lemon-sized balls and do the same with the potato
                                     stuffing.</li>
@@ -512,13 +532,13 @@
                         </div>
                     </div>
                     <!-- 3th -->
-                    <div class="tab-content grid grid-cols-2 hidden" id="tab3">
+                    <div class="tab-content grid grid-cols-12 hidden" id="tab3">
                         <div class="col-span-4">
-                            <h2 class="text-yellow uppercase lg:text-[5.5vh] lg:leading-[7vh] font-bold">Aloo<br>
+                            <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">Aloo<br>
                                 Paratha</h2>
                             <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[3vh]">
                         </div>
-                        <div class="col-end-8">
+                        <div class="col-span-8">
                             <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
                                 <li>Divide the dough into small lemon-sized balls and do the same with the potato
                                     stuffing.</li>
@@ -533,13 +553,13 @@
                         </div>
                     </div>
                     <!-- 4th -->
-                    <div class="tab-content grid grid-cols-2 hidden" id="tab4">
+                    <div class="tab-content grid grid-cols-12 hidden" id="tab4">
                         <div class="col-span-4">
-                            <h2 class="text-yellow uppercase lg:text-[5.5vh] lg:leading-[7vh] font-bold">Aloo<br>
+                            <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">Aloo<br>
                                 Paratha</h2>
                             <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[3vh]">
                         </div>
-                        <div class="col-end-8">
+                        <div class="col-span-8">
                             <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
                                 <li>Divide the dough into small lemon-sized balls and do the same with the potato
                                     stuffing.</li>
@@ -554,13 +574,13 @@
                         </div>
                     </div>
                     <!-- 5th -->
-                    <div class="tab-content grid grid-cols-2 hidden" id="tab5">
+                    <div class="tab-content grid grid-cols-12 hidden" id="tab5">
                         <div class="col-span-4">
-                            <h2 class="text-yellow uppercase lg:text-[5.5vh] lg:leading-[7vh] font-bold">Aloo<br>
+                            <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">Aloo<br>
                                 Paratha</h2>
                             <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[3vh]">
                         </div>
-                        <div class="col-end-8">
+                        <div class="col-span-8">
                             <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
                                 <li>Divide the dough into small lemon-sized balls and do the same with the potato
                                     stuffing.</li>
@@ -578,51 +598,52 @@
                     <!-- Tabs Button-->
                     <div class="tabs grid grid-cols-5 gap-x-[2vh] mt-[20vh]">
                         <!-- 1st -->
-                        <button class="tab-link active bg-yellow pt-[5vh] px-[2vh] pb-[2vh]" data-tab="tab1">
+                        <button class="tab-link active bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                            data-tab="tab1">
                             <div
                                 class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
                                 1</div>
                             <p
-                                class="uppercase text-mehroon text-[2.2vh] text-left font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
                                 Prepare<br> the Dough</p>
                         </button>
                         <!-- 2ndt -->
-                        <button class="tab-link bg-yellow pt-[5vh] px-[2vh] pb-[2vh]" data-tab="tab2">
+                        <button class="tab-link bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]" data-tab="tab2">
                             <div
                                 class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
                                 2</div>
                             <p
-                                class="uppercase text-mehroon text-[2.2vh] text-left font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
                                 Prepare the Aloo<br>
                                 (Potato) Stuffing</p>
                         </button>
                         <!-- 3rd -->
-                        <button class="tab-link bg-yellow pt-[5vh] px-[2vh] pb-[2vh]" data-tab="tab3">
+                        <button class="tab-link bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]" data-tab="tab3">
                             <div
                                 class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
                                 3</div>
                             <p
-                                class="uppercase text-mehroon text-[2.2vh] text-left font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
                                 Stuff the<br>
                                 Parathas</p>
                         </button>
                         <!-- 4th -->
-                        <button class="tab-link bg-yellow pt-[5vh] px-[2vh] pb-[2vh]" data-tab="tab4">
+                        <button class="tab-link bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]" data-tab="tab4">
                             <div
                                 class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
                                 4</div>
                             <p
-                                class="uppercase text-mehroon text-[2.2vh] text-left font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
                                 Cook<br>
                                 the Parathas</p>
                         </button>
                         <!-- 5th -->
-                        <button class="tab-link bg-yellow pt-[5vh] px-[2vh] pb-[2vh]" data-tab="tab5">
+                        <button class="tab-link bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]" data-tab="tab5">
                             <div
                                 class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
                                 5</div>
                             <p
-                                class="uppercase text-mehroon text-[2.2vh] text-left font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
                                 Serve</p>
                         </button>
 
@@ -636,37 +657,42 @@
 
         <!-- ========= Testimonial =========== -->
         <section class="testimonial-section relative min-h-screen:  z-30 bg-yellow">
-           
+
             <!-- bottom-[-15vh] mt-[-15vh] -->
-             <div class="custom-width">
-                
+            <div class="custom-width">
+
                 <div class="relative bottom-[-15vh]">
-                    <div class="grid grid-cols-2">
+                    <div class="grid grid-cols-1 lg:grid-cols-2">
                         <div class="grid-span-4 overflow-hidden">
                             <div class="textimonial-bg"></div>
                             <div class="">
                                 <span class="uppercase text-darkMehroon text-[2.2vh] ">Testimonials</span>
-                                <h2 class="text-darkMehroon uppercase lg:text-[5.5vh] lg:leading-[7vh] font-bold w">What our
+                                <h2 class="text-darkMehroon uppercase lg:text-[5.5vh] lg:leading-[7vh] font-bold w">What
+                                    our
                                     Customers<br>
                                     are Talking About</h2>
                                 <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[6vh]">
                                 <p class="text-darkMehroon text-[2.2vh] col-span-full mt-[4vh]">
-                                    There are many variations of passages of Lorem Ipsum available, but the majority have
+                                    There are many variations of passages of Lorem Ipsum available, but the majority
+                                    have
                                     suffered
-                                    alteration in some form, by injected humour, or randomised words which don’t look even
+                                    alteration in some form, by injected humour, or randomised words which don’t look
+                                    even
                                     slightly
                                     believable.
-        
-        
+
+
                                 </p>
                             </div>
                         </div>
                         <div class="grid-span-8">
                             <div class="owl-carousel owl-theme testimonial-slider">
-                                <div class="item bg-orange_ p-[10vh] pl-[15vh] pr-[15vh]  rounded-tr-[50vh]">
+                                <div class="item bg-orange_ p-[10vh] pl-[3vh] md:pl-[15vh] pr-[15vh]  rounded-tr-[50vh] mt-[10vh] lg:mt-[0vh]">
                                     <div class="text-white">
-                                        <p class="text-[4.5vh] font-normal">This is due to their excellent service, competitive
-                                            pricing and customer support. It's thoroughly refreshing to get such a personal
+                                        <p class="text-[3.5vh] md:text-[4.5vh] font-normal">This is due to their excellent service,
+                                            competitive
+                                            pricing and customer support. It's thoroughly refreshing to get such a
+                                            personal
                                             touch.</p>
                                         <hr class="w-full bg-white h-[0.3vh] my-[7vh]">
                                         <div class="flex gap-x-[2vh] items-center">
@@ -680,10 +706,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item bg-orange_ p-[10vh] pl-[15vh] pr-[15vh]  rounded-tr-[50vh]">
+                                <div class="item bg-orange_ p-[10vh] pl-[3vh] md:pl-[15vh] pr-[15vh]  rounded-tr-[50vh] mt-[10vh] lg:mt-[0vh]">
                                     <div class="text-white">
-                                        <p class="text-[4.5vh] font-normal">This is due to their excellent service, competitive
-                                            pricing and customer support. It's thoroughly refreshing to get such a personal
+                                        <p class="text-[3.5vh] md:text-[4.5vh] font-normal">This is due to their excellent service,
+                                            competitive
+                                            pricing and customer support. It's thoroughly refreshing to get such a
+                                            personal
                                             touch.</p>
                                         <hr class="w-full bg-white h-[0.3vh] my-[7vh]">
                                         <div class="flex gap-x-[2vh] items-center">
@@ -697,10 +725,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item bg-orange_ p-[10vh] pl-[15vh] pr-[15vh]  rounded-tr-[50vh]">
+                                <div class="item bg-orange_ p-[10vh] pl-[3vh] md:pl-[15vh] pr-[15vh]  rounded-tr-[50vh] mt-[10vh] lg:mt-[0vh]">
                                     <div class="text-white">
-                                        <p class="text-[4.5vh] font-normal">This is due to their excellent service, competitive
-                                            pricing and customer support. It's thoroughly refreshing to get such a personal
+                                        <p class="text-[3.5vh] md:text-[4.5vh] font-normal">This is due to their excellent service,
+                                            competitive
+                                            pricing and customer support. It's thoroughly refreshing to get such a
+                                            personal
                                             touch.</p>
                                         <hr class="w-full bg-white h-[0.3vh] my-[7vh]">
                                         <div class="flex gap-x-[2vh] items-center">
@@ -718,8 +748,8 @@
                         </div>
                     </div>
                 </div>
-             </div>
-          
+            </div>
+
         </section>
     </main>
     <footer class="min-h-screen bg-darkMehroon relative overflow-hidden z-20">
@@ -727,12 +757,14 @@
 
         <div class="custom-width">
             <div class="footer-bg"></div>
-            <div class="grid grid-cols-4 mt-[30vh]">
-                <div class="col-span-1">
+            <div class="grid grid-cols-1 md:grid-cols-12 mt-[30vh]">
+                <div class="col-span-1 md:col-span-12 lg:col-span-3 ">
                     <a href="index.html">
-                        <img src="assets/img/footer-logo.webp" alt="footer-logo" class="w-[60%]">
+                        <img src="assets/img/footer-logo.webp" alt="footer-logo"
+                            class="w-[40%] md:w-[20%] lg:w-[50%] m-auto lg:m-0 lg:mr-auto">
                     </a>
-                    <p class="text-white text-[2.2vh] mt-[4vh] leading-[2]">
+                    <p
+                        class="text-white text-center lg:text-start text-[2.2vh] mt-[4vh] leading-[2] md:w-[75%] lg:w-full m-auto lg:mr-auto">
                         There are many variations of passages of Lorem Ipsum available, but the majority have suffered
                         alteration in some form, by injected humour, or randomised words which don’t look even slightly
                         believable.
@@ -740,7 +772,7 @@
 
                     </p>
                 </div>
-                <div class="col-span-1 pl-[5vh]">
+                <div class="col-span-1 md:col-span-4 lg:col-span-3 pt-[5vh] lg:pl-[5vh] ">
                     <h3 class="uppercase text-yellow  line font-semibold text-[3vh]">Contact Us</h3>
                     <div class="mt-[4vh]">
                         <p class="text-white text-[2.2vh]">Plot No. G-1, 158, lid Centre,</p>
@@ -752,7 +784,7 @@
                                 target="_blank">+91-8824892796</a></p>
                     </div>
                 </div>
-                <div class="col-span-1 pl-[2vh]">
+                <div class="col-span-1 md:col-span-4 lg:col-span-3 pt-[5vh] pl-[0vh]">
                     <h3 class="uppercase text-yellow  line font-semibold text-[3vh]">Useful Links</h3>
                     <div class="mt-[4vh]">
                         <a href="#" class="text-white block mt-[2.2vh] text-[2.2vh]">Home</a>
@@ -764,7 +796,7 @@
 
                     </div>
                 </div>
-                <div class="col-span-1">
+                <div class="col-span-1 md:col-span-4 lg:col-span-3 pt-[5vh] pl-[0vh]">
                     <h3 class="uppercase text-yellow  line font-semibold text-[3vh]">Follow us Now</h3>
                     <div class="mt-[4vh]">
                         <a href="#" class="text-white  mt-[2.2vh] text-[2.2vh] flex items-center gap-x-[1.5vh]">
@@ -783,7 +815,9 @@
                     </div>
                 </div>
             </div>
-            <p class="text-[2.2vh] text-white text-center absolute bottom-[6vh] left-1/2 transform -translate-x-1/2">© Copyright 2018. "Aaryabhog" by <a href="https://www.expandbuzz.com/" class="text-[2.2vh] text-white">expandbuzz</a>. All rights reserved.</p>
+            <p class="text-[2.2vh] text-white text-center lg:absolute bottom-[6vh] lg:left-1/2 lg:transform lg:-translate-x-1/2 pt-[5vh] pb-[3vh]  lg:pb-[0vh]">©
+                Copyright 2018. "Aaryabhog" by <a href="https://www.expandbuzz.com/"
+                    class="text-[2.2vh] text-white">expandbuzz</a>. All rights reserved.</p>
         </div>
     </footer>
     <!-- Jquery.js -->

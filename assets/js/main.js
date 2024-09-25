@@ -32,7 +32,7 @@ $(document).ready(function () {
 
     requestAnimationFrame(raf);
   }
-  lenis();
+  // lenis();
 
   function sliders() {
     $("#banner-slider").owlCarousel({
@@ -85,6 +85,7 @@ $(document).ready(function () {
         },
         768: {
           items: 1,
+          nav: true,
         },
         1000: {
           items: 1,
@@ -111,10 +112,10 @@ $(document).ready(function () {
 
         responsive: {
           0: {
-            items: 1,
+            items: 2,
           },
           768: {
-            items: 1,
+            items: 3,
           },
           1000: {
             items: 3,
@@ -226,7 +227,7 @@ $(document).ready(function () {
       trigger: ".pin-box2",
       pin: true,
       start: "center center",
-      markers: true,
+      // markers: true,
       end: `+=${totalHeight}`, // Pin until the total height of all process items
       scrub: true,
     });
@@ -267,7 +268,27 @@ $(document).ready(function () {
       $(this).addClass("active");
     });
   }
-
   // Initialize the tabs function
   tabs();
+  function mobileMenu() {
+    const menuTimeline = gsap.timeline({});
+
+    // GSAP toggle menu animation
+    const toggleBtn = document.querySelector(".toggle-btn");
+    const mobileMenu = document.querySelector(".mobile-menu");
+    let isMobileMenu = false;
+
+    toggleBtn.addEventListener("click", () => {
+      if (!isMobileMenu) {
+        gsap.to(mobileMenu, { x: "100%", duration: 0.5, ease: "power2.out" });
+      } 
+      else {
+ 
+        gsap.to(mobileMenu, { x: "0%", duration: 0.5, ease: "power2.in" });
+        menuTimeline.reverse();
+      }
+      isMenuOpen = !isMenuOpen;
+    });
+  }
+  // mobileMenu();
 });
