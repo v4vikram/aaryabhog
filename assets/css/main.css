@@ -414,6 +414,9 @@ img {
     .footer-bg {
         height: 125vh;
     }
+    .testimonial-section::before {
+display: none;
+    }
     .testimonial-slider .owl-dots {
         right: 5vh;
         bottom: 3vh;
