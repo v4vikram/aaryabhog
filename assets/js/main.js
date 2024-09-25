@@ -236,20 +236,24 @@ $(document).ready(function () {
   // Initial call to process
   process();
 
-  function tabs() {
+  function innerTabs($parentClass2) {
+    console.log($parentClass2)
+    // console.log($parentClass2)
     let isAnimating = false; // Animation lock
 
-    $(".recipe-section .tab-link").on("click", function () {
+    $(`${$parentClass2} .tab-link`).on("click", function () {
       if (isAnimating) return; // Prevent click if animation is running
 
+      // console.log(this)
       var tabId = $(this).data("tab");
 
       // Remove active class from all buttons
-      $(".recipe-section .tab-link").removeClass("active");
+      $(`${$parentClass2} button`).removeClass("active");
 
       // Fade out the current active tab content
       isAnimating = true; // Lock animations
-      $(".recipe-section .tab-content.active")
+      // console.log($(`${$parentClass2} .tab-content.active `))
+      $(`${$parentClass2} .tab-content.active `)
         .css("opacity", 1)
         .animate({ opacity: 0 }, 100, function () {
           $(this).removeClass("active").css("visibility", "hidden");
@@ -268,8 +272,52 @@ $(document).ready(function () {
       $(this).addClass("active");
     });
   }
+  $parentClass2 =1;
+  innerTabs(".innerTabContent");
+  innerTabs(".innerTabContent2");
+  innerTabs(".innerTabContent3");
+  innerTabs(".innerTabContent4");
+  innerTabs(".innerTabContent5");
+ 
+
+
+  function owlTabs($parentClass){
+    let isAnimating = false; // Animation lock
+
+    $(`${$parentClass} .tab-link`).on("click", function () {
+      if (isAnimating) return; // Prevent click if animation is running
+
+      console.log(this)
+      var tabId = $(this).data("tab");
+
+      // Remove active class from all buttons
+      $(`${$parentClass} .tab-link`).removeClass("active");
+
+      // Fade out the current active tab content
+      isAnimating = true; // Lock animations
+      $(`.recipe-section .tab-content.active `)
+        .css("opacity", 1)
+        .animate({ opacity: 0 }, 100, function () {
+          $(this).removeClass("active").css("visibility", "hidden");
+
+          // Fade in the new tab content
+          $("#" + tabId)
+            .css("visibility", "visible")
+            .css("opacity", 0)
+            .animate({ opacity: 1 }, 100, function () {
+              isAnimating = false; // Unlock animations
+            })
+            .addClass("active");
+        });
+
+      // Add active class to the clicked button
+      $(this).addClass("active");
+    });
+  }
+  owlTabs('.recipe-slider')
+  // owlTabs('.recipe-container')
   // Initialize the tabs function
-  tabs();
+ 
   function mobileMenu() {
     const menuTimeline = gsap.timeline({});
 
@@ -291,4 +339,27 @@ $(document).ready(function () {
     });
   }
   // mobileMenu();
+
+  function accordian($parentClass) {
+    // Show the first content by default
+    $(`${$parentClass} .accordion-content`).first().slideDown();
+    $(`${$parentClass} .accordion-header i`).first().addClass('rotate'); // Rotate the first icon by default
+  
+    $(`${$parentClass} .accordion-header`).click(function() {
+      // Slide up all content and remove rotation from all icons
+      $(`${$parentClass} .accordion-content`).slideUp();
+      $(`${$parentClass} .accordion-header i`).removeClass('rotate');
+  
+      // If the clicked header's content is not visible, show it
+      if (!$(this).next(`${$parentClass} .accordion-content`).is(':visible')) {
+        $(this).next(`${$parentClass} .accordion-content`).slideDown();
+        $(this).find('i').addClass('rotate'); // Rotate the icon of the clicked header
+      }
+    });
+  }
+  
+  // Apply the accordion to a specific section
+  // accordian(".process-section");
+  
+
 });

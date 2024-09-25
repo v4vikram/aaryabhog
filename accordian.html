@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Owl Carousel with TailwindCSS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <style>
+    .content-item { display: none; }
+    .active-item { display: block; }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+<div class="container mx-auto my-10">
+  <!-- Owl Carousel -->
+  <div class="owl-carousel owl-theme">
+    <div class="item bg-blue-500 p-5 text-center text-white cursor-pointer" data-item="1">
+      Item 1
+    </div>
+    <div class="item bg-red-500 p-5 text-center text-white cursor-pointer" data-item="2">
+      Item 2
+    </div>
+    <div class="item bg-green-500 p-5 text-center text-white cursor-pointer" data-item="3">
+      Item 3
+    </div>
+  </div>
+
+  <!-- Content Section -->
+  <div id="content-container" class="mt-8">
+    <div id="content-1" class="content-item active-item">
+      <h2 class="text-xl font-bold">Content for Item 1</h2>
+      <button class="btn-content bg-blue-500 text-white px-4 py-2 mt-4" data-btn="1-1">Button 1</button>
+      <button class="btn-content bg-blue-500 text-white px-4 py-2 mt-4" data-btn="1-2">Button 2</button>
+      <!-- First button's content displayed by default -->
+      <div id="btn-content-1-1" class="mt-4">Content for Button 1 in Item </div>
+      <div id="btn-content-1-2" class="mt-4 hidden">Content for Button 2</div>
+    </div>
+
+    <div id="content-2" class="content-item">
+      <h2 class="text-xl font-bold">Content for Item 2</h2>
+      <button class="btn-content bg-red-500 text-white px-4 py-2 mt-4" data-btn="2-1">Button 1</button>
+      <button class="btn-content bg-red-500 text-white px-4 py-2 mt-4" data-btn="2-2">Button 2</button>
+      <div id="btn-content-2-1" class="mt-4 hidden">Content for Button 1 </div>
+      <div id="btn-content-2-2" class="mt-4 hidden">Content for Button 2 </div>
+    </div>
+
+    <div id="content-3" class="content-item">
+      <h2 class="text-xl font-bold">Content for Item 3</h2>
+      <button class="btn-content bg-green-500 text-white px-4 py-2 mt-4" data-btn="3-1">Button 1</button>
+      <button class="btn-content bg-green-500 text-white px-4 py-2 mt-4" data-btn="3-2">Button 2</button>
+      <div id="btn-content-3-1" class="mt-4 hidden">Content for Button 1 </div>
+      <div id="btn-content-3-2" class="mt-4 hidden">Content for Button 2 </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      items: 1
+    });
+
+    // Show corresponding content when clicking carousel item
+    $('.item').on('click', function() {
+      var itemId = $(this).data('item');
+     
+      $('.content-item').removeClass('active-item');
+      $('#content-' + itemId).addClass('active-item');
+      // Reset and show the first button's content by default
+      $('[id^="btn-content"]').hide(); // Hide all button content
+      $('#btn-content-' + itemId + '-1').show(); // Show the first button's content by default
+    });
+
+    // Show content based on button click
+    $('.btn-content').on('click', function() {
+      var btnId = $(this).data('btn');
+      console.log(btnId)
+      $('[id^="btn-content"]').hide(); // Hide all button content
+      $('#btn-content-' + btnId).show(); // Show the corresponding content
+    });
+
+    // Ensure the first button's content is shown by default
+    $('#btn-content-1-1').show(); // Show the first content when the page loads
+  });
+</script>
+
+</body>
+</html>
