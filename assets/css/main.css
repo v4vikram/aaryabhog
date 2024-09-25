@@ -406,6 +406,7 @@ img {
         top: -2px;
         background-repeat: no-repeat;
     }
+    
     .product-section::after {
         top: -102px;
         background-size: contain;
@@ -431,12 +432,25 @@ display: none;
         width: 60% !important;
         margin: auto;
     }
+    .banner-owl-wrapper::before {
+        background: url(../img/red-shape-4.webp);
+        top: 16px;
+        z-index: 9;
+        background-size: contain;
+    }
+
 }
 @media(max-width: 576px) {
 
     .product-section::after {
         top: -55px;
        
+    }
+    .banner-owl-wrapper::before {
+        background: url(../img/red-shape-4.webp);
+        top: 2px;
+        z-index: 9;
+        background-size: contain;
     }
 }
 @media(max-width: 375px) {
@@ -445,11 +459,23 @@ display: none;
         top: -48px;
        
     }
+    .banner-owl-wrapper::before {
+        background: url(../img/red-shape-4.webp);
+        top: 9px;
+        z-index: 9;
+        background-size: contain;
+    }
 }
 @media(max-width: 320px) {
 
     .product-section::after {
         top: -41px;
        
+    }
+    .banner-owl-wrapper::before {
+        background: url(../img/red-shape-4.webp);
+        top: 17px;
+        z-index: 9;
+        background-size: contain;
     }
 }
