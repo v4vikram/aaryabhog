@@ -319,26 +319,22 @@ $(document).ready(function () {
   // Initialize the tabs function
  
   function mobileMenu() {
-    const menuTimeline = gsap.timeline({});
+    const menu = document.getElementById('mobile-menu');
+    const menuToggle = document.getElementById('menuToggle');
+    let menuOpen = false;
 
-    // GSAP toggle menu animation
-    const toggleBtn = document.querySelector(".toggle-btn");
-    const mobileMenu = document.querySelector(".mobile-menu");
-    let isMobileMenu = false;
-
-    toggleBtn.addEventListener("click", () => {
-      if (!isMobileMenu) {
-        gsap.to(mobileMenu, { x: "100%", duration: 0.5, ease: "power2.out" });
-      } 
-      else {
- 
-        gsap.to(mobileMenu, { x: "0%", duration: 0.5, ease: "power2.in" });
-        menuTimeline.reverse();
-      }
-      isMenuOpen = !isMenuOpen;
+    menuToggle.addEventListener('click', () => {
+        if (!menuOpen) {
+            gsap.to(menu, { x: '0%', duration: 0.7 },);
+            // gsap.to("body", { overflowY: 'hidden', duration: 0.7 },);
+        } else {
+            gsap.to(menu,{ x: '-100%', duration: 0.5 });
+            // gsap.to("body", { overflowY: 'scroll', duration: 0.7 },);
+        }
+        menuOpen = !menuOpen;
     });
   }
-  // mobileMenu();
+  mobileMenu();
 
   function accordian($parentClass) {
     // Show the first content by default
