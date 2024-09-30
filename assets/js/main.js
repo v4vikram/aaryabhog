@@ -85,38 +85,38 @@ $(document).ready(function () {
           animateOut: animateOut, // Fade animation on large screens
           dotsContainer: ".custom-dots",
   
-          // responsive: {
-          //     375: {
-          //         items: 1,
+          responsive: {
+              375: {
+                  items: 1,
                    
-          //     },
-          //     425: {
-          //         items: 1,
+              },
+              425: {
+                  items: 1,
                    
-          //     },
-          //     576: {
-          //         items: 1,
-          //     },
+              },
+              576: {
+                  items: 1,
+              },
                
-          //     768: {
-          //         items: 1,
+              768: {
+                  items: 1,
                    
-          //     },
-          //     1024: {
-          //         items: 1,
-          //         nav: false,
-          //     },
-          //     1366: {
-          //         items: 1,
-          //         nav: false,
-          //     },
-          //     1600: {
-          //         items: 1,
-          //         nav: false,
-          //     },
+              },
+              1024: {
+                  items: 1,
+                  nav: false,
+              },
+              1366: {
+                  items: 1,
+                  nav: false,
+              },
+              1600: {
+                  items: 1,
+                  nav: false,
+              },
               
 
-          // }
+          }
       });
   }
   
