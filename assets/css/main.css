@@ -323,6 +323,18 @@ img {
 #mobile-section .tabs button.active .recipe-number{
     background-color: var(--yellow);
 }
+#mobile-section .owl-nav {
+    position: absolute;
+    top: 0%;
+    right: 0;
+}
+#mobile-section .owl-nav button {
+    background-color: transparent;
+}
+#mobile-section .owl-nav span {
+    font-size: 8vh;
+    color: var(--yellow);
+}
 
 /* ========== Recipe Slider =============== */
 

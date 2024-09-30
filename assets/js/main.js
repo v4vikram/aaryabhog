@@ -144,7 +144,7 @@ $(document).ready(function () {
       center: false,
       nav: true,
       margin: vhMargin, // Set margin dynamically
-      dots: true,
+      dots: false,
       loop: true, // Disable touch dragging
       mouseDrag: false,
     });
