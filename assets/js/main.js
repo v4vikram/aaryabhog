@@ -60,38 +60,63 @@ $(document).ready(function () {
         },
       },
     });
-    $(".product-slider").owlCarousel({
-      autoplay: false,
-      // autoplaySpeed: 2000,
-      // autoplayTimeout: 2000,
-      smartSpeed: 5000,
-      items: 1,
-      stagePadding: 0,
-      center: true,
-      nav: false,
-      margin: 10,
-      dots: true,
-      loop: true,
-      touchDrag: false,
-      pullDrag: false,
-      mouseDrag: false,
-      animateOut: "fadeOut",
-      animateIn: "fadeIn",
-      dotsContainer: ".custom-dots",
-
-      responsive: {
-        0: {
+    function productInitializeCarousel() {
+      var windowWidth = $(window).width(); // Get the current window width
+  
+      // Set fade animation for large screens, slide animation for small screens
+      var animateIn = (windowWidth >= 769) ? "fadeIn" : false;
+      var animateOut = (windowWidth >= 769) ? "fadeOut" : false;
+  
+      $(".product-slider").owlCarousel({
+          autoplay: false,
+          smartSpeed: 1000,
           items: 1,
-        },
-        768: {
-          items: 1,
-          nav: true,
-        },
-        1000: {
-          items: 1,
-        },
-      },
-    });
+          stagePadding: 0,
+          center: true,
+          nav: false,
+          margin: 10,
+          dots: true,
+          loop: true,
+          touchDrag: true,
+          pullDrag: true,
+          mouseDrag: (windowWidth >= 768) ? false : true,  // Disable mouse drag on large screens
+          animateIn: animateIn,   // Fade animation on large screens
+          animateOut: animateOut, // Fade animation on large screens
+          dotsContainer: ".custom-dots",
+  
+          responsive: {
+              375: {
+                  items: 1,
+                   nav: true,
+              },
+              425: {
+                  items: 1,
+                   nav: true,
+              },
+              576: {
+                  items: 1,
+              },
+               nav: true,
+              768: {
+                  items: 1,
+                   nav: true,
+              },
+              1000: {
+                  items: 1,
+              },
+          }
+      });
+  }
+  
+  // Initialize the carousel on page load
+  productInitializeCarousel();
+  
+  // Reinitialize carousel when window is resized
+  $(window).resize(function() {
+      $('.product-slider').trigger('destroy.owl.carousel'); // Destroy current instance
+      productInitializeCarousel(); // Reinitialize with new settings
+  });
+  
 
     const vhMargin = window.innerHeight * 0.02; // Calculate margin based on viewport height
     // recipe slider
@@ -147,7 +172,7 @@ $(document).ready(function () {
       dots: false,
       loop: true, // Disable touch dragging
       mouseDrag: false,
-      touchDrag: false
+      touchDrag: false,
     });
 
     $(".testimonial-slider").owlCarousel({
@@ -254,57 +279,58 @@ $(document).ready(function () {
     // Target only the specific container (like for desktop or mobile)
     var $container = $(containerSelector);
 
-
-    
     // Show corresponding content when clicking carousel item
-    if ($container.attr('id') == 'desktop-section') {
+    if ($container.attr("id") == "desktop-section") {
       $container.find(".item").on("click", function () {
         var itemId = $(this).data("item");
-        
+
         // Deactivate all items in this container and activate the clicked item
         $container.find(".content-item").removeClass("active-item");
         $container.find("#content-" + itemId).addClass("active-item");
-        
+
         // Hide all button contents in this container and reset active states
         $container.find(".content-item .btn-content").removeClass("active"); // Reset all button states
         $container.find(".content-item [id^='btn-content']").hide(); // Hide all contents
-    
+
         // Show the first button's content by default for the activated item
         $container.find("#btn-content-" + itemId + "-1").show(); // Show the first button content for the active item
         $container.find(".active-item .btn-content").first().addClass("active"); // Make the first button active
       });
     }
- 
-    
-  
-  
+
     // Show content based on button click within the selected item
     $container.on("click", ".active-item .btn-content", function () {
       var btnId = $(this).data("btn");
-  
+
       // Remove active class from buttons within the active content item
-      $(this).closest('.content-item').find(".btn-content").removeClass("active");
+      $(this)
+        .closest(".content-item")
+        .find(".btn-content")
+        .removeClass("active");
       $(this).addClass("active");
-  
+
       // Hide all content in the active item and show the corresponding content
-      $(this).closest('.content-item').find('[id^="btn-content"]').hide();
-      $(this).closest('.content-item').find("#btn-content-" + btnId).show();
+      $(this).closest(".content-item").find('[id^="btn-content"]').hide();
+      $(this)
+        .closest(".content-item")
+        .find("#btn-content-" + btnId)
+        .show();
     });
-  
+
     // Ensure the first button's content is shown by default on page load
     $container.find(".content-item").first().addClass("active-item"); // Ensure first item is active on load
-    $container.find(".content-item").first().find(".btn-content").first().addClass("active"); // Ensure first button is active
+    $container
+      .find(".content-item")
+      .first()
+      .find(".btn-content")
+      .first()
+      .addClass("active"); // Ensure first button is active
     $container.find("#btn-content-1-1").show(); // Show the first button content by default
   }
-  
+
   // Initialize the tabs for both desktop and mobile sections
   recipeTabs("#desktop-section"); // For desktop
   recipeTabs("#mobile-section"); // For small screens (or mobile)
-  
-  
-  
-  
-
 
   function mobileMenu() {
     const menu = document.getElementById("mobile-menu");

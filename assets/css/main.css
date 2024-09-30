@@ -268,6 +268,7 @@ img {
     color: var(--dark-brown);
     font-size: 2.2vh;
     font-weight: 700;
+    margin-right: 9.5vh;
 }
 
 .custom-dots .owl-dot::after {
@@ -325,15 +326,55 @@ img {
 }
 #mobile-section .owl-nav {
     position: absolute;
-    top: -5%;
+    top: -4%;
     right: 0;
 }
+
+
 #mobile-section .owl-nav button {
     background-color: transparent;
 }
 #mobile-section .owl-nav span {
     font-size: 8vh;
     color: var(--yellow);
+}
+
+.product-slider .owl-nav {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    /* background: red; */
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.product-slider .owl-nav button {
+    background-color: transparent !important;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.product-slider .owl-nav span {
+    font-size: 8vh;
+    color: var(--yellow);
+    position: relative;
+    z-index: 999;
+    background-color: transparent !important;
+    
+}
+.product-slider .owl-nav button::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    z-index: -1;
+    width: 7vh;
+    height: 7vh;
+    background-color: var(--dark-brown);
+    top: 55%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
 }
 
 /* ========== Recipe Slider =============== */
