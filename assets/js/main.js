@@ -1,5 +1,5 @@
 // Register the ScrollTrigger plugin
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 $(document).ready(function () {
   // Create a simple animation
@@ -32,7 +32,7 @@ $(document).ready(function () {
 
     requestAnimationFrame(raf);
   }
-  // lenis();
+  lenis();
 
   function sliders() {
     $("#banner-slider").owlCarousel({
@@ -383,3 +383,19 @@ $(document).ready(function () {
   // Apply the accordion to a specific section
   accordian(".process-section");
 });
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      let targetElement = document.querySelector(this.getAttribute('href'));
+      if (targetElement) {
+          gsap.to(window, {
+              scrollTo: targetElement,
+              duration: 1,
+              onStart: () => ScrollTrigger.getAll().forEach(t => t.disable()), // Disable ScrollTrigger
+              onComplete: () => ScrollTrigger.getAll().forEach(t => t.enable()) // Re-enable ScrollTrigger
+          });
+      }
+  });
+});
+
