@@ -104,23 +104,24 @@
             <nav>
                 <ul class="flex items-center justify-center mb-[4vh]">
                     <li>
-                        <a href="index.html" class="text-yellow text-[2.2vh] px-[3vh]">Home</a>
+                        <a href="#home-section" class="text-yellow text-[2.2vh] px-[3vh]">Home</a>
                     </li>
                     <li>
-                        <a href="index.html" class="text-white text-[2.2vh] px-[3vh]">Our Story</a>
+                        <a href="#about-section" class="text-white text-[2.2vh] px-[3vh]">Our Story</a>
                     </li>
                     <li>
-                        <a href="index.html" class="text-white text-[2.2vh] px-[3vh]">Our Products</a>
+                        <a href="#product-section" class="text-white text-[2.2vh] px-[3vh]">Our Products</a>
                     </li>
                     <li>
-                        <a href="index.html" class="text-white text-[2.2vh] px-[3vh]">Recipe</a>
+                        <a href="#desktop-section" class="text-white text-[2.2vh] px-[3vh] hidden md:inline">Recipe</a>
+                        <a href="#mobile-section" class="text-white text-[2.2vh] px-[3vh] inline md:hidden">Recipe</a>
                     </li>
                     <li>
-                        <a href="index.html" class="text-white text-[2.2vh] px-[3vh]">Testimonials</a>
+                        <a href="#testimonial-section" class="text-white text-[2.2vh] px-[3vh]">Testimonials</a>
                     </li>
                     <li>
 
-                        <a href="index.html" class="text-white text-[2.2vh] px-[3vh]">Contact Us</a>
+                        <a href="#footer-section" class="text-white text-[2.2vh] px-[3vh]">Contact Us</a>
                     </li>
                 </ul>
             </nav>
@@ -134,26 +135,27 @@
             </div>
             <nav>
                 <ul class="block text-start items-start justify-start leading-[8vh] mt-[5vh]">
-                    <li>
-                        <a href="index.html" class="text-green text-[3vh] px-[3vh]">Home</a>
-                    </li>
-                    <li>
-                        <a href="index.html" class="text-white text-[3vh] px-[3vh]">Our Story</a>
-                    </li>
-                    <li>
-                        <a href="index.html" class="text-white text-[3vh] px-[3vh]">Our Products</a>
-                    </li>
-                    <li>
-                        <a href="index.html" class="text-white text-[3vh] px-[3vh]">Recipe</a>
-                    </li>
-                    <li>
-                        <a href="index.html" class="text-white text-[3vh] px-[3vh]">Testimonials</a>
-                    </li>
-                    <li>
-
-                        <a href="index.html" class="text-white text-[3vh] px-[3vh]">Contact Us</a>
-                    </li>
-                </ul>
+                        <li>
+                            <a href="#home-section" class="text-yellow text-[3vh] px-[3vh]">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about-section" class="text-white text-[3vh] px-[3vh]">Our Story</a>
+                        </li>
+                        <li>
+                            <a href="#product-section" class="text-white text-[3vh] px-[3vh]">Our Products</a>
+                        </li>
+                        <li>
+                            <a href="#desktop-section" class="text-white text-[3vh] px-[3vh] hidden md:inline">Recipe</a>
+                            <a href="#mobile-section" class="text-white text-[3vh] px-[3vh] inline md:hidden">Recipe</a>
+                        </li>
+                        <li>
+                            <a href="#testimonial-section" class="text-white text-[3vh] px-[3vh]">Testimonials</a>
+                        </li>
+                        <li>
+    
+                            <a href="#footer-section" class="text-white text-[3vh] px-[3vh]">Contact Us</a>
+                        </li>
+                    </ul>
             </nav>
             <div class="social-header flex items-center gap-x-[2vh] pl-[3vh] mt-[22vh]">
                 <a href="#" class="w-[6vh]">
@@ -190,7 +192,7 @@
     </div>
     <main class="home-page relative top-[15vh]">
         <!-- ========= Banner =========== -->
-        <section class="custom-width">
+        <section class="custom-width" id="home-section">
             <div class="banner-owl-wrapper">
                 <div class="banner-shape">
                     <!-- <img src="assets/img/red-shape-1.webp" alt="red-shape-1"> -->
@@ -230,7 +232,7 @@
             </div>
         </section>
         <!-- ========= About =========== -->
-        <section class="custom-width min-h-screen pt-[16vh]">
+        <section class="custom-width min-h-screen pt-[16vh]" id="about-section">
 
             <div class="flex flex-col-reverse md:grid md:grid-cols-2 lg:grid-cols-2 gap-6">
                 <div class="">
@@ -293,7 +295,8 @@
             </div>
         </section>
         <!-- ========= Proccess =========== -->
-        <section class="custom-width process-section pt-[12vh] 2xl:pt-[20vh] pb-[25vh] md:pb-[30vh] lg:pb-[40vh]">
+        <section class="custom-width process-section pt-[12vh] 2xl:pt-[20vh] pb-[25vh] md:pb-[30vh] lg:pb-[40vh]"
+            id="proccess-section">
             <div class="text-center w-full max-w-xl m-auto">
                 <span class="uppercase text-white text-[2.2vh]">OUR PROCESS</span>
                 <h2 class="text-yellow uppercase text-[4vh] leading-[5vh] md:text-[5.5vh] md:leading-[7vh] font-bold">
@@ -588,7 +591,8 @@
 
         <section
             class="custom-width container2 product-section pt-[5vh] md:pt-[18vh] px-[2vh] md:px-[6vh] lg:pl-[13vh] pb-[10vh]">
-            <h2 class="text-darkMehroon uppercase  text-[5vh] leading-[5vh] md:text-[5.5vh] md:leading-[7vh] font-bold text-center md:text-start">
+            <h2 class="text-darkMehroon uppercase  text-[5vh] leading-[5vh] md:text-[5.5vh] md:leading-[7vh] font-bold text-center md:text-start"
+                id="product-section">
                 OUR
                 PRODUCTS</h2>
             <div>
@@ -614,9 +618,9 @@
                                 or randomised words which don’t look even slightly believable.</p>
                         </div>
                         <div class="col-span-5 xl:col-span-1 pt-[4vh] md:pt-[0vh]">
-                           <div class="hidden md:block">
-                            <img src="assets/img/aaryabhog-pack.webp" alt="aaryabhog-pack">
-                           </div>
+                            <div class="hidden md:block">
+                                <img src="assets/img/aaryabhog-pack.webp" alt="aaryabhog-pack">
+                            </div>
                         </div>
                     </div>
                     <div class="owl-items grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-2">
@@ -639,9 +643,9 @@
                                 or randomised words which don’t look even slightly believable.</p>
                         </div>
                         <div class="col-span-5 xl:col-span-1 pt-[4vh] md:pt-[0vh]">
-                           <div class="hidden md:block">
-                            <img src="assets/img/aaryabhog-pack.webp" alt="aaryabhog-pack">
-                           </div>
+                            <div class="hidden md:block">
+                                <img src="assets/img/aaryabhog-pack.webp" alt="aaryabhog-pack">
+                            </div>
                         </div>
                     </div>
                     <div class="owl-items grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-2">
@@ -664,13 +668,13 @@
                                 or randomised words which don’t look even slightly believable.</p>
                         </div>
                         <div class="col-span-5 xl:col-span-1 pt-[4vh] md:pt-[0vh]">
-                           <div class="hidden md:block">
-                            <img src="assets/img/aaryabhog-pack.webp" alt="aaryabhog-pack">
-                           </div>
+                            <div class="hidden md:block">
+                                <img src="assets/img/aaryabhog-pack.webp" alt="aaryabhog-pack">
+                            </div>
                         </div>
                     </div>
-                   
-                    
+
+
                 </div>
                 <!-- Product Custom dots -->
                 <div class="custom-dots absolute bottom-0  z-[999] gap-[10vh] pb-[6vh] hidden lg:block">
@@ -679,7 +683,780 @@
         </section>
 
         <!-- ========= Recipe =========== -->
-       
+        <section class="recipe-section pt-[12vh] hidden md:block" id="desktop-section">
+            <div class="custom-width">
+                <div class="text-center md:w-[40%] m-auto pin-box1">
+                    <span class="uppercase text-white text-[2.2vh]">CHECK OUT</span>
+
+                    <h2
+                        class=" text-yellow uppercase text-[4vh] leading-[5vh] md:text-[5.5vh] md:leading-[7vh] font-bold">
+                        OUR FAVOURITE<br>
+                        RECIPES</h2>
+                    <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] mt-[6vh] mb-[8vh] m-auto">
+                </div>
+            </div>
+            <!-- Recipe Slider -->
+            <div class="custom-width">
+                <!-- Owl Carousel -->
+                <div class="owl-carousel owl-theme recipe-slider">
+                    <div class="item  cursor-pointer" data-item="1">
+                        <img src="assets/img/recipe-slider-1.webp" alt="recipe-slider-1"
+                            class="w-full card-image rounded-tr-[14vh]">
+                        <div class="bg-orange_ py-[3vh] pl-[3vh]">
+                            <h3 class="text-[3vh]  md:text-[4vh] text-white">Aloo Paratha 1</h3>
+                        </div>
+
+
+                    </div>
+                    <div class="item  cursor-pointer" data-item="2">
+                        <img src="assets/img/recipe-slider-1.webp" alt="recipe-slider-1"
+                            class="w-full card-image rounded-tr-[14vh]">
+                        <div class="bg-orange_ py-[3vh] pl-[3vh]">
+                            <h3 class="text-[3vh]  md:text-[4vh] text-white">Aloo Paratha 2</h3>
+                        </div>
+                    </div>
+                    <div class="item cursor-pointer" data-item="3">
+                        <img src="assets/img/recipe-slider-1.webp" alt="recipe-slider-1"
+                            class="w-full card-image rounded-tr-[14vh]">
+                        <div class="bg-orange_ py-[3vh] pl-[3vh]">
+                            <h3 class="text-[3vh]  md:text-[4vh] text-white">Aloo Paratha 3</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-mehroon min-h-screen mt-[-12.2vh]  pb-[18vh] recipe-container">
+                <div class="custom-width pt-[24.4vh]">
+                    <!-- Content Section -->
+                    <div id="content-container" class="mt-8">
+                        <div id="content-1" class=" content-item active-item">
+                            <!-- First button's content displayed by default -->
+                            <div id="btn-content-1-1" class="mt-4">
+                                <div class="col-span-12 grid grid-cols-12">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                            Aloo<br>
+                                            Paratha test 1</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] my-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Divide the dough into small lemon-sized balls and do the same with the
+                                                potato
+                                                stuffing.</li>
+                                            <li>Roll out one dough ball into a small circle (about 4-5 inches in
+                                                diameter)
+                                                using
+                                                a
+                                                rolling pin.</li>
+                                            <li>Place a portion of the potato mixture in the center of the rolled-out
+                                                dough.
+                                            </li>
+                                            <li>Gather the edges of the dough and seal it over the filling, pinching to
+                                                close.
+                                            </li>
+                                            <li>Gently press the filled dough ball and flatten it slightly with your
+                                                fingers.
+                                            </li>
+                                            <li>Roll it out again carefully into a larger circle (about 6-7 inches),
+                                                ensuring
+                                                the
+                                                stuffing doesn't spill out.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-content-1-2" class="mt-4 hidden">
+                                <div class="col-span-12 grid grid-cols-12 tab-link">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                            Aloo<br>
+                                            Paratha test 2</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] my-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Divide the dough into small lemon-sized balls and do the same with the
+                                                potato
+                                                stuffing.</li>
+                                            <li>Roll out one dough ball into a small circle (about 4-5 inches in
+                                                diameter)
+                                                using
+                                                a
+                                                rolling pin.</li>
+                                            <li>Place a portion of the potato mixture in the center of the rolled-out
+                                                dough.
+                                            </li>
+                                            <li>Gather the edges of the dough and seal it over the filling, pinching to
+                                                close.
+                                            </li>
+                                            <li>Gently press the filled dough ball and flatten it slightly with your
+                                                fingers.
+                                            </li>
+                                            <li>Roll it out again carefully into a larger circle (about 6-7 inches),
+                                                ensuring
+                                                the
+                                                stuffing doesn't spill out.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-content-1-3" class="mt-4 hidden">
+                                <div class="col-span-12 grid grid-cols-12 tab-link">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                            Aloo<br>
+                                            Paratha test 3</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] my-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Divide the dough into small lemon-sized balls and do the same with the
+                                                potato
+                                                stuffing.</li>
+                                            <li>Roll out one dough ball into a small circle (about 4-5 inches in
+                                                diameter)
+                                                using
+                                                a
+                                                rolling pin.</li>
+                                            <li>Place a portion of the potato mixture in the center of the rolled-out
+                                                dough.
+                                            </li>
+                                            <li>Gather the edges of the dough and seal it over the filling, pinching to
+                                                close.
+                                            </li>
+                                            <li>Gently press the filled dough ball and flatten it slightly with your
+                                                fingers.
+                                            </li>
+                                            <li>Roll it out again carefully into a larger circle (about 6-7 inches),
+                                                ensuring
+                                                the
+                                                stuffing doesn't spill out.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-content-1-4" class="mt-4 hidden">
+                                <div class="col-span-12 grid grid-cols-12 tab-link">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                            Aloo<br>
+                                            Paratha test 4</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] my-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Divide the dough into small lemon-sized balls and do the same with the
+                                                potato
+                                                stuffing.</li>
+                                            <li>Roll out one dough ball into a small circle (about 4-5 inches in
+                                                diameter)
+                                                using
+                                                a
+                                                rolling pin.</li>
+                                            <li>Place a portion of the potato mixture in the center of the rolled-out
+                                                dough.
+                                            </li>
+                                            <li>Gather the edges of the dough and seal it over the filling, pinching to
+                                                close.
+                                            </li>
+                                            <li>Gently press the filled dough ball and flatten it slightly with your
+                                                fingers.
+                                            </li>
+                                            <li>Roll it out again carefully into a larger circle (about 6-7 inches),
+                                                ensuring
+                                                the
+                                                stuffing doesn't spill out.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-content-1-5" class="mt-4 hidden">
+                                <div class="col-span-12 grid grid-cols-12 tab-link">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                            Aloo<br>
+                                            Paratha test 5</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] my-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Divide the dough into small lemon-sized balls and do the same with the
+                                                potato
+                                                stuffing.</li>
+                                            <li>Roll out one dough ball into a small circle (about 4-5 inches in
+                                                diameter)
+                                                using
+                                                a
+                                                rolling pin.</li>
+                                            <li>Place a portion of the potato mixture in the center of the rolled-out
+                                                dough.
+                                            </li>
+                                            <li>Gather the edges of the dough and seal it over the filling, pinching to
+                                                close.
+                                            </li>
+                                            <li>Gently press the filled dough ball and flatten it slightly with your
+                                                fingers.
+                                            </li>
+                                            <li>Roll it out again carefully into a larger circle (about 6-7 inches),
+                                                ensuring
+                                                the
+                                                stuffing doesn't spill out.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="tabs grid grid-cols-5 gap-x-[2vh] mt-[20vh]">
+                                <!-- 1st -->
+                                <button class="btn-content active bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="1-1">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        1</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Prepare<br> the Dough</p>
+                                </button>
+                                <!-- 2ndt -->
+                                <button class="btn-content bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="1-2">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        2</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Prepare the Aloo<br>
+                                        (Potato) Stuffing</p>
+                                </button>
+                                <!-- 3rd -->
+                                <button class="btn-content bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="1-3">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        3</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Stuff the<br>
+                                        Parathas</p>
+                                </button>
+                                <!-- 4th -->
+                                <button class="btn-content bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="1-4">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        4</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Cook<br>
+                                        the Parathas</p>
+                                </button>
+                                <!-- 5th -->
+                                <button class="btn-content bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="1-5">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        5</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Serve</p>
+                                </button>
+
+                            </div>
+                        </div>
+
+                        <div id="content-2" class=" content-item">
+                            <div id="btn-content-2-1" class="mt-4">
+                                <div class="col-span-12 grid grid-cols-12">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                            Aloo<br>
+                                            Paratha test 11</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] my-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Divide the dough into small lemon-sized balls and do the same with the
+                                                potato
+                                                stuffing.</li>
+                                            <li>Roll out one dough ball into a small circle (about 4-5 inches in
+                                                diameter)
+                                                using
+                                                a
+                                                rolling pin.</li>
+                                            <li>Place a portion of the potato mixture in the center of the rolled-out
+                                                dough.
+                                            </li>
+                                            <li>Gather the edges of the dough and seal it over the filling, pinching to
+                                                close.
+                                            </li>
+                                            <li>Gently press the filled dough ball and flatten it slightly with your
+                                                fingers.
+                                            </li>
+                                            <li>Roll it out again carefully into a larger circle (about 6-7 inches),
+                                                ensuring
+                                                the
+                                                stuffing doesn't spill out.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-content-2-2" class="mt-4 hidden">
+                                <div class="col-span-12 grid grid-cols-12 tab-link">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                            Aloo<br>
+                                            Paratha test 22</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] my-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Divide the dough into small lemon-sized balls and do the same with the
+                                                potato
+                                                stuffing.</li>
+                                            <li>Roll out one dough ball into a small circle (about 4-5 inches in
+                                                diameter)
+                                                using
+                                                a
+                                                rolling pin.</li>
+                                            <li>Place a portion of the potato mixture in the center of the rolled-out
+                                                dough.
+                                            </li>
+                                            <li>Gather the edges of the dough and seal it over the filling, pinching to
+                                                close.
+                                            </li>
+                                            <li>Gently press the filled dough ball and flatten it slightly with your
+                                                fingers.
+                                            </li>
+                                            <li>Roll it out again carefully into a larger circle (about 6-7 inches),
+                                                ensuring
+                                                the
+                                                stuffing doesn't spill out.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-content-2-3" class="mt-4 hidden">
+                                <div class="col-span-12 grid grid-cols-12 tab-link">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                            Aloo<br>
+                                            Paratha test 33</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] my-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Divide the dough into small lemon-sized balls and do the same with the
+                                                potato
+                                                stuffing.</li>
+                                            <li>Roll out one dough ball into a small circle (about 4-5 inches in
+                                                diameter)
+                                                using
+                                                a
+                                                rolling pin.</li>
+                                            <li>Place a portion of the potato mixture in the center of the rolled-out
+                                                dough.
+                                            </li>
+                                            <li>Gather the edges of the dough and seal it over the filling, pinching to
+                                                close.
+                                            </li>
+                                            <li>Gently press the filled dough ball and flatten it slightly with your
+                                                fingers.
+                                            </li>
+                                            <li>Roll it out again carefully into a larger circle (about 6-7 inches),
+                                                ensuring
+                                                the
+                                                stuffing doesn't spill out.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-content-2-4" class="mt-4 hidden">
+                                <div class="col-span-12 grid grid-cols-12 tab-link">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                            Aloo<br>
+                                            Paratha test 44</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] my-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Divide the dough into small lemon-sized balls and do the same with the
+                                                potato
+                                                stuffing.</li>
+                                            <li>Roll out one dough ball into a small circle (about 4-5 inches in
+                                                diameter)
+                                                using
+                                                a
+                                                rolling pin.</li>
+                                            <li>Place a portion of the potato mixture in the center of the rolled-out
+                                                dough.
+                                            </li>
+                                            <li>Gather the edges of the dough and seal it over the filling, pinching to
+                                                close.
+                                            </li>
+                                            <li>Gently press the filled dough ball and flatten it slightly with your
+                                                fingers.
+                                            </li>
+                                            <li>Roll it out again carefully into a larger circle (about 6-7 inches),
+                                                ensuring
+                                                the
+                                                stuffing doesn't spill out.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-content-2-5" class="mt-4 hidden">
+                                <div class="col-span-12 grid grid-cols-12 tab-link">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                            Aloo<br>
+                                            Paratha test 55</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] my-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Divide the dough into small lemon-sized balls and do the same with the
+                                                potato
+                                                stuffing.</li>
+                                            <li>Roll out one dough ball into a small circle (about 4-5 inches in
+                                                diameter)
+                                                using
+                                                a
+                                                rolling pin.</li>
+                                            <li>Place a portion of the potato mixture in the center of the rolled-out
+                                                dough.
+                                            </li>
+                                            <li>Gather the edges of the dough and seal it over the filling, pinching to
+                                                close.
+                                            </li>
+                                            <li>Gently press the filled dough ball and flatten it slightly with your
+                                                fingers.
+                                            </li>
+                                            <li>Roll it out again carefully into a larger circle (about 6-7 inches),
+                                                ensuring
+                                                the
+                                                stuffing doesn't spill out.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="tabs grid grid-cols-5 gap-x-[2vh] mt-[20vh]">
+                                <!-- 1st -->
+                                <button class="btn-content active bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="2-1">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        1</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Prepare<br> the Dough</p>
+                                </button>
+                                <!-- 2ndt -->
+                                <button class="btn-content bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="2-2">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        2</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Prepare the Aloo<br>
+                                        (Potato) Stuffing</p>
+                                </button>
+                                <!-- 3rd -->
+                                <button class="btn-content bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="2-3">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        3</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Stuff the<br>
+                                        Parathas</p>
+                                </button>
+                                <!-- 4th -->
+                                <button class="btn-content bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="2-4">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        4</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Cook<br>
+                                        the Parathas</p>
+                                </button>
+                                <!-- 5th -->
+                                <button class="btn-content bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="2-5">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        5</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Serve</p>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <div id="content-3" class=" content-item">
+                            <div id="btn-content-3-1" class="mt-4">
+                                <div class="col-span-12 grid grid-cols-12">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                            Aloo<br>
+                                            Paratha test 111</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] my-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Divide the dough into small lemon-sized balls and do the same with the
+                                                potato
+                                                stuffing.</li>
+                                            <li>Roll out one dough ball into a small circle (about 4-5 inches in
+                                                diameter)
+                                                using
+                                                a
+                                                rolling pin.</li>
+                                            <li>Place a portion of the potato mixture in the center of the rolled-out
+                                                dough.
+                                            </li>
+                                            <li>Gather the edges of the dough and seal it over the filling, pinching to
+                                                close.
+                                            </li>
+                                            <li>Gently press the filled dough ball and flatten it slightly with your
+                                                fingers.
+                                            </li>
+                                            <li>Roll it out again carefully into a larger circle (about 6-7 inches),
+                                                ensuring
+                                                the
+                                                stuffing doesn't spill out.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-content-3-2" class="mt-4 hidden">
+                                <div class="col-span-12 grid grid-cols-12 tab-link">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                            Aloo<br>
+                                            Paratha test 222</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] my-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Divide the dough into small lemon-sized balls and do the same with the
+                                                potato
+                                                stuffing.</li>
+                                            <li>Roll out one dough ball into a small circle (about 4-5 inches in
+                                                diameter)
+                                                using
+                                                a
+                                                rolling pin.</li>
+                                            <li>Place a portion of the potato mixture in the center of the rolled-out
+                                                dough.
+                                            </li>
+                                            <li>Gather the edges of the dough and seal it over the filling, pinching to
+                                                close.
+                                            </li>
+                                            <li>Gently press the filled dough ball and flatten it slightly with your
+                                                fingers.
+                                            </li>
+                                            <li>Roll it out again carefully into a larger circle (about 6-7 inches),
+                                                ensuring
+                                                the
+                                                stuffing doesn't spill out.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-content-3-3" class="mt-4 hidden">
+                                <div class="col-span-12 grid grid-cols-12 tab-link">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                            Aloo<br>
+                                            Paratha test 333</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] my-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Divide the dough into small lemon-sized balls and do the same with the
+                                                potato
+                                                stuffing.</li>
+                                            <li>Roll out one dough ball into a small circle (about 4-5 inches in
+                                                diameter)
+                                                using
+                                                a
+                                                rolling pin.</li>
+                                            <li>Place a portion of the potato mixture in the center of the rolled-out
+                                                dough.
+                                            </li>
+                                            <li>Gather the edges of the dough and seal it over the filling, pinching to
+                                                close.
+                                            </li>
+                                            <li>Gently press the filled dough ball and flatten it slightly with your
+                                                fingers.
+                                            </li>
+                                            <li>Roll it out again carefully into a larger circle (about 6-7 inches),
+                                                ensuring
+                                                the
+                                                stuffing doesn't spill out.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-content-3-4" class="mt-4 hidden">
+                                <div class="col-span-12 grid grid-cols-12 tab-link">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                            Aloo<br>
+                                            Paratha test 444</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] my-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Divide the dough into small lemon-sized balls and do the same with the
+                                                potato
+                                                stuffing.</li>
+                                            <li>Roll out one dough ball into a small circle (about 4-5 inches in
+                                                diameter)
+                                                using
+                                                a
+                                                rolling pin.</li>
+                                            <li>Place a portion of the potato mixture in the center of the rolled-out
+                                                dough.
+                                            </li>
+                                            <li>Gather the edges of the dough and seal it over the filling, pinching to
+                                                close.
+                                            </li>
+                                            <li>Gently press the filled dough ball and flatten it slightly with your
+                                                fingers.
+                                            </li>
+                                            <li>Roll it out again carefully into a larger circle (about 6-7 inches),
+                                                ensuring
+                                                the
+                                                stuffing doesn't spill out.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-content-3-5" class="mt-4 hidden">
+                                <div class="col-span-12 grid grid-cols-12 tab-link">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                            Aloo<br>
+                                            Paratha test 555</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] my-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Divide the dough into small lemon-sized balls and do the same with the
+                                                potato
+                                                stuffing.</li>
+                                            <li>Roll out one dough ball into a small circle (about 4-5 inches in
+                                                diameter)
+                                                using
+                                                a
+                                                rolling pin.</li>
+                                            <li>Place a portion of the potato mixture in the center of the rolled-out
+                                                dough.
+                                            </li>
+                                            <li>Gather the edges of the dough and seal it over the filling, pinching to
+                                                close.
+                                            </li>
+                                            <li>Gently press the filled dough ball and flatten it slightly with your
+                                                fingers.
+                                            </li>
+                                            <li>Roll it out again carefully into a larger circle (about 6-7 inches),
+                                                ensuring
+                                                the
+                                                stuffing doesn't spill out.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="tabs grid grid-cols-5 gap-x-[2vh] mt-[20vh]">
+                                <!-- 1st -->
+                                <button class="btn-content active bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="3-1">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        1</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Prepare<br> the Dough</p>
+                                </button>
+                                <!-- 2ndt -->
+                                <button class="btn-content bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="3-2">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        2</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Prepare the Aloo<br>
+                                        (Potato) Stuffing</p>
+                                </button>
+                                <!-- 3rd -->
+                                <button class="btn-content bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="3-3">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        3</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Stuff the<br>
+                                        Parathas</p>
+                                </button>
+                                <!-- 4th -->
+                                <button class="btn-content bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="3-4">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        4</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Cook<br>
+                                        the Parathas</p>
+                                </button>
+                                <!-- 5th -->
+                                <button class="btn-content bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="3-5">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        5</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Serve</p>
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
 
         <!-- sm slider -->
         <section class="recipe-section py-[12vh] block md:hidden" id="mobile-section">
@@ -704,8 +1481,8 @@
                         <div class="bg-orange_ py-[3vh] pl-[3vh]">
                             <h3 class="text-[3vh]  md:text-[4vh] text-white">Aloo Paratha 1</h3>
                         </div>
-                         <!-- 1st -->
-                         <div id="content-1" class="content-item active-item grid grid-cols-12 mt-[3vh]">
+                        <!-- 1st -->
+                        <div id="content-1" class="content-item active-item grid grid-cols-12 mt-[3vh]">
                             <!-- First button's content displayed by default -->
                             <div id="btn-content-1-1" class="col-span-10">
                                 <div class="">
@@ -837,8 +1614,7 @@
                                     <h2 class="text-yellow uppercase text-[3.5vh] leading-[4vh] font-bold">
                                         Aloo<br>
                                         Paratha test 5</h2>
-                                    <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
-                                        class="w-[18vh] my-[3vh]">
+                                    <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[3vh]">
                                     <ul class="list-none text-white text-[2.2vh] leading-[3vh] text-justify pr-[2vh]">
                                         <li>Divide the dough into small lemon-sized balls and do the same with the
                                             potato
@@ -909,38 +1685,37 @@
                             <h3 class="text-[3vh]  md:text-[4vh] text-white">Aloo Paratha 2</h3>
                         </div>
 
-                         <!-- 2nd -->
-                         <div id="content-2" class="content-item active-item grid grid-cols-12 mt-[3vh]">
+                        <!-- 2nd -->
+                        <div id="content-2" class="content-item active-item grid grid-cols-12 mt-[3vh]">
                             <div id="btn-content-2-1" class="col-span-10">
                                 <div class="">
                                     <h2 class="text-yellow uppercase text-[3.5vh] leading-[4vh] font-bold">
                                         Aloo<br>
                                         Paratha test 11</h2>
-                                    <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
-                                        class="w-[18vh] my-[3vh]">
-                                        <ul class="list-none text-white text-[2.2vh] leading-[3vh] text-justify pr-[2vh]">
-                                            <li>Divide the dough into small lemon-sized balls and do the same with the
-                                                potato
-                                                stuffing.</li>
-                                            <li>Roll out one dough ball into a small circle (about 4-5 inches in
-                                                diameter)
-                                                using
-                                                a
-                                                rolling pin.</li>
-                                            <li>Place a portion of the potato mixture in the center of the rolled-out
-                                                dough.
-                                            </li>
-                                            <li>Gather the edges of the dough and seal it over the filling, pinching to
-                                                close.
-                                            </li>
-                                            <li>Gently press the filled dough ball and flatten it slightly with your
-                                                fingers.
-                                            </li>
-                                            <li>Roll it out again carefully into a larger circle (about 6-7 inches),
-                                                ensuring
-                                                the
-                                                stuffing doesn't spill out.</li>
-                                        </ul>
+                                    <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[3vh]">
+                                    <ul class="list-none text-white text-[2.2vh] leading-[3vh] text-justify pr-[2vh]">
+                                        <li>Divide the dough into small lemon-sized balls and do the same with the
+                                            potato
+                                            stuffing.</li>
+                                        <li>Roll out one dough ball into a small circle (about 4-5 inches in
+                                            diameter)
+                                            using
+                                            a
+                                            rolling pin.</li>
+                                        <li>Place a portion of the potato mixture in the center of the rolled-out
+                                            dough.
+                                        </li>
+                                        <li>Gather the edges of the dough and seal it over the filling, pinching to
+                                            close.
+                                        </li>
+                                        <li>Gently press the filled dough ball and flatten it slightly with your
+                                            fingers.
+                                        </li>
+                                        <li>Roll it out again carefully into a larger circle (about 6-7 inches),
+                                            ensuring
+                                            the
+                                            stuffing doesn't spill out.</li>
+                                    </ul>
                                 </div>
                             </div>
                             <div id="btn-content-2-2" class="col-span-10 hidden">
@@ -948,31 +1723,30 @@
                                     <h2 class="text-yellow uppercase text-[3.5vh] leading-[4vh] font-bold">
                                         Aloo<br>
                                         Paratha test 22</h2>
-                                    <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
-                                        class="w-[18vh] my-[3vh]">
-                                        <ul class="list-none text-white text-[2.2vh] leading-[3vh] text-justify pr-[2vh]">
-                                            <li>Divide the dough into small lemon-sized balls and do the same with the
-                                                potato
-                                                stuffing.</li>
-                                            <li>Roll out one dough ball into a small circle (about 4-5 inches in
-                                                diameter)
-                                                using
-                                                a
-                                                rolling pin.</li>
-                                            <li>Place a portion of the potato mixture in the center of the rolled-out
-                                                dough.
-                                            </li>
-                                            <li>Gather the edges of the dough and seal it over the filling, pinching to
-                                                close.
-                                            </li>
-                                            <li>Gently press the filled dough ball and flatten it slightly with your
-                                                fingers.
-                                            </li>
-                                            <li>Roll it out again carefully into a larger circle (about 6-7 inches),
-                                                ensuring
-                                                the
-                                                stuffing doesn't spill out.</li>
-                                        </ul>
+                                    <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[3vh]">
+                                    <ul class="list-none text-white text-[2.2vh] leading-[3vh] text-justify pr-[2vh]">
+                                        <li>Divide the dough into small lemon-sized balls and do the same with the
+                                            potato
+                                            stuffing.</li>
+                                        <li>Roll out one dough ball into a small circle (about 4-5 inches in
+                                            diameter)
+                                            using
+                                            a
+                                            rolling pin.</li>
+                                        <li>Place a portion of the potato mixture in the center of the rolled-out
+                                            dough.
+                                        </li>
+                                        <li>Gather the edges of the dough and seal it over the filling, pinching to
+                                            close.
+                                        </li>
+                                        <li>Gently press the filled dough ball and flatten it slightly with your
+                                            fingers.
+                                        </li>
+                                        <li>Roll it out again carefully into a larger circle (about 6-7 inches),
+                                            ensuring
+                                            the
+                                            stuffing doesn't spill out.</li>
+                                    </ul>
                                 </div>
                             </div>
                             <div id="btn-content-2-3" class="col-span-10 hidden">
@@ -980,31 +1754,30 @@
                                     <h2 class="text-yellow uppercase text-[3.5vh] leading-[4vh] font-bold">
                                         Aloo<br>
                                         Paratha test 33</h2>
-                                    <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
-                                        class="w-[18vh] my-[3vh]">
-                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
-                                            <li>Divide the dough into small lemon-sized balls and do the same with the
-                                                potato
-                                                stuffing.</li>
-                                            <li>Roll out one dough ball into a small circle (about 4-5 inches in
-                                                diameter)
-                                                using
-                                                a
-                                                rolling pin.</li>
-                                            <li>Place a portion of the potato mixture in the center of the rolled-out
-                                                dough.
-                                            </li>
-                                            <li>Gather the edges of the dough and seal it over the filling, pinching to
-                                                close.
-                                            </li>
-                                            <li>Gently press the filled dough ball and flatten it slightly with your
-                                                fingers.
-                                            </li>
-                                            <li>Roll it out again carefully into a larger circle (about 6-7 inches),
-                                                ensuring
-                                                the
-                                                stuffing doesn't spill out.</li>
-                                        </ul>
+                                    <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[3vh]">
+                                    <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                        <li>Divide the dough into small lemon-sized balls and do the same with the
+                                            potato
+                                            stuffing.</li>
+                                        <li>Roll out one dough ball into a small circle (about 4-5 inches in
+                                            diameter)
+                                            using
+                                            a
+                                            rolling pin.</li>
+                                        <li>Place a portion of the potato mixture in the center of the rolled-out
+                                            dough.
+                                        </li>
+                                        <li>Gather the edges of the dough and seal it over the filling, pinching to
+                                            close.
+                                        </li>
+                                        <li>Gently press the filled dough ball and flatten it slightly with your
+                                            fingers.
+                                        </li>
+                                        <li>Roll it out again carefully into a larger circle (about 6-7 inches),
+                                            ensuring
+                                            the
+                                            stuffing doesn't spill out.</li>
+                                    </ul>
                                 </div>
                             </div>
                             <div id="btn-content-2-4" class="col-span-10 hidden">
@@ -1012,31 +1785,30 @@
                                     <h2 class="text-yellow uppercase text-[3.5vh] leading-[4vh] font-bold">
                                         Aloo<br>
                                         Paratha test 44</h2>
-                                    <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
-                                        class="w-[18vh] my-[3vh]">
-                                        <ul class="list-none text-white text-[2.2vh] leading-[3vh] text-justify pr-[2vh]">
-                                            <li>Divide the dough into small lemon-sized balls and do the same with the
-                                                potato
-                                                stuffing.</li>
-                                            <li>Roll out one dough ball into a small circle (about 4-5 inches in
-                                                diameter)
-                                                using
-                                                a
-                                                rolling pin.</li>
-                                            <li>Place a portion of the potato mixture in the center of the rolled-out
-                                                dough.
-                                            </li>
-                                            <li>Gather the edges of the dough and seal it over the filling, pinching to
-                                                close.
-                                            </li>
-                                            <li>Gently press the filled dough ball and flatten it slightly with your
-                                                fingers.
-                                            </li>
-                                            <li>Roll it out again carefully into a larger circle (about 6-7 inches),
-                                                ensuring
-                                                the
-                                                stuffing doesn't spill out.</li>
-                                        </ul>
+                                    <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[3vh]">
+                                    <ul class="list-none text-white text-[2.2vh] leading-[3vh] text-justify pr-[2vh]">
+                                        <li>Divide the dough into small lemon-sized balls and do the same with the
+                                            potato
+                                            stuffing.</li>
+                                        <li>Roll out one dough ball into a small circle (about 4-5 inches in
+                                            diameter)
+                                            using
+                                            a
+                                            rolling pin.</li>
+                                        <li>Place a portion of the potato mixture in the center of the rolled-out
+                                            dough.
+                                        </li>
+                                        <li>Gather the edges of the dough and seal it over the filling, pinching to
+                                            close.
+                                        </li>
+                                        <li>Gently press the filled dough ball and flatten it slightly with your
+                                            fingers.
+                                        </li>
+                                        <li>Roll it out again carefully into a larger circle (about 6-7 inches),
+                                            ensuring
+                                            the
+                                            stuffing doesn't spill out.</li>
+                                    </ul>
                                 </div>
                             </div>
                             <div id="btn-content-2-5" class="col-span-10 hidden">
@@ -1044,38 +1816,36 @@
                                     <h2 class="text-yellow uppercase text-[3.5vh] leading-[4vh] font-bold">
                                         Aloo<br>
                                         Paratha test 55</h2>
-                                    <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
-                                        class="w-[18vh] my-[3vh]">
-                                        <ul class="list-none text-white text-[2.2vh] leading-[3vh] text-justify pr-[2vh]">
-                                            <li>Divide the dough into small lemon-sized balls and do the same with the
-                                                potato
-                                                stuffing.</li>
-                                            <li>Roll out one dough ball into a small circle (about 4-5 inches in
-                                                diameter)
-                                                using
-                                                a
-                                                rolling pin.</li>
-                                            <li>Place a portion of the potato mixture in the center of the rolled-out
-                                                dough.
-                                            </li>
-                                            <li>Gather the edges of the dough and seal it over the filling, pinching to
-                                                close.
-                                            </li>
-                                            <li>Gently press the filled dough ball and flatten it slightly with your
-                                                fingers.
-                                            </li>
-                                            <li>Roll it out again carefully into a larger circle (about 6-7 inches),
-                                                ensuring
-                                                the
-                                                stuffing doesn't spill out.</li>
-                                        </ul>
+                                    <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[3vh]">
+                                    <ul class="list-none text-white text-[2.2vh] leading-[3vh] text-justify pr-[2vh]">
+                                        <li>Divide the dough into small lemon-sized balls and do the same with the
+                                            potato
+                                            stuffing.</li>
+                                        <li>Roll out one dough ball into a small circle (about 4-5 inches in
+                                            diameter)
+                                            using
+                                            a
+                                            rolling pin.</li>
+                                        <li>Place a portion of the potato mixture in the center of the rolled-out
+                                            dough.
+                                        </li>
+                                        <li>Gather the edges of the dough and seal it over the filling, pinching to
+                                            close.
+                                        </li>
+                                        <li>Gently press the filled dough ball and flatten it slightly with your
+                                            fingers.
+                                        </li>
+                                        <li>Roll it out again carefully into a larger circle (about 6-7 inches),
+                                            ensuring
+                                            the
+                                            stuffing doesn't spill out.</li>
+                                    </ul>
                                 </div>
                             </div>
                             <!-- Buttons -->
                             <div class="tabs col-span-2 flex flex-col items-end">
                                 <!-- 1st -->
-                                <button class="btn-content active mb-[0vh]"
-                                    data-btn="2-1">
+                                <button class="btn-content active mb-[0vh]" data-btn="2-1">
                                     <div
                                         class="recipe-number w-[7vh] h-[7vh] rounded-ful border-t-2 border-yellow p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
                                         1</div>
@@ -1115,169 +1885,163 @@
                         <div class="bg-orange_ py-[3vh] pl-[3vh]">
                             <h3 class="text-[3vh]  md:text-[4vh] text-white">Aloo Paratha 3</h3>
                         </div>
-                         <!-- 3rd -->
-                         <div id="content-3" class="content-item active-item grid grid-cols-12 mt-[3vh]">
+                        <!-- 3rd -->
+                        <div id="content-3" class="content-item active-item grid grid-cols-12 mt-[3vh]">
                             <div id="btn-content-3-1" class="col-span-10">
                                 <div class="">
                                     <h2 class="text-yellow uppercase text-[3.5vh] leading-[4vh] font-bold">
                                         Aloo<br>
                                         Paratha test 111</h2>
-                                    <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
-                                        class="w-[18vh] my-[3vh]">
-                                        <ul class="list-none text-white text-[2.2vh] leading-[3vh] text-justify pr-[2vh]">
-                                            <li>Divide the dough into small lemon-sized balls and do the same with the
-                                                potato
-                                                stuffing.</li>
-                                            <li>Roll out one dough ball into a small circle (about 4-5 inches in
-                                                diameter)
-                                                using
-                                                a
-                                                rolling pin.</li>
-                                            <li>Place a portion of the potato mixture in the center of the rolled-out
-                                                dough.
-                                            </li>
-                                            <li>Gather the edges of the dough and seal it over the filling, pinching to
-                                                close.
-                                            </li>
-                                            <li>Gently press the filled dough ball and flatten it slightly with your
-                                                fingers.
-                                            </li>
-                                            <li>Roll it out again carefully into a larger circle (about 6-7 inches),
-                                                ensuring
-                                                the
-                                                stuffing doesn't spill out.</li>
-                                        </ul>
+                                    <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[3vh]">
+                                    <ul class="list-none text-white text-[2.2vh] leading-[3vh] text-justify pr-[2vh]">
+                                        <li>Divide the dough into small lemon-sized balls and do the same with the
+                                            potato
+                                            stuffing.</li>
+                                        <li>Roll out one dough ball into a small circle (about 4-5 inches in
+                                            diameter)
+                                            using
+                                            a
+                                            rolling pin.</li>
+                                        <li>Place a portion of the potato mixture in the center of the rolled-out
+                                            dough.
+                                        </li>
+                                        <li>Gather the edges of the dough and seal it over the filling, pinching to
+                                            close.
+                                        </li>
+                                        <li>Gently press the filled dough ball and flatten it slightly with your
+                                            fingers.
+                                        </li>
+                                        <li>Roll it out again carefully into a larger circle (about 6-7 inches),
+                                            ensuring
+                                            the
+                                            stuffing doesn't spill out.</li>
+                                    </ul>
                                 </div>
                             </div>
                             <div id="btn-content-3-2" class="col-span-10 hidden">
                                 <div class="">
                                     <h2 class="text-yellow uppercase text-[3.5vh] leading-[4vh] font-bold">
                                         Aloo Paratha<br> test 222</h2>
-                                    <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
-                                        class="w-[18vh] my-[3vh]">
-                                        <ul class="list-none text-white text-[2.2vh] leading-[3vh] text-justify pr-[2vh]">
-                                            <li>Divide the dough into small lemon-sized balls and do the same with the
-                                                potato
-                                                stuffing.</li>
-                                            <li>Roll out one dough ball into a small circle (about 4-5 inches in
-                                                diameter)
-                                                using
-                                                a
-                                                rolling pin.</li>
-                                            <li>Place a portion of the potato mixture in the center of the rolled-out
-                                                dough.
-                                            </li>
-                                            <li>Gather the edges of the dough and seal it over the filling, pinching to
-                                                close.
-                                            </li>
-                                            <li>Gently press the filled dough ball and flatten it slightly with your
-                                                fingers.
-                                            </li>
-                                            <li>Roll it out again carefully into a larger circle (about 6-7 inches),
-                                                ensuring
-                                                the
-                                                stuffing doesn't spill out.</li>
-                                        </ul>
+                                    <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[3vh]">
+                                    <ul class="list-none text-white text-[2.2vh] leading-[3vh] text-justify pr-[2vh]">
+                                        <li>Divide the dough into small lemon-sized balls and do the same with the
+                                            potato
+                                            stuffing.</li>
+                                        <li>Roll out one dough ball into a small circle (about 4-5 inches in
+                                            diameter)
+                                            using
+                                            a
+                                            rolling pin.</li>
+                                        <li>Place a portion of the potato mixture in the center of the rolled-out
+                                            dough.
+                                        </li>
+                                        <li>Gather the edges of the dough and seal it over the filling, pinching to
+                                            close.
+                                        </li>
+                                        <li>Gently press the filled dough ball and flatten it slightly with your
+                                            fingers.
+                                        </li>
+                                        <li>Roll it out again carefully into a larger circle (about 6-7 inches),
+                                            ensuring
+                                            the
+                                            stuffing doesn't spill out.</li>
+                                    </ul>
                                 </div>
                             </div>
                             <div id="btn-content-3-3" class="col-span-10 hidden">
                                 <div class="">
                                     <h2 class="text-yellow uppercase text-[3.5vh] leading-[4vh] font-bold">
                                         Aloo Paratha<br> test 333</h2>
-                                    <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
-                                        class="w-[18vh] my-[3vh]">
-                                        <ul class="list-none text-white text-[2.2vh] leading-[3vh] text-justify pr-[2vh]">
-                                            <li>Divide the dough into small lemon-sized balls and do the same with the
-                                                potato
-                                                stuffing.</li>
-                                            <li>Roll out one dough ball into a small circle (about 4-5 inches in
-                                                diameter)
-                                                using
-                                                a
-                                                rolling pin.</li>
-                                            <li>Place a portion of the potato mixture in the center of the rolled-out
-                                                dough.
-                                            </li>
-                                            <li>Gather the edges of the dough and seal it over the filling, pinching to
-                                                close.
-                                            </li>
-                                            <li>Gently press the filled dough ball and flatten it slightly with your
-                                                fingers.
-                                            </li>
-                                            <li>Roll it out again carefully into a larger circle (about 6-7 inches),
-                                                ensuring
-                                                the
-                                                stuffing doesn't spill out.</li>
-                                        </ul>
+                                    <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[3vh]">
+                                    <ul class="list-none text-white text-[2.2vh] leading-[3vh] text-justify pr-[2vh]">
+                                        <li>Divide the dough into small lemon-sized balls and do the same with the
+                                            potato
+                                            stuffing.</li>
+                                        <li>Roll out one dough ball into a small circle (about 4-5 inches in
+                                            diameter)
+                                            using
+                                            a
+                                            rolling pin.</li>
+                                        <li>Place a portion of the potato mixture in the center of the rolled-out
+                                            dough.
+                                        </li>
+                                        <li>Gather the edges of the dough and seal it over the filling, pinching to
+                                            close.
+                                        </li>
+                                        <li>Gently press the filled dough ball and flatten it slightly with your
+                                            fingers.
+                                        </li>
+                                        <li>Roll it out again carefully into a larger circle (about 6-7 inches),
+                                            ensuring
+                                            the
+                                            stuffing doesn't spill out.</li>
+                                    </ul>
                                 </div>
                             </div>
                             <div id="btn-content-3-4" class="col-span-10 hidden">
                                 <div class="">
-                                        <h2 class="text-yellow uppercase text-[3.5vh] leading-[4vh] font-bold">
-                                            Aloo Paratha<br> test 444</h2>
-                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
-                                            class="w-[18vh] my-[3vh]">
-                                            <ul class="list-none text-white text-[2.2vh] leading-[3vh] text-justify pr-[2vh]">
-                                                <li>Divide the dough into small lemon-sized balls and do the same with the
-                                                    potato
-                                                    stuffing.</li>
-                                                <li>Roll out one dough ball into a small circle (about 4-5 inches in
-                                                    diameter)
-                                                    using
-                                                    a
-                                                    rolling pin.</li>
-                                                <li>Place a portion of the potato mixture in the center of the rolled-out
-                                                    dough.
-                                                </li>
-                                                <li>Gather the edges of the dough and seal it over the filling, pinching to
-                                                    close.
-                                                </li>
-                                                <li>Gently press the filled dough ball and flatten it slightly with your
-                                                    fingers.
-                                                </li>
-                                                <li>Roll it out again carefully into a larger circle (about 6-7 inches),
-                                                    ensuring
-                                                    the
-                                                    stuffing doesn't spill out.</li>
-                                            </ul>
-                                    </div>
+                                    <h2 class="text-yellow uppercase text-[3.5vh] leading-[4vh] font-bold">
+                                        Aloo Paratha<br> test 444</h2>
+                                    <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[3vh]">
+                                    <ul class="list-none text-white text-[2.2vh] leading-[3vh] text-justify pr-[2vh]">
+                                        <li>Divide the dough into small lemon-sized balls and do the same with the
+                                            potato
+                                            stuffing.</li>
+                                        <li>Roll out one dough ball into a small circle (about 4-5 inches in
+                                            diameter)
+                                            using
+                                            a
+                                            rolling pin.</li>
+                                        <li>Place a portion of the potato mixture in the center of the rolled-out
+                                            dough.
+                                        </li>
+                                        <li>Gather the edges of the dough and seal it over the filling, pinching to
+                                            close.
+                                        </li>
+                                        <li>Gently press the filled dough ball and flatten it slightly with your
+                                            fingers.
+                                        </li>
+                                        <li>Roll it out again carefully into a larger circle (about 6-7 inches),
+                                            ensuring
+                                            the
+                                            stuffing doesn't spill out.</li>
+                                    </ul>
+                                </div>
                             </div>
                             <div id="btn-content-3-5" class="col-span-10 hidden">
                                 <div class="col-span-4">
                                     <h2 class="text-yellow uppercase text-[3.5vh] leading-[4vh] font-bold">
                                         Aloo Paratha<br> test 555</h2>
-                                    <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
-                                        class="w-[18vh] my-[3vh]">
-                                        <ul class="list-none text-white text-[2.2vh] leading-[3vh] text-justify pr-[2vh]">
-                                            <li>Divide the dough into small lemon-sized balls and do the same with the
-                                                potato
-                                                stuffing.</li>
-                                            <li>Roll out one dough ball into a small circle (about 4-5 inches in
-                                                diameter)
-                                                using
-                                                a
-                                                rolling pin.</li>
-                                            <li>Place a portion of the potato mixture in the center of the rolled-out
-                                                dough.
-                                            </li>
-                                            <li>Gather the edges of the dough and seal it over the filling, pinching to
-                                                close.
-                                            </li>
-                                            <li>Gently press the filled dough ball and flatten it slightly with your
-                                                fingers.
-                                            </li>
-                                            <li>Roll it out again carefully into a larger circle (about 6-7 inches),
-                                                ensuring
-                                                the
-                                                stuffing doesn't spill out.</li>
-                                        </ul>
+                                    <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[3vh]">
+                                    <ul class="list-none text-white text-[2.2vh] leading-[3vh] text-justify pr-[2vh]">
+                                        <li>Divide the dough into small lemon-sized balls and do the same with the
+                                            potato
+                                            stuffing.</li>
+                                        <li>Roll out one dough ball into a small circle (about 4-5 inches in
+                                            diameter)
+                                            using
+                                            a
+                                            rolling pin.</li>
+                                        <li>Place a portion of the potato mixture in the center of the rolled-out
+                                            dough.
+                                        </li>
+                                        <li>Gather the edges of the dough and seal it over the filling, pinching to
+                                            close.
+                                        </li>
+                                        <li>Gently press the filled dough ball and flatten it slightly with your
+                                            fingers.
+                                        </li>
+                                        <li>Roll it out again carefully into a larger circle (about 6-7 inches),
+                                            ensuring
+                                            the
+                                            stuffing doesn't spill out.</li>
+                                    </ul>
                                 </div>
                             </div>
                             <!-- Buttons -->
                             <div class="tabs col-span-2 flex flex-col items-end">
                                 <!-- 1st -->
-                                <button class="btn-content active mb-[0vh]"
-                                    data-btn="3-1">
+                                <button class="btn-content active mb-[0vh]" data-btn="3-1">
                                     <div
                                         class="recipe-number w-[7vh] h-[7vh] rounded-ful border-t-2 border-yellow p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
                                         1</div>
@@ -1318,7 +2082,7 @@
 
 
         <!-- ========= Testimonial =========== -->
-        <section class="testimonial-section relative min-h-screen:  z-30 bg-yellow">
+        <section class="testimonial-section relative min-h-screen:  z-30 bg-yellow" id="testimonial-section">
 
             <!-- bottom-[-15vh] mt-[-15vh] -->
             <div class="custom-width">
@@ -1327,11 +2091,13 @@
                     <div class="grid grid-cols-1 lg:grid-cols-2">
                         <div class="grid-span-4 overflow-hidden">
                             <div class="textimonial-bg"></div>
-                            
+
                             <div class="">
                                 <span class="uppercase text-darkMehroon text-[2.2vh]">Testimonials</span>
-            
-                                <h2 class="text-darkMehroon uppercase text-[4vh] leading-[5vh] md:text-[5.5vh] md:leading-[7vh] font-bold">our
+
+                                <h2
+                                    class="text-darkMehroon uppercase text-[4vh] leading-[5vh] md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                    our
                                     Customers<br>
                                     are Talking About</h2>
                                 <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[6vh]">
@@ -1421,7 +2187,7 @@
 
         </section>
     </main>
-    <footer class="min-h-screen bg-darkMehroon relative overflow-hidden z-20">
+    <footer class="min-h-screen bg-darkMehroon relative overflow-hidden z-20" id="footer-section">
 
 
         <div class="custom-width">
