@@ -24,15 +24,30 @@ $(document).ready(function () {
       smoothWheel: true, // Smooth scrolling for the mouse wheel
       smoothTouch: true, // Smooth scrolling for touch devices
     });
-
+  
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
-
+  
     requestAnimationFrame(raf);
   }
-  lenis();
+  
+  // Function to check the viewport width and apply Lenis only if >= 1024px
+  function initLenisForLargeScreens() {
+    if (window.innerWidth >= 1024) {
+      lenis();
+    }
+  }
+  
+  // Initial check when the page loads
+  initLenisForLargeScreens();
+  
+  // Recheck when the window is resized
+  window.addEventListener('resize', function () {
+    initLenisForLargeScreens();
+  });
+  
 
   function sliders() {
     $("#banner-slider").owlCarousel({
