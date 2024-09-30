@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Aaryabhog</title>
+    <!-- Bootstrap.css -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap-grid.min.css"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Owl.css -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" />
+
+    <!-- Tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        orange_: '#F04E23',
+                        yellow: '#E99D23',
+                        mehroon: '#981B1E',
+                        darkMehroon: '#501B15',
+                        green: "#12743b"
+                    },
+                    backgroundImage: {
+                        'custom-gradient': 'linear-gradient(180deg, rgba(240, 78, 35, 1), rgba(233, 157, 35, 1))',
+                    },
+                    backgroundImage: {
+                        'mobile-gradient': 'linear-gradient(0deg, rgba(240, 78, 35, 1), rgba(233, 157, 35, 1))',
+                    },
+                    fontSize: {
+                        'p': '18px',
+                        'h2': '50px',
+                        'h3': '35px',
+                        '20px': "20px",
+                        "75px": "75px",
+                        "50px": "50px"
+                    },
+                    lineHeight: {
+                        '39px': '39px',
+                        '75px': '75px',
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    },
+                    display: {
+                        unset: 'unset',
+                        initial: 'initial',
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Font.css -->
+    <link rel="stylesheet" href="assets/css/font.css">
+    <!-- Main.css -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body class="bg-darkMehroon">
+    <!-- ========= lg Header =========== -->
+    <header class="custom-width hidden lg:block">
+        <div class="header-top-wrapper mt-[4vh] mb-[6vh]">
+            <div class="flex justify-between">
+                <div class="cta-header flex items-center gap-x-[2vh]">
+                    <a href="mailto:info@aaryabhog.com" class="flex items-center gap-x-[1vh]">
+                        <img src="assets/img/mail-white-icon.webp" alt="mail-white-icon" class="w-[3vh]">
+                        <span class="text-[2vh] text-white">info@aaryabhog.com</span>
+                    </a>
+                    <a href="tel:918824892796" class="flex items-center gap-x-[1vh]">
+                        <img src="assets/img/phone-white-icon.webp" alt="phone-white-icon" class="w-[2.3vh]">
+                        <span class="text-[2vh] text-white"> +91 - 8824892796</span>
+
+                    </a>
+                </div>
+                <div>
+                    <img src="assets/img/header-logo.webp" alt="header-logo" class="w-[75%]">
+                </div>
+                <div class="social-header flex items-center gap-x-[2vh]">
+                    <a href="#" class="w-[6vh]">
+                        <img src="assets/img/facebook-icon.webp" alt="facebook-icon" class="ml-[0vh] float-right">
+                    </a>
+                    <a href="#" class="w-[6vh]">
+                        <img src="assets/img/insta-icon.webp" alt="insta-icon" class="ml-[0vh] float-right">
+                    </a>
+                    <a href="#" class="w-[6vh]">
+                        <img src="assets/img/twitter-icon.webp" alt="twitter-icon" class="ml-[0vh] float-right">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="header-wrapper">
+            <nav>
+                <ul class="flex items-center justify-center mb-[4vh]">
+                    <li>
+                        <a href="index.html" class="text-yellow text-[2.2vh] px-[3vh]">Home</a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="text-white text-[2.2vh] px-[3vh]">Our Story</a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="text-white text-[2.2vh] px-[3vh]">Our Products</a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="text-white text-[2.2vh] px-[3vh]">Recipe</a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="text-white text-[2.2vh] px-[3vh]">Testimonials</a>
+                    </li>
+                    <li>
+
+                        <a href="index.html" class="text-white text-[2.2vh] px-[3vh]">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- ========= sm Header =========== -->
+    <header id="mobile-menu" class="bg-mobile-gradient block lg:hidden">
+        <div class="mobile-wrapper flex flex-col justify-evenly items-start">
+            <div class="text-center">
+                <img src="assets/img/header-logo.webp" alt="header-logo" class="w-[80%] m-auto ml-[3vh] mt-[4vh]">
+            </div>
+            <nav>
+                <ul class="block text-start items-start justify-start leading-[8vh] mt-[5vh]">
+                    <li>
+                        <a href="index.html" class="text-green text-[3vh] px-[3vh]">Home</a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="text-white text-[3vh] px-[3vh]">Our Story</a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="text-white text-[3vh] px-[3vh]">Our Products</a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="text-white text-[3vh] px-[3vh]">Recipe</a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="text-white text-[3vh] px-[3vh]">Testimonials</a>
+                    </li>
+                    <li>
+
+                        <a href="index.html" class="text-white text-[3vh] px-[3vh]">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="social-header flex items-center gap-x-[2vh] pl-[3vh] mt-[22vh]">
+                <a href="#" class="w-[6vh]">
+                    <img src="assets/img/facebook-icon.webp" alt="facebook-icon" class="ml-[0vh] float-right">
+                </a>
+                <a href="#" class="w-[6vh]">
+                    <img src="assets/img/insta-icon.webp" alt="insta-icon" class="ml-[0vh] float-right">
+                </a>
+                <a href="#" class="w-[6vh] flex justify-center items-center">
+                    <img src="assets/img/twitter-icon.webp" alt="twitter-icon" class="ml-[0vh] float-right">
+                </a>
+                <a href="tel:918824892796" class="">
+                    <!-- width: 6.3vh;
+    height: 6.3vh;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 6.3vh;
+    font-size: 3.5vh; -->
+                    <i
+                        class="fas fa-mobile-alt bg-white text-darkMehroon w-[6.3vh] h-[6.3vh] rounded-full leading-[6.3vh] text-[3.5vh] text-center"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="custom-width relative">
+        <div class="absolute left-[0vh] top-[3vh] z-40 w-[50%] md:w-[25%] block lg:hidden">
+            <img src="assets/img/header-logo.webp" alt="header-logo" class="">
+        </div>
+        <div class="hamburger-wrapper block lg:hidden">
+            <div class="toggle-btn cursor-pointer" id="menuToggle">
+                <i class="fa-solid fa-bars text-white text-[5vh]"></i>
+            </div>
+        </div>
+    </div>
+    <main class="home-page relative top-[15vh]">
+        <!-- ========= Banner =========== -->
+        <section class="custom-width">
+            <div class="banner-owl-wrapper">
+                <div class="banner-shape">
+                    <!-- <img src="assets/img/red-shape-1.webp" alt="red-shape-1"> -->
+                </div>
+                <div class="owl-carousel owl-theme" id="banner-slider">
+                    <div class="owl-items">
+                        <img src="assets/img/banner-slider-1.webp" alt="banner-slider-1">
+                        <div class="owl-items-content w-[50vh] md:w-[35vw] ml-[5vh] lg:ml-[15vh]">
+                            <div class="">
+                                <h1
+                                    class="text-white text-[3vh] md:text-[7vh] md:leading-[7vh] lg:text-[11vh] lg:leading-[12vh] xl:text-[9vh] xl:leading-[11vh] font-bold">
+                                    The Aaryabhog
+                                    Promise</h1>
+                                <p class="text-[2.2vh] text-white mt-0 md:mt-[1vh]">Hand-picked ingredients, careful
+                                    processing and
+                                    untouched packaging ensuring superior quality.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-items">
+                        <img src="assets/img/banner-slider-1.webp" alt="banner-slider-1">
+                        <div class="owl-items-content w-[50vh] md:w-[35vw] ml-[5vh] lg:ml-[15vh]">
+                            <div class="">
+                                <h1
+                                    class="text-white text-[3vh] md:text-[7vh] md:leading-[7vh] lg:text-[11vh] lg:leading-[12vh] xl:text-[9vh] xl:leading-[11vh] font-bold">
+                                    The Aaryabhog
+                                    Promise</h1>
+                                <p class="text-[2.2vh] text-white mt-0 md:mt-[1vh]">Hand-picked ingredients, careful
+                                    processing and
+                                    untouched packaging ensuring superior quality.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- ========= About =========== -->
+        <section class="custom-width min-h-screen pt-[16vh]">
+
+            <div class="flex flex-col-reverse md:grid md:grid-cols-2 lg:grid-cols-2 gap-6">
+                <div class="">
+                    <div class="wheat-img-wrapper lg:mr-[13vw] relative">
+                        <img src="assets/img/wheat.webp" alt="wheat">
+                        <div class="absolute left-[50%] top-[70%] w-[75%] hidden lg:block">
+
+                            <img src="assets/img/green-wheat.webp" alt="green-wheat">
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:mr-[10vh]">
+                    <span class="uppercase text-white text-[2.2vh]">ABOUT AARYABHOG</span>
+                    <h2
+                        class="text-yellow uppercase text-[4vh] leading-[5vh] md:text-[5.5vh] md:leading-[7vh] font-bold">
+                        WE’RE LEADER IN<br>
+                        AGRICULTURE
+                        MARKET
+                    </h2>
+                    <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[4vh]">
+                    <p class="text-white text-[2.2vh] mb-[4vh]">
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form, by injected humour, or randomised words which don’t look even slightly
+                        believable.
+
+                    </p>
+                    <div class="hidden md:grid grid-cols-2 mt-[4vh]">
+                        <div class="flex items-center">
+                            <span class="w-[4vw] h-[4vw] bg-yellow block rounded-full mr-[1vh]"></span>
+                            <p class="text-white bold text-[2.5vh]">Our Main Unique<br>
+                                Selling Point</p>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-[4vw] h-[4vw] bg-yellow block rounded-full mr-[1vh]"></span>
+                            <p class="text-white bold text-[2.5vh]">Our Main Unique<br>
+                                Selling Point</p>
+                        </div>
+                        <p class="text-white text-[2.2vh] col-span-full mt-[4vh]">
+                            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything
+                            embarrassing hidden in the middle of text.
+                        </p>
+                        <img src="assets/img/red-shape-3.webp" alt="red-shape-3" class="col-span-full mt-[5vh]">
+                    </div>
+                    <div class="flex flex-col gap-y-[2vh] md:hidden grid-cols-2 mt-[4vh]">
+                        <div class="flex items-center">
+                            <span class="w-[10vw] h-[10vw] bg-yellow block rounded-full mr-[1vh]"></span>
+                            <p class="text-white bold text-[2.5vh]">Our Main Unique Selling Point</p>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-[10vw] h-[10vw] bg-yellow block rounded-full mr-[1vh]"></span>
+                            <p class="text-white bold text-[2.5vh]">Our Main Unique Selling Point</p>
+                        </div>
+                        <p class="text-white text-[2.2vh] col-span-full mt-[4vh]">
+                            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything
+                            embarrassing hidden in the middle of text.
+                        </p>
+                        <img src="assets/img/red-shape-3.webp" alt="red-shape-3" class="col-span-full mt-[5vh]">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ========= Proccess =========== -->
+        <section class="custom-width process-section pt-[12vh] 2xl:pt-[20vh] pb-[25vh] md:pb-[30vh] lg:pb-[40vh]">
+            <div class="text-center w-full max-w-xl m-auto">
+                <span class="uppercase text-white text-[2.2vh]">OUR PROCESS</span>
+                <h2 class="text-yellow uppercase text-[4vh] leading-[5vh] md:text-[5.5vh] md:leading-[7vh] font-bold">
+                    MAKING ATTA<br> FROM FARM TO TABLE
+                </h2>
+                <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] mt-[6vh] mb-[8vh] m-auto">
+            </div>
+
+            <div class="hidden  lg:grid grid-cols-3 mt-[4vh] container gap-4">
+                <!-- Left -->
+                <div class="process-content-wrapper process-left-wrapper">
+                    <div class="process-items process-items-left" animation-item="10px">
+                        <h2 class="text-yellow lg:text-[5.5vh] lg:leading-[7vh] font-semibold">Wheat <br> Cultivation
+                        </h2>
+                        <img src="assets/img/red-village.webp" alt="red-village" class="mt-[10vh]">
+                    </div>
+                    <div class="process-items process-items-left" animation-item="30px">
+                        <h2 class="text-yellow lg:text-[5.5vh] lg:leading-[7vh] font-semibold">Wheat <br> Cultivation
+                        </h2>
+                        <img src="assets/img/red-village.webp" alt="red-village" class="mt-[10vh]">
+                    </div>
+                    <div class="process-items process-items-left" animation-item="50px">
+                        <h2 class="text-yellow lg:text-[5.5vh] lg:leading-[7vh] font-semibold">Wheat <br> Cultivation
+                        </h2>
+                        <img src="assets/img/red-village.webp" alt="red-village" class="mt-[10vh]">
+                    </div>
+                    <div class="process-items process-items-left" animation-item="50px">
+                        <h2 class="text-yellow lg:text-[5.5vh] lg:leading-[7vh] font-semibold">Wheat <br> Cultivation
+                        </h2>
+                        <img src="assets/img/red-village.webp" alt="red-village" class="mt-[10vh]">
+                    </div>
+                    <div class="process-items process-items-left" animation-item="50px">
+                        <h2 class="text-yellow lg:text-[5.5vh] lg:leading-[7vh] font-semibold">Wheat <br> Cultivation
+                        </h2>
+                        <img src="assets/img/red-village.webp" alt="red-village" class="mt-[10vh]">
+                    </div>
+                </div>
+
+                <!-- Middle Image -->
+                <div class="flex items-start justify-center">
+                    <img src="assets/img/aaryabhog-pack.webp" alt="aaryabhog-pack"
+                        class="w-[80%] max-w-md aaryabhog-pack pin-box2">
+                </div>
+
+                <!-- Right -->
+                <div class="process-content-wrapper">
+                    <div class="process-items" animation-item="10px">
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Soil Preparation: The process starts with selecting fertile soil for growing wheat. The
+                            soil is plowed and leveled to ensure good drainage and proper aeration.
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Sowing Wheat Seeds: Farmers sow wheat seeds using traditional or modern machinery,
+                            usually after the monsoon or during the Rabi season (winter in India).
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Irrigation: Wheat requires moderate water, so farmers irrigate the fields periodically
+                            based on the soil and weather conditions.
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Fertilization and Pest Control: Organic or chemical fertilizers are added for better
+                            crop yield. Pest control measures are also taken to protect the wheat from insects and
+                            diseases.
+                        </p>
+                    </div>
+                    <div class="process-items" animation-item="20px">
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Soil Preparation: The process starts with selecting fertile soil for growing wheat. The
+                            soil is plowed and leveled to ensure good drainage and proper aeration.
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Sowing Wheat Seeds: Farmers sow wheat seeds using traditional or modern machinery,
+                            usually after the monsoon or during the Rabi season (winter in India).
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Irrigation: Wheat requires moderate water, so farmers irrigate the fields periodically
+                            based on the soil and weather conditions.
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Fertilization and Pest Control: Organic or chemical fertilizers are added for better
+                            crop yield. Pest control measures are also taken to protect the wheat from insects and
+                            diseases.
+                        </p>
+                    </div>
+                    <div class="process-items" animation-item="30px">
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Soil Preparation: The process starts with selecting fertile soil for growing wheat. The
+                            soil is plowed and leveled to ensure good drainage and proper aeration.
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Sowing Wheat Seeds: Farmers sow wheat seeds using traditional or modern machinery,
+                            usually after the monsoon or during the Rabi season (winter in India).
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Irrigation: Wheat requires moderate water, so farmers irrigate the fields periodically
+                            based on the soil and weather conditions.
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Fertilization and Pest Control: Organic or chemical fertilizers are added for better
+                            crop yield. Pest control measures are also taken to protect the wheat from insects and
+                            diseases.
+                        </p>
+                    </div>
+                    <div class="process-items" animation-item="30px">
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Soil Preparation: The process starts with selecting fertile soil for growing wheat. The
+                            soil is plowed and leveled to ensure good drainage and proper aeration.
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Sowing Wheat Seeds: Farmers sow wheat seeds using traditional or modern machinery,
+                            usually after the monsoon or during the Rabi season (winter in India).
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Irrigation: Wheat requires moderate water, so farmers irrigate the fields periodically
+                            based on the soil and weather conditions.
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Fertilization and Pest Control: Organic or chemical fertilizers are added for better
+                            crop yield. Pest control measures are also taken to protect the wheat from insects and
+                            diseases.
+                        </p>
+                    </div>
+                    <div class="process-items" animation-item="30px">
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Soil Preparation: The process starts with selecting fertile soil for growing wheat. The
+                            soil is plowed and leveled to ensure good drainage and proper aeration.
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Sowing Wheat Seeds: Farmers sow wheat seeds using traditional or modern machinery,
+                            usually after the monsoon or during the Rabi season (winter in India).
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Irrigation: Wheat requires moderate water, so farmers irrigate the fields periodically
+                            based on the soil and weather conditions.
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Fertilization and Pest Control: Organic or chemical fertilizers are added for better
+                            crop yield. Pest control measures are also taken to protect the wheat from insects and
+                            diseases.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- accordian -->
+            <div class="block lg:hidden accordion">
+                <!-- Accordion 1 -->
+                <div class="accordion-wrapper">
+                    <div class="accordion-header">
+                        <h2 class="text-darkMehroon uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">Wheat
+                            Cultivation</h2>
+                        <i class="fas fa-chevron-down icon text-darkMehroon text-[5vh]"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <img src="assets/img/red-village.webp" alt="red-village" class="mt-[2vh] mb-[5vh]">
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Soil Preparation: The process starts with selecting fertile soil for growing wheat. The
+                            soil is plowed and leveled to ensure good drainage and proper aeration.
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Sowing Wheat Seeds: Farmers sow wheat seeds using traditional or modern machinery,
+                            usually after the monsoon or during the Rabi season (winter in India).
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Irrigation: Wheat requires moderate water, so farmers irrigate the fields periodically
+                            based on the soil and weather conditions.
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Fertilization and Pest Control: Organic or chemical fertilizers are added for better
+                            crop yield. Pest control measures are also taken to protect the wheat from insects and
+                            diseases.
+                        </p>
+                    </div>
+                </div>
+                <!-- Accordion 2 -->
+                <div class="accordion-wrapper">
+                    <div class="accordion-header">
+                        <h2 class="text-darkMehroon uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">Wheat
+                            Cultivation</h2>
+                        <i class="fas fa-chevron-down icon text-darkMehroon text-[5vh]"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <img src="assets/img/red-village.webp" alt="red-village" class="mt-[2vh] mb-[5vh]">
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Soil Preparation: The process starts with selecting fertile soil for growing wheat. The
+                            soil is plowed and leveled to ensure good drainage and proper aeration.
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Sowing Wheat Seeds: Farmers sow wheat seeds using traditional or modern machinery,
+                            usually after the monsoon or during the Rabi season (winter in India).
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Irrigation: Wheat requires moderate water, so farmers irrigate the fields periodically
+                            based on the soil and weather conditions.
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Fertilization and Pest Control: Organic or chemical fertilizers are added for better
+                            crop yield. Pest control measures are also taken to protect the wheat from insects and
+                            diseases.
+                        </p>
+                    </div>
+                </div>
+                <!-- Accordion3 -->
+                <div class="accordion-wrapper">
+                    <div class="accordion-header">
+                        <h2 class="text-darkMehroon uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">Wheat
+                            Cultivation</h2>
+                        <i class="fas fa-chevron-down icon text-darkMehroon text-[5vh]"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <img src="assets/img/red-village.webp" alt="red-village" class="mt-[2vh] mb-[5vh]">
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Soil Preparation: The process starts with selecting fertile soil for growing wheat. The
+                            soil is plowed and leveled to ensure good drainage and proper aeration.
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Sowing Wheat Seeds: Farmers sow wheat seeds using traditional or modern machinery,
+                            usually after the monsoon or during the Rabi season (winter in India).
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Irrigation: Wheat requires moderate water, so farmers irrigate the fields periodically
+                            based on the soil and weather conditions.
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Fertilization and Pest Control: Organic or chemical fertilizers are added for better
+                            crop yield. Pest control measures are also taken to protect the wheat from insects and
+                            diseases.
+                        </p>
+                    </div>
+                </div>
+                <!-- Accordion 4 -->
+                <div class="accordion-wrapper">
+                    <div class="accordion-header">
+                        <h2 class="text-darkMehroon uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">Wheat
+                            Cultivation</h2>
+                        <i class="fas fa-chevron-down icon text-darkMehroon text-[5vh]"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <img src="assets/img/red-village.webp" alt="red-village" class="mt-[2vh] mb-[5vh]">
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Soil Preparation: The process starts with selecting fertile soil for growing wheat. The
+                            soil is plowed and leveled to ensure good drainage and proper aeration.
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Sowing Wheat Seeds: Farmers sow wheat seeds using traditional or modern machinery,
+                            usually after the monsoon or during the Rabi season (winter in India).
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Irrigation: Wheat requires moderate water, so farmers irrigate the fields periodically
+                            based on the soil and weather conditions.
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Fertilization and Pest Control: Organic or chemical fertilizers are added for better
+                            crop yield. Pest control measures are also taken to protect the wheat from insects and
+                            diseases.
+                        </p>
+                    </div>
+                </div>
+                <!-- Accordion 5-->
+                <div class="accordion-wrapper">
+                    <div class="accordion-header">
+                        <h2 class="text-darkMehroon uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">Wheat
+                            Cultivation</h2>
+                        <i class="fas fa-chevron-down icon text-darkMehroon text-[5vh]"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <img src="assets/img/red-village.webp" alt="red-village" class="mt-[2vh] mb-[5vh]">
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Soil Preparation: The process starts with selecting fertile soil for growing wheat. The
+                            soil is plowed and leveled to ensure good drainage and proper aeration.
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Sowing Wheat Seeds: Farmers sow wheat seeds using traditional or modern machinery,
+                            usually after the monsoon or during the Rabi season (winter in India).
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Irrigation: Wheat requires moderate water, so farmers irrigate the fields periodically
+                            based on the soil and weather conditions.
+                        </p>
+                        <p class="text-white text-[2.2vh] mb-[2vh] col-span-full">
+                            Fertilization and Pest Control: Organic or chemical fertilizers are added for better
+                            crop yield. Pest control measures are also taken to protect the wheat from insects and
+                            diseases.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========= Product =========== -->
+
+        <section
+            class="custom-width container2 product-section pt-[5vh] md:pt-[18vh] px-[2vh] md:px-[6vh] lg:pl-[13vh] pb-[10vh]">
+            <h2 class="text-darkMehroon uppercase  text-[5vh] leading-[5vh] md:text-[5.5vh] md:leading-[7vh] font-bold">
+                OUR
+                PRODUCTS</h2>
+            <div>
+                <div class="owl-carousel owl-theme product-slider">
+
+                    <div class="owl-items grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-2">
+                        <div class="col-span-7 xl:col-span-1">
+                            <span class=" text-darkMehroon text-[2.2vh] mt-[6vh] block">Premium Sortex Wheat</span>
+                            <h2 class="text-darkMehroon uppercase text-[4vh] leading-[4vh] md:text-[5.5vh] md:leading-[7vh] font-bold">MP
+                                SHARBATI<br> SEHORI</h2>
+                            <span class=" text-darkMehroon text-[2.2vh] block mt-[2vh] font-semibold">
+                                Quality grains for delicious &<br> healthy food
+                            </span>
+                            <p class="text-[2.2vh] text-darkMehroon mt-[5vh] font-medium leading-[5vh]  md:max-w-[60%]">
+                                There are many
+                                variations of passages of Lorem Ipsum
+                                available, but the majority have suffered alteration in some form, by injected humour,
+                                or randomised words which don’t look even slightly believable.</p>
+                        </div>
+                        <div class="col-span-5 xl:col-span-1 pt-[4vh] md:pt-[0vh]">
+                            <img src="assets/img/aaryabhog-pack.webp" alt="aaryabhog-pack">
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+                <!-- Product Custom dots -->
+                <div class="custom-dots absolute bottom-0 flex z-[999] gap-[10vh] pb-[6vh] hidden lg:block">
+                </div>
+            </div>
+        </section>
+
+        <!-- ========= Recipe =========== -->
+        <section class="recipe-section pt-[12vh]">
+            <div class="custom-width">
+                <div class="text-center md:w-[40%] m-auto pin-box1">
+                    <span class="uppercase text-white text-[2.2vh]">CHECK OUT</span>
+
+                    <h2
+                        class=" text-yellow uppercase text-[4vh] leading-[5vh] md:text-[5.5vh] md:leading-[7vh] font-bold">
+                        OUR FAVOURITE<br>
+                        RECIPES</h2>
+                    <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] mt-[6vh] mb-[8vh] m-auto">
+                </div>
+            </div>
+
+            <!-- recipe slider -->
+            <div class="custom-width">
+                <div class="owl-carousel owl-theme recipe-slider">
+                    <!-- Slide 1 -->
+                    <div class="tab-link active" data-tab="tab1">
+                        <img src="assets/img/recipe-slider-1.webp" alt="recipe-slider-1"
+                            class="w-full card-image rounded-tr-[14vh]">
+                        <div class="bg-orange_ py-[3vh] pl-[3vh]">
+                            <h3 class="text-[3vh]  md:text-[4vh] text-white">Aloo Paratha 1</h3>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="tab-link " data-tab="tab2">
+                        <img src="assets/img/recipe-slider-1.webp" alt="recipe-slider-1"
+                            class="w-full card-image rounded-tr-[14vh]">
+                        <div class="bg-orange_ py-[3vh] pl-[3vh]">
+                            <h3 class="text-[3vh]  md:text-[4vh] text-white">Aloo Paratha 2</h3>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="tab-link " data-tab="tab3">
+                        <img src="assets/img/recipe-slider-1.webp" alt="recipe-slider-1"
+                            class="w-full card-image rounded-tr-[14vh]">
+                        <div class="bg-orange_ py-[3vh] pl-[3vh]">
+                            <h3 class="text-[3vh]  md:text-[4vh] text-white">Aloo Paratha 3</h3>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- recipe tabs -->
+            <div class="bg-mehroon min-h-screen mt-[-12.2vh]  pb-[18vh] recipe-container">
+                <div class="custom-width pt-[24.4vh]">
+                    <!-- ==========  Tab Content =========== -->
+
+                    <span class="text-white text-[2.2vh]">Reciepe</span>
+                    <!-- 1st -->
+                    <div class="tab-content grid grid-cols-12 active innerTabContent" id="tab1">
+                        <!-- Inner Tabs 1 -->
+                        <div class="tab-content col-span-12 grid grid-cols-12 tab-link active" id="innerTab1">
+                            <div class="col-span-4">
+                                <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">Aloo<br>
+                                    Paratha test1</h2>
+                                <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[3vh]">
+                            </div>
+                            <div class="col-span-8">
+                                <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                    <li>Divide the dough into small lemon-sized balls and do the same with the potato
+                                        stuffing.</li>
+                                    <li>Roll out one dough ball into a small circle (about 4-5 inches in diameter) using
+                                        a
+                                        rolling pin.</li>
+                                    <li>Place a portion of the potato mixture in the center of the rolled-out dough.
+                                    </li>
+                                    <li>Gather the edges of the dough and seal it over the filling, pinching to close.
+                                    </li>
+                                    <li>Gently press the filled dough ball and flatten it slightly with your fingers.
+                                    </li>
+                                    <li>Roll it out again carefully into a larger circle (about 6-7 inches), ensuring
+                                        the
+                                        stuffing doesn't spill out.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Inner Tabs 2 -->
+                        <div class="tab-content col-span-12 grid grid-cols-12 tab-link hidden" id="innerTab2">
+                            <div class="col-span-4">
+                                <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">Aloo<br>
+                                    Paratha test2</h2>
+                                <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[3vh]">
+                            </div>
+                            <div class="col-span-8">
+                                <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                    <li>Divide the dough into small lemon-sized balls and do the same with the potato
+                                        stuffing.</li>
+                                    <li>Roll out one dough ball into a small circle (about 4-5 inches in diameter) using
+                                        a
+                                        rolling pin.</li>
+                                    <li>Place a portion of the potato mixture in the center of the rolled-out dough.
+                                    </li>
+                                    <li>Gather the edges of the dough and seal it over the filling, pinching to close.
+                                    </li>
+                                    <li>Gently press the filled dough ball and flatten it slightly with your fingers.
+                                    </li>
+                                    <li>Roll it out again carefully into a larger circle (about 6-7 inches), ensuring
+                                        the
+                                        stuffing doesn't spill out.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Inner Tabs 3 -->
+                        <div class="tab-content col-span-12 grid grid-cols-12 tab-link hidden" id="innerTab3">
+                            <div class="col-span-4">
+                                <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">Aloo<br>
+                                    Paratha test3</h2>
+                                <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[3vh]">
+                            </div>
+                            <div class="col-span-8">
+                                <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                    <li>Divide the dough into small lemon-sized balls and do the same with the potato
+                                        stuffing.</li>
+                                    <li>Roll out one dough ball into a small circle (about 4-5 inches in diameter) using
+                                        a
+                                        rolling pin.</li>
+                                    <li>Place a portion of the potato mixture in the center of the rolled-out dough.
+                                    </li>
+                                    <li>Gather the edges of the dough and seal it over the filling, pinching to close.
+                                    </li>
+                                    <li>Gently press the filled dough ball and flatten it slightly with your fingers.
+                                    </li>
+                                    <li>Roll it out again carefully into a larger circle (about 6-7 inches), ensuring
+                                        the
+                                        stuffing doesn't spill out.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Inner Tabs 4 -->
+                        <div class="tab-content col-span-12 grid grid-cols-12 tab-link hidden" id="innerTab4">
+                            <div class="col-span-4">
+                                <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">Aloo<br>
+                                    Paratha test4</h2>
+                                <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[3vh]">
+                            </div>
+                            <div class="col-span-8">
+                                <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                    <li>Divide the dough into small lemon-sized balls and do the same with the potato
+                                        stuffing.</li>
+                                    <li>Roll out one dough ball into a small circle (about 4-5 inches in diameter) using
+                                        a
+                                        rolling pin.</li>
+                                    <li>Place a portion of the potato mixture in the center of the rolled-out dough.
+                                    </li>
+                                    <li>Gather the edges of the dough and seal it over the filling, pinching to close.
+                                    </li>
+                                    <li>Gently press the filled dough ball and flatten it slightly with your fingers.
+                                    </li>
+                                    <li>Roll it out again carefully into a larger circle (about 6-7 inches), ensuring
+                                        the
+                                        stuffing doesn't spill out.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Inner Tabs 5 -->
+                        <div class="tab-content col-span-12 grid grid-cols-12 tab-link hidden" id="innerTab5">
+                            <div class="col-span-4">
+                                <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">Aloo<br>
+                                    Paratha test5</h2>
+                                <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[3vh]">
+                            </div>
+                            <div class="col-span-8">
+                                <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                    <li>Divide the dough into small lemon-sized balls and do the same with the potato
+                                        stuffing.</li>
+                                    <li>Roll out one dough ball into a small circle (about 4-5 inches in diameter) using
+                                        a
+                                        rolling pin.</li>
+                                    <li>Place a portion of the potato mixture in the center of the rolled-out dough.
+                                    </li>
+                                    <li>Gather the edges of the dough and seal it over the filling, pinching to close.
+                                    </li>
+                                    <li>Gently press the filled dough ball and flatten it slightly with your fingers.
+                                    </li>
+                                    <li>Roll it out again carefully into a larger circle (about 6-7 inches), ensuring
+                                        the
+                                        stuffing doesn't spill out.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- ==========  Tabs Button 1 =========== -->
+                        <div class="col-span-12">
+                            <div class="tabs grid grid-cols-5 gap-x-[2vh] mt-[20vh]">
+                                <!-- 1st -->
+                                <button class="tab-link active bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-tab="innerTab1">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        1</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Prepare<br> the Dough</p>
+                                </button>
+                                <!-- 2ndt -->
+                                <button class="tab-link bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-tab="innerTab2">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        2</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Prepare the Aloo<br>
+                                        (Potato) Stuffing</p>
+                                </button>
+                                <!-- 3rd -->
+                                <button class="tab-link bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-tab="innerTab3">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        3</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Stuff the<br>
+                                        Parathas</p>
+                                </button>
+                                <!-- 4th -->
+                                <button class="tab-link bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-tab="innerTab4">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        4</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Cook<br>
+                                        the Parathas</p>
+                                </button>
+                                <!-- 5th -->
+                                <button class="tab-link bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-tab="innerTab5">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        5</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Serve</p>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2nd -->
+                    <div class="tab-content grid grid-cols-12 hidden innerTabContent2" data-tab="innerTab1">
+                        <div class="col-span-4">
+                            <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">Aloo<br>
+                                Paratha 2nd</h2>
+                            <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[3vh]">
+                        </div>
+                        <div class="col-span-8">
+                            <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                <li>2nd Divide the dough into small lemon-sized balls and do the same with the potato
+                                    stuffing.</li>
+                                <li>Roll out one dough ball into a small circle (about 4-5 inches in diameter) using a
+                                    rolling pin.</li>
+                                <li>Place a portion of the potato mixture in the center of the rolled-out dough.</li>
+                                <li>Gather the edges of the dough and seal it over the filling, pinching to close.</li>
+                                <li>Gently press the filled dough ball and flatten it slightly with your fingers.</li>
+                                <li>Roll it out again carefully into a larger circle (about 6-7 inches), ensuring the
+                                    stuffing doesn't spill out.</li>
+                            </ul>
+                        </div>
+                        <!-- ==========  Tabs Button 1 =========== -->
+                        <div class="col-span-12">
+                            <div class="tabs grid grid-cols-5 gap-x-[2vh] mt-[20vh]">
+                                <!-- 1st -->
+                                <button class="tab-link active bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-tab="innerTab1">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        1</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Prepare<br> the Dough</p>
+                                </button>
+                                <!-- 2ndt -->
+                                <button class="tab-link bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-tab="innerTab2">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        2</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Prepare the Aloo<br>
+                                        (Potato) Stuffing</p>
+                                </button>
+                                <!-- 3rd -->
+                                <button class="tab-link bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-tab="innerTab3">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        3</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Stuff the<br>
+                                        Parathas</p>
+                                </button>
+                                <!-- 4th -->
+                                <button class="tab-link bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-tab="innerTab4">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        4</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Cook<br>
+                                        the Parathas</p>
+                                </button>
+                                <!-- 5th -->
+                                <button class="tab-link bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-tab="innerTab5">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        5</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Serve</p>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3th -->
+                    <div class="tab-content grid grid-cols-12 hidden innerTabContent3" id="tab3">
+                        <div class="col-span-4">
+                            <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">Aloo<br>
+                                Paratha 3</h2>
+                            <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[3vh]">
+                        </div>
+                        <div class="col-span-8">
+                            <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                <li>Divide the dough into small lemon-sized balls and do the same with the potato
+                                    stuffing.</li>
+                                <li>Roll out one dough ball into a small circle (about 4-5 inches in diameter) using a
+                                    rolling pin.</li>
+                                <li>Place a portion of the potato mixture in the center of the rolled-out dough.</li>
+                                <li>Gather the edges of the dough and seal it over the filling, pinching to close.</li>
+                                <li>Gently press the filled dough ball and flatten it slightly with your fingers.</li>
+                                <li>Roll it out again carefully into a larger circle (about 6-7 inches), ensuring the
+                                    stuffing doesn't spill out.</li>
+                            </ul>
+                        </div>
+                        <!-- ==========  Tabs Button 1 =========== -->
+                        <div class="col-span-12">
+                            <div class="tabs grid grid-cols-5 gap-x-[2vh] mt-[20vh]">
+                                <!-- 1st -->
+                                <button class="tab-link active bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-tab="innerTab1">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        1</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Prepare<br> the Dough</p>
+                                </button>
+                                <!-- 2ndt -->
+                                <button class="tab-link bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-tab="innerTab2">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        2</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Prepare the Aloo<br>
+                                        (Potato) Stuffing</p>
+                                </button>
+                                <!-- 3rd -->
+                                <button class="tab-link bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-tab="innerTab3">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        3</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Stuff the<br>
+                                        Parathas</p>
+                                </button>
+                                <!-- 4th -->
+                                <button class="tab-link bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-tab="innerTab4">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        4</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Cook<br>
+                                        the Parathas</p>
+                                </button>
+                                <!-- 5th -->
+                                <button class="tab-link bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-tab="innerTab5">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        5</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Serve</p>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+
+        </section>
+
+        <!-- ========= Testimonial =========== -->
+        <section class="testimonial-section relative min-h-screen:  z-30 bg-yellow">
+
+            <!-- bottom-[-15vh] mt-[-15vh] -->
+            <div class="custom-width">
+
+                <div class="relative bottom-[-15vh]">
+                    <div class="grid grid-cols-1 lg:grid-cols-2">
+                        <div class="grid-span-4 overflow-hidden">
+                            <div class="textimonial-bg"></div>
+                            <div class="">
+                                <span class="uppercase text-darkMehroon text-[2.2vh] ">Testimonials</span>
+                                <h2 class="text-darkMehroon uppercase lg:text-[5.5vh] lg:leading-[7vh] font-bold w">What
+                                    our
+                                    Customers<br>
+                                    are Talking About</h2>
+                                <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] my-[6vh]">
+                                <p class="text-darkMehroon text-[2.2vh] col-span-full mt-[4vh]">
+                                    There are many variations of passages of Lorem Ipsum available, but the majority
+                                    have
+                                    suffered
+                                    alteration in some form, by injected humour, or randomised words which don’t look
+                                    even
+                                    slightly
+                                    believable.
+
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-span-8">
+                            <div class="owl-carousel owl-theme testimonial-slider">
+                                <div
+                                    class="item bg-orange_ p-[10vh] pl-[3vh] md:pl-[15vh] pr-[5vh] md:pr-[15vh]  rounded-tr-[20vh] lg:rounded-tr-[50vh]  mt-[10vh] lg:mt-[0vh]">
+                                    <div class="text-white">
+                                        <p class="text-[2.2vh] md:text-[4.5vh] font-normal">This is due to their
+                                            excellent service,
+                                            competitive
+                                            pricing and customer support. It's thoroughly refreshing to get such a
+                                            personal
+                                            touch.</p>
+                                        <hr class="w-full bg-white h-[0.3vh] my-[7vh]">
+                                        <div class="flex gap-x-[2vh] items-center">
+                                            <div class="w-[20%] h-[20%] rounded-full overflow-hidden">
+                                                <img src="assets/img/user-placeholder.png" alt="user-placeholder">
+                                            </div>
+                                            <div class="text-[3vh]">
+                                                <h2 class="font-medium text-[2.5vh] md:text-[3vh]">GOVIND GARKOTI</h2>
+                                                <p class="text-[2vh]">CUSTOMER</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="item bg-orange_ p-[10vh] pl-[3vh] md:pl-[15vh] pr-[5vh] md:pr-[15vh]  rounded-tr-[20vh] lg:rounded-tr-[50vh]  mt-[10vh] lg:mt-[0vh]">
+                                    <div class="text-white">
+                                        <p class="text-[2.2vh] md:text-[4.5vh] font-normal">This is due to their
+                                            excellent service,
+                                            competitive
+                                            pricing and customer support. It's thoroughly refreshing to get such a
+                                            personal
+                                            touch.</p>
+                                        <hr class="w-full bg-white h-[0.3vh] my-[7vh]">
+                                        <div class="flex gap-x-[2vh] items-center">
+                                            <div class="w-[20%] h-[20%] rounded-full overflow-hidden">
+                                                <img src="assets/img/user-placeholder.png" alt="user-placeholder">
+                                            </div>
+                                            <div class="text-[3vh]">
+                                                <h2 class="font-medium text-[2.5vh] md:text-[3vh]">GOVIND GARKOTI</h2>
+                                                <p class="text-[2vh]">CUSTOMER</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="item bg-orange_ p-[10vh] pl-[3vh] md:pl-[15vh] pr-[5vh] md:pr-[15vh]  rounded-tr-[20vh] lg:rounded-tr-[50vh]  mt-[10vh] lg:mt-[0vh]">
+                                    <div class="text-white">
+                                        <p class="text-[2.2vh] md:text-[4.5vh] font-normal">This is due to their
+                                            excellent service,
+                                            competitive
+                                            pricing and customer support. It's thoroughly refreshing to get such a
+                                            personal
+                                            touch.</p>
+                                        <hr class="w-full bg-white h-[0.3vh] my-[7vh]">
+                                        <div class="flex gap-x-[2vh] items-center">
+                                            <div class="w-[20%] h-[20%] rounded-full overflow-hidden">
+                                                <img src="assets/img/user-placeholder.png" alt="user-placeholder">
+                                            </div>
+                                            <div class="text-[3vh]">
+                                                <h2 class="font-medium text-[2.5vh] md:text-[3vh]">GOVIND GARKOTI</h2>
+                                                <p class="text-[2vh]">CUSTOMER</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <footer class="min-h-screen bg-darkMehroon relative overflow-hidden z-20">
+
+
+        <div class="custom-width">
+            <div class="footer-bg"></div>
+            <div class="grid grid-cols-1 md:grid-cols-12  mt-[40vh] lg:mt-[30vh]">
+                <div class="col-span-1 md:col-span-12 lg:col-span-3 ">
+                    <a href="index.html">
+                        <img src="assets/img/footer-logo.webp" alt="footer-logo"
+                            class="w-[40%] md:w-[20%] lg:w-[50%] m-auto lg:m-0 lg:mr-auto">
+                    </a>
+                    <p
+                        class="text-white text-center lg:text-start text-[2.2vh] mt-[4vh] leading-[2] md:w-[75%] lg:w-full m-auto lg:mr-auto">
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form, by injected humour, or randomised words which don’t look even slightly
+                        believable.
+
+
+                    </p>
+                </div>
+                <div class="col-span-1 md:col-span-4 lg:col-span-3 pt-[5vh] lg:pl-[5vh] ">
+                    <h3 class="uppercase text-yellow  line font-semibold text-[3vh]">Contact Us</h3>
+                    <div class="mt-[4vh]">
+                        <p class="text-white text-[2.2vh]">Plot No. G-1, 158, lid Centre,</p>
+                        <p class="text-white text-[2.2vh]">Riico Industrial, Kota Road,</p>
+                        <p class="text-white text-[2.2vh]">Baran, Rajasthan - 325205</p>
+                        <p class="text-white text-[2.2vh] mt-[3vh]">Email: <a href="mailto:info@aaryabhog.com"
+                                target="_blank">info@aaryabhog.com</a></p>
+                        <p class="text-white text-[2.2vh]">Phone: <a href="tel:+91-8824892796"
+                                target="_blank">+91-8824892796</a></p>
+                    </div>
+                </div>
+                <div class="col-span-1 md:col-span-4 lg:col-span-3 pt-[5vh] pl-[0vh]">
+                    <h3 class="uppercase text-yellow  line font-semibold text-[3vh]">Useful Links</h3>
+                    <div class="mt-[4vh]">
+                        <a href="#" class="text-white block mt-[2.2vh] text-[2.2vh]">Home</a>
+                        <a href="#" class="text-white block mt-[2.2vh] text-[2.2vh]">Our Story</a>
+                        <a href="#" class="text-white block mt-[2.2vh] text-[2.2vh]">Our Products</a>
+                        <a href="#" class="text-white block mt-[2.2vh] text-[2.2vh]">Recipe</a>
+                        <a href="#" class="text-white block mt-[2.2vh] text-[2.2vh]">Testimonials</a>
+                        <a href="#" class="text-white block mt-[2.2vh] text-[2.2vh]">Contact Us</a>
+
+                    </div>
+                </div>
+                <div class="col-span-1 md:col-span-4 lg:col-span-3 pt-[5vh] pl-[0vh]">
+                    <h3 class="uppercase text-yellow  line font-semibold text-[3vh]">Follow us Now</h3>
+                    <div class="mt-[4vh]">
+                        <a href="#" class="text-white  mt-[2.2vh] text-[2.2vh] flex items-center gap-x-[1.5vh]">
+                            <img src="assets/img/facebook-icon-blue.webp" alt="facebook-icon" class="w-[1.5vh]">
+                            Facebook
+                        </a>
+                        <a href="#" class="text-white  mt-[2.2vh] text-[2.2vh] flex items-center gap-x-[1.5vh]">
+                            <img src="assets/img/insta-icon-blue.webp" alt="insta-icon" class="w-[2.2vh]">
+                            Instagram
+                        </a>
+                        <a href="#" class="text-white  mt-[2.2vh] text-[2.2vh] flex items-center gap-x-[1.5vh]">
+                            <img src="assets/img/twitter-icon-blue.webp" alt="twitter-icon" class="w-[2.2vh]">
+                            Twitter
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <p
+                class="text-[2.2vh] text-white text-center lg:absolute bottom-[6vh] lg:left-1/2 lg:transform lg:-translate-x-1/2 pt-[5vh] pb-[3vh]  lg:pb-[0vh]">
+                ©
+                Copyright 2018. "Aaryabhog" by <a href="https://www.expandbuzz.com/"
+                    class="text-[2.2vh] text-white">expandbuzz</a>. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Jquery.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Bootstrap.js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script> -->
+    <!-- Owl.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- GSAP and ScrollTrigger.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Lenis -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.js"></script>
+    <!-- Main.js -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

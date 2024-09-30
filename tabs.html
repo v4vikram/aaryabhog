@@ -1,31 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Grid Example</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Slider with Tabs</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
     <style>
-        /* @tailwind base;
-        @tailwind components;
-        @tailwind utilities; */
+      .content-item {
+        display: none;
+      }
+      .active-item {
+        display: block;
+      }
     </style>
-</head>
-<body class="bg-gray-100">
-
-    <footer class="min-h-screen bg-darkMehroon relative overflow-hidden">
-        <div class="custom-width relative">
-            <div class="footer-bg"></div>
-            <div class="grid grid-cols-5 gap-4 p-8"> <!-- 5 column grid -->
-                <div class="col-span-1 bg-red-500 text-white p-4">Item 1</div> <!-- Spans 1 column -->
-                <div class="col-span-3 bg-blue-500 text-white p-4">Item 2</div> <!-- Spans 2 columns -->
-                <div class="col-span-1 bg-green-500 text-white p-4">Item 3</div> <!-- Spans 1 column -->
-                <div class="col-span-1 bg-yellow-500 text-black p-4">Item 4</div> <!-- Spans 1 column -->
-            </div>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Recipe Slider Section -->
+    <div class="custom-width">
+      <div class="owl-carousel owl-theme recipe-slider">
+        <!-- Slide 1 -->
+        <div class="item" data-item="1">
+          <img
+            src="assets/img/recipe-slider-1.webp"
+            alt="recipe-slider-1"
+            class="w-full card-image rounded-tr-[14vh]"
+          />
+          <div class="bg-orange_ py-[3vh] pl-[3vh]">
+            <h3 class="text-[3vh] md:text-[4vh] text-white">Aloo Paratha 1</h3>
+          </div>
         </div>
-    </footer>
+        <div class="item" data-item="2">
+          <img
+            src="assets/img/recipe-slider-1.webp"
+            alt="recipe-slider-1"
+            class="w-full card-image rounded-tr-[14vh]"
+          />
+          <div class="bg-orange_ py-[3vh] pl-[3vh]">
+            <h3 class="text-[3vh] md:text-[4vh] text-white">Aloo Paratha 2</h3>
+          </div>
+        </div>
+      </div>
+    </div>
 
-</body>
+    <!-- Recipe Tabs Section -->
+    <div class="bg-mehroon min-h-screen mt-[-12.2vh] pb-[18vh] recipe-container">
+      <div class="custom-width pt-[24.4vh]">
+        <span class="text-white text-[2.2vh]">Recipe</span>
+
+        <!-- Content Section for Recipe -->
+        <div class="content-item active-item grid grid-cols-12" id="content-1">
+          <div class="col-span-4">
+            <h2 class="text-yellow uppercase md:text-[5.5vh] font-bold">Aloo Paratha</h2>
+            <img
+              src="assets/img/orange-leaf.webp"
+              alt="orange-leaf"
+              class="w-[18vh] my-[3vh]"
+            />
+          </div>
+          <div class="col-span-8">
+            <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+              <li>Divide the dough into small lemon-sized balls...</li>
+              <li>Roll out one dough ball into a small circle...</li>
+              <!-- Additional list items -->
+            </ul>
+          </div>
+
+          <!-- Inner Tabs for Recipe Steps -->
+          <div class="col-span-12">
+            <div class="tabs grid grid-cols-5 gap-x-[2vh] mt-[20vh]">
+              <!-- Tab 1 -->
+              <button
+                class="btn-content bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                data-btn="1-1"
+              >
+                <div
+                  class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold"
+                >
+                  1
+                </div>
+                <p class="uppercase text-mehroon text-[2vh] font-semibold">
+                  Prepare<br />the Dough
+                </p>
+              </button>
+              <!-- Tab 2 -->
+              <button
+                class="btn-content bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                data-btn="1-2"
+              >
+                <div
+                  class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold"
+                >
+                  2
+                </div>
+                <p class="uppercase text-mehroon text-[2vh] font-semibold">
+                  Prepare the Aloo<br />Stuffing
+                </p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Initialize Owl Carousel
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: true,
+          items: 1,
+        });
+
+        // Switch between Recipe tabs when clicking the slider
+        $(".item").on("click", function () {
+          var itemId = $(this).data("item");
+          console.log(itemId)
+
+          $(".content-item").removeClass("active-item");
+          $("#content-" + itemId).addClass("active-item");
+
+          // Reset and show the first button's content by default
+          $('[id^="btn-content"]').hide(); // Hide all button content
+          $("#btn-content-" + itemId + "-1").show(); // Show the first button's content by default
+        });
+
+        // Show content based on button click inside tabs
+        $(".btn-content").on("click", function () {
+          var btnId = $(this).data("btn");
+
+          $('[id^="btn-content"]').hide(); // Hide all button content
+          $("#btn-content-" + btnId).show(); // Show the corresponding content
+        });
+
+        // Ensure the first button's content is shown by default
+        $("#btn-content-1-1").show(); // Show the first content when the page loads
+      });
+    </script>
+  </body>
 </html>

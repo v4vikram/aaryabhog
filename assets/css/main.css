@@ -96,18 +96,19 @@ img {
 
 /* =========== Banner ============ */
 /* =========== Mobile Menu ============ */
-#mobile-menu{
+#mobile-menu {
     position: fixed;
     top: 0;
     left: 0;
-    transform: translateX(0%);
+    transform: translateX(-100%);
     width: 265px;
     height: 100vh;
     z-index: 9999;
     color: white;
     /* opacity: 0; */
 }
-.hamburger-wrapper{
+
+.hamburger-wrapper {
     position: fixed;
     top: 3vh;
     right: 3vh;
@@ -295,24 +296,32 @@ img {
     display: none;
 }
 
-/* tabs */
-.recipe-section .tab-content {
-    display: none;
-    /* Hide all tabs initially */
-}
 
-.recipe-section .tab-content.active {
-    display: grid;
-    /* Show active tab */
-}
+.content-item {
+    display: none !important;
+  }
 
-.recipe-section .tabs button.active {
+  .active-item {
+    display: grid !important;
+  }
+
+
+
+
+#desktop-section .tabs button.active {
     background-color: var(--white);
 }
-
-.recipe-section .tabs button.active .recipe-number {
+#desktop-section .tabs button.active .recipe-number{
     background-color: var(--yellow);
-    color: var(--white);
+}
+
+/* sm */
+
+#mobile-section .content-item img{
+   width: auto !important;
+}
+#mobile-section .tabs button.active .recipe-number{
+    background-color: var(--yellow);
 }
 
 /* ========== Recipe Slider =============== */
@@ -497,7 +506,8 @@ img {
         right: 5vh;
         bottom: 3vh;
     }
-    .textimonial-bg::after{
+
+    .textimonial-bg::after {
         display: none;
     }
 }
@@ -520,6 +530,7 @@ img {
         z-index: 9;
         background-size: contain;
     }
+
     .footer-bg {
         height: 210vh;
         display: none;

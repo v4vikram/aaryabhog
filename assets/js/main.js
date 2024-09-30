@@ -93,9 +93,9 @@ $(document).ready(function () {
       },
     });
 
+    const vhMargin = window.innerHeight * 0.02; // Calculate margin based on viewport height
     // recipe slider
     function initializeCarousel() {
-      const vhMargin = window.innerHeight * 0.02; // Calculate margin based on viewport height
       $(".recipe-slider").owlCarousel({
         autoplay: false,
         autoplaySpeed: 1000,
@@ -104,10 +104,10 @@ $(document).ready(function () {
         items: 1,
         stagePadding: 0,
         center: false,
-        nav: false,
+        nav: true,
         margin: vhMargin, // Set margin dynamically
-        dots: false,
-        loop: false, // Disable touch dragging
+        dots: true,
+        loop: true, // Disable touch dragging
         mouseDrag: false,
 
         responsive: {
@@ -127,13 +127,26 @@ $(document).ready(function () {
       });
     }
 
-    // Initial call to set up the carousel
     initializeCarousel();
-
-    // Reinitialize on window resize
     window.addEventListener("resize", () => {
       $(".recipe-slider").trigger("destroy.owl.carousel"); // Destroy the existing carousel
       initializeCarousel(); // Re-initialize with the new margin
+    });
+
+    // recipe small slider
+    $(".sm-recipe-slider").owlCarousel({
+      autoplay: false,
+      autoplaySpeed: 1000,
+      autoplayTimeout: 1000,
+      smartSpeed: 1000,
+      items: 1,
+      stagePadding: 0,
+      center: false,
+      nav: true,
+      margin: vhMargin, // Set margin dynamically
+      dots: true,
+      loop: true, // Disable touch dragging
+      mouseDrag: false,
     });
 
     $(".testimonial-slider").owlCarousel({
@@ -236,102 +249,76 @@ $(document).ready(function () {
   // Initial call to process
   process();
 
-  function innerTabs($parentClass2) {
-    console.log($parentClass2)
-    // console.log($parentClass2)
-    let isAnimating = false; // Animation lock
+  function recipeTabs(containerSelector) {
+    // Target only the specific container (like for desktop or mobile)
+    var $container = $(containerSelector);
 
-    $(`${$parentClass2} .tab-link`).on("click", function () {
-      if (isAnimating) return; // Prevent click if animation is running
 
-      // console.log(this)
-      var tabId = $(this).data("tab");
-
-      // Remove active class from all buttons
-      $(`${$parentClass2} button`).removeClass("active");
-
-      // Fade out the current active tab content
-      isAnimating = true; // Lock animations
-      // console.log($(`${$parentClass2} .tab-content.active `))
-      $(`${$parentClass2} .tab-content.active `)
-        .css("opacity", 1)
-        .animate({ opacity: 0 }, 100, function () {
-          $(this).removeClass("active").css("visibility", "hidden");
-
-          // Fade in the new tab content
-          $("#" + tabId)
-            .css("visibility", "visible")
-            .css("opacity", 0)
-            .animate({ opacity: 1 }, 100, function () {
-              isAnimating = false; // Unlock animations
-            })
-            .addClass("active");
-        });
-
-      // Add active class to the clicked button
-      $(this).addClass("active");
-    });
-  }
-  $parentClass2 =1;
-  innerTabs(".innerTabContent");
-  innerTabs(".innerTabContent2");
-  innerTabs(".innerTabContent3");
-  innerTabs(".innerTabContent4");
-  innerTabs(".innerTabContent5");
+    
+    // Show corresponding content when clicking carousel item
+    if ($container.attr('id') == 'desktop-section') {
+      $container.find(".item").on("click", function () {
+        var itemId = $(this).data("item");
+        
+        // Deactivate all items in this container and activate the clicked item
+        $container.find(".content-item").removeClass("active-item");
+        $container.find("#content-" + itemId).addClass("active-item");
+        
+        // Hide all button contents in this container and reset active states
+        $container.find(".content-item .btn-content").removeClass("active"); // Reset all button states
+        $container.find(".content-item [id^='btn-content']").hide(); // Hide all contents
+    
+        // Show the first button's content by default for the activated item
+        $container.find("#btn-content-" + itemId + "-1").show(); // Show the first button content for the active item
+        $container.find(".active-item .btn-content").first().addClass("active"); // Make the first button active
+      });
+    }
  
-
-
-  function owlTabs($parentClass){
-    let isAnimating = false; // Animation lock
-
-    $(`${$parentClass} .tab-link`).on("click", function () {
-      if (isAnimating) return; // Prevent click if animation is running
-
-      console.log(this)
-      var tabId = $(this).data("tab");
-
-      // Remove active class from all buttons
-      $(`${$parentClass} .tab-link`).removeClass("active");
-
-      // Fade out the current active tab content
-      isAnimating = true; // Lock animations
-      $(`.recipe-section .tab-content.active `)
-        .css("opacity", 1)
-        .animate({ opacity: 0 }, 100, function () {
-          $(this).removeClass("active").css("visibility", "hidden");
-
-          // Fade in the new tab content
-          $("#" + tabId)
-            .css("visibility", "visible")
-            .css("opacity", 0)
-            .animate({ opacity: 1 }, 100, function () {
-              isAnimating = false; // Unlock animations
-            })
-            .addClass("active");
-        });
-
-      // Add active class to the clicked button
+    
+  
+  
+    // Show content based on button click within the selected item
+    $container.on("click", ".active-item .btn-content", function () {
+      var btnId = $(this).data("btn");
+  
+      // Remove active class from buttons within the active content item
+      $(this).closest('.content-item').find(".btn-content").removeClass("active");
       $(this).addClass("active");
+  
+      // Hide all content in the active item and show the corresponding content
+      $(this).closest('.content-item').find('[id^="btn-content"]').hide();
+      $(this).closest('.content-item').find("#btn-content-" + btnId).show();
     });
+  
+    // Ensure the first button's content is shown by default on page load
+    $container.find(".content-item").first().addClass("active-item"); // Ensure first item is active on load
+    $container.find(".content-item").first().find(".btn-content").first().addClass("active"); // Ensure first button is active
+    $container.find("#btn-content-1-1").show(); // Show the first button content by default
   }
-  owlTabs('.recipe-slider')
-  // owlTabs('.recipe-container')
-  // Initialize the tabs function
- 
+  
+  // Initialize the tabs for both desktop and mobile sections
+  recipeTabs("#desktop-section"); // For desktop
+  recipeTabs("#mobile-section"); // For small screens (or mobile)
+  
+  
+  
+  
+
+
   function mobileMenu() {
-    const menu = document.getElementById('mobile-menu');
-    const menuToggle = document.getElementById('menuToggle');
+    const menu = document.getElementById("mobile-menu");
+    const menuToggle = document.getElementById("menuToggle");
     let menuOpen = false;
 
-    menuToggle.addEventListener('click', () => {
-        if (!menuOpen) {
-            gsap.to(menu, { x: '0%', duration: 0.7 },);
-            // gsap.to("body", { overflowY: 'hidden', duration: 0.7 },);
-        } else {
-            gsap.to(menu,{ x: '-100%', duration: 0.5 });
-            // gsap.to("body", { overflowY: 'scroll', duration: 0.7 },);
-        }
-        menuOpen = !menuOpen;
+    menuToggle.addEventListener("click", () => {
+      if (!menuOpen) {
+        gsap.to(menu, { x: "0%", duration: 0.7 });
+        // gsap.to("body", { overflowY: 'hidden', duration: 0.7 },);
+      } else {
+        gsap.to(menu, { x: "-100%", duration: 0.5 });
+        // gsap.to("body", { overflowY: 'scroll', duration: 0.7 },);
+      }
+      menuOpen = !menuOpen;
     });
   }
   mobileMenu();
@@ -339,23 +326,21 @@ $(document).ready(function () {
   function accordian($parentClass) {
     // Show the first content by default
     $(`${$parentClass} .accordion-content`).first().slideDown();
-    $(`${$parentClass} .accordion-header i`).first().addClass('rotate'); // Rotate the first icon by default
-  
-    $(`${$parentClass} .accordion-header`).click(function() {
+    $(`${$parentClass} .accordion-header i`).first().addClass("rotate"); // Rotate the first icon by default
+
+    $(`${$parentClass} .accordion-header`).click(function () {
       // Slide up all content and remove rotation from all icons
       $(`${$parentClass} .accordion-content`).slideUp();
-      $(`${$parentClass} .accordion-header i`).removeClass('rotate');
-  
+      $(`${$parentClass} .accordion-header i`).removeClass("rotate");
+
       // If the clicked header's content is not visible, show it
-      if (!$(this).next(`${$parentClass} .accordion-content`).is(':visible')) {
+      if (!$(this).next(`${$parentClass} .accordion-content`).is(":visible")) {
         $(this).next(`${$parentClass} .accordion-content`).slideDown();
-        $(this).find('i').addClass('rotate'); // Rotate the icon of the clicked header
+        $(this).find("i").addClass("rotate"); // Rotate the icon of the clicked header
       }
     });
   }
-  
-  // Apply the accordion to a specific section
-  // accordian(".process-section");
-  
 
+  // Apply the accordion to a specific section
+  accordian(".process-section");
 });
