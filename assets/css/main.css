@@ -44,6 +44,7 @@
     /* Medium weight */
 }
 
+/* utils */
 
 
 body {
@@ -587,6 +588,9 @@ img {
     .footer-bg {
         height: 210vh;
         display: none;
+    }
+    .product-section::before {
+        border-bottom-right-radius: 0vh;
     }
 
 }
