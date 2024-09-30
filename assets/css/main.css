@@ -547,6 +547,9 @@ img {
         background-size: contain;
 
     }
+    ul.list-none li {
+        margin-bottom: 2vh;
+    }
 
     .footer-bg {
         height: 135vh;
