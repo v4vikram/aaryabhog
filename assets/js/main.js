@@ -147,6 +147,7 @@ $(document).ready(function () {
       dots: false,
       loop: true, // Disable touch dragging
       mouseDrag: false,
+      touchDrag: false
     });
 
     $(".testimonial-slider").owlCarousel({

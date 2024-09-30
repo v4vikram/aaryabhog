@@ -325,7 +325,7 @@ img {
 }
 #mobile-section .owl-nav {
     position: absolute;
-    top: 0%;
+    top: -5%;
     right: 0;
 }
 #mobile-section .owl-nav button {
