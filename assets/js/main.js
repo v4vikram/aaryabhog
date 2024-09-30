@@ -66,6 +66,7 @@ $(document).ready(function () {
       // Set fade animation for large screens, slide animation for small screens
       var animateIn = (windowWidth >= 769) ? "fadeIn" : false;
       var animateOut = (windowWidth >= 769) ? "fadeOut" : false;
+      console.log(animateIn,animateOut,)
   
       $(".product-slider").owlCarousel({
           autoplay: false,
@@ -73,13 +74,13 @@ $(document).ready(function () {
           items: 1,
           stagePadding: 0,
           center: true,
-          nav: false,
+          nav: true,
           margin: 10,
           dots: true,
           loop: true,
           touchDrag: true,
           pullDrag: true,
-          mouseDrag: (windowWidth >= 768) ? false : true,  // Disable mouse drag on large screens
+          mouseDrag: (windowWidth >= 769) ? false : true,  // Disable mouse drag on large screens
           animateIn: animateIn,   // Fade animation on large screens
           animateOut: animateOut, // Fade animation on large screens
           dotsContainer: ".custom-dots",
@@ -87,23 +88,34 @@ $(document).ready(function () {
           responsive: {
               375: {
                   items: 1,
-                   nav: true,
+                   
               },
               425: {
                   items: 1,
-                   nav: true,
+                   
               },
               576: {
                   items: 1,
               },
-               nav: true,
+               
               768: {
                   items: 1,
-                   nav: true,
+                   
               },
-              1000: {
+              1024: {
                   items: 1,
+                  nav: false,
               },
+              1366: {
+                  items: 1,
+                  nav: false,
+              },
+              1600: {
+                  items: 1,
+                  nav: false,
+              },
+              
+
           }
       });
   }
