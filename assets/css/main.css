@@ -124,7 +124,8 @@ img {
 
 .banner-owl-wrapper::before {
     background: url('../img/red-shape-1.webp');
-    background-repeat: repeat-x;
+    /* background: url('../img/svg/red-shape-1.svg'); */
+    /* background-repeat: repeat-x; */
     position: absolute;
     content: "";
     top: 0px;
@@ -218,11 +219,11 @@ img {
 }
 
 .product-section::after {
-    background: url(../img/red-shape-4.webp);
+    background: url(../img/svg/red-shape-4.svg);
     background-repeat: repeat-x;
     position: absolute;
     content: "";
-    top: -166px;
+    top: -28%;
     left: 0px;
     width: 100%;
     height: 47vh;
@@ -239,7 +240,7 @@ img {
     left: 0px;
     top: 0px;
     width: 100%;
-    height: 100%;
+    height: 90%;
     z-index: -1;
     border-bottom-right-radius: 85vh;
     overflow: hidden;
@@ -247,7 +248,7 @@ img {
 }
 
 .product-slider img {
-    width: 65% !important;
+    width: 73% !important;
 }
 
 /* Basic styling for slides */
@@ -323,7 +324,7 @@ img {
 /* sm */
 
 #mobile-section .content-item img{
-   width: auto !important;
+   width: 45% !important;
 }
 #mobile-section .tabs button.active .recipe-number{
     background-color: var(--yellow);
@@ -406,7 +407,7 @@ img {
     bottom: 15vh;
     left: 0;
     /* background-color: red; */
-    background: url(../img/red-shape-2.webp);
+    background: url(../img/svg/red-shape-4.svg);
     width: 100%;
     height: 15vh;
     z-index: 1;
@@ -601,7 +602,9 @@ img {
     .testimonial-section .owl-carousel .item{
         height: auto;
     }
-
+    .product-section::before{
+        height: 100%;
+    }
 }
 
 @media(max-width: 576px) {
