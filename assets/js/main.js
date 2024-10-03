@@ -81,7 +81,7 @@ $(document).ready(function () {
       // Set fade animation for large screens, slide animation for small screens
       var animateIn = (windowWidth >= 769) ? "fadeIn" : false;
       var animateOut = (windowWidth >= 769) ? "fadeOut" : false;
-      console.log(animateIn,animateOut,)
+
   
       $(".product-slider").owlCarousel({
           autoplay: false,
@@ -287,7 +287,7 @@ $(document).ready(function () {
     const processWrapper = document.querySelector(".process-left-wrapper");
 
     // Calculate total height, adjusting based on viewport height
-    const totalHeight = processWrapper.scrollHeight - window.innerHeight * 0.86;
+    const totalHeight = processWrapper.scrollHeight - window.innerHeight * 0.88;
 
     ScrollTrigger.create({
       trigger: ".pin-box2",
@@ -308,9 +308,25 @@ $(document).ready(function () {
 
     // Show corresponding content when clicking carousel item
     if ($container.attr("id") == "desktop-section") {
+
+     if ($container.length) {  
+        // Set the first item's background to yellow on page load
+        // $container.find('.item').first().find('.bg-orange_').css('background', 'yellow');
+         var firstItem = $container.find('.owl-item.active').first().find('.bg-orange_').css('background', '#e99d23'); 
+
+        // Set up click event for items
+        $container.find('.item').on('click', function() {
+            // Reset background color for all items to the default color
+            $container.find('.bg-orange_').css('background', ''); // Reset to default
+
+            // Change the background of the clicked item to yellow
+            $(this).find('.bg-orange_').css('background', '#e99d23'); 
+        });
+    }
+
       $container.find(".item").on("click", function () {
         var itemId = $(this).data("item");
-
+       
         // Deactivate all items in this container and activate the clicked item
         $container.find(".content-item").removeClass("active-item");
         $container.find("#content-" + itemId).addClass("active-item");
@@ -327,6 +343,7 @@ $(document).ready(function () {
 
     // Show content based on button click within the selected item
     $container.on("click", ".active-item .btn-content", function () {
+      
       var btnId = $(this).data("btn");
 
       // Remove active class from buttons within the active content item

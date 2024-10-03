@@ -184,7 +184,7 @@ img {
     margin-bottom: 50px;
     /* background: white; */
     font-size: 36px;
-    height: 56vh;
+    height: 70vh;
     /* opacity: 0; */
     /* background: red; */
     /* background: var(--orange); */
@@ -256,6 +256,9 @@ img {
     /* padding: 40px;
     color: white;
     text-align: center; */
+}
+.testimonial-section .owl-carousel .item{
+    height: 90vh;
 }
 
 /* Custom dots styling */
@@ -594,6 +597,9 @@ img {
     }
     .product-section::before {
         border-bottom-right-radius: 0vh;
+    }
+    .testimonial-section .owl-carousel .item{
+        height: auto;
     }
 
 }
