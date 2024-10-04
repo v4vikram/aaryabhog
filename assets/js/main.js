@@ -1,5 +1,6 @@
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+let lenisInstance = null; 
 
 
 $(document).ready(function () {
@@ -23,15 +24,18 @@ $(document).ready(function () {
   mobileMenu();
 
   function lenisScroll() {
-    const lenis = new Lenis({
-      duration: 1.2, 
-      easing: (t) => t,
-      easing: (t) => Math.min(1, 1.008 - Math.pow(2, -5 * t)),
-      smoothWheel: true, 
-      smoothTouch: true,
-    });
+    // Initialize Lenis only if it's not already initialized
+    if (!lenisInstance) {
+        lenisInstance = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.008 - Math.pow(2, -5 * t)),
+            smoothWheel: true,
+            smoothTouch: true,
+        });
+    }
+
     function raf(time) {
-        lenis.raf(time);
+        lenisInstance.raf(time);
         requestAnimationFrame(raf);
     }
     requestAnimationFrame(raf);
@@ -39,36 +43,40 @@ $(document).ready(function () {
 
 function initLenisForLargeScreens() {
     if (window.innerWidth >= 1024) {
-        lenisScroll();
+        lenisScroll(); // Initialize and start Lenis for large screens
+
+        document.querySelectorAll('#desktop-menu a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    const headerOffset = 0; // Adjust if you have a fixed header
+                    const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+                    const offsetPosition = elementPosition - headerOffset;
+
+                    // Use Lenis scrollTo method
+                    lenisInstance.scrollTo(offsetPosition, {
+                        duration: 0.5, // Adjust as needed
+                    });
+                }
+            });
+        });
+    } else if (lenisInstance) {
+        lenisInstance.destroy(); // Destroy Lenis instance when switching to smaller screens
+        lenisInstance = null;    // Reset instance to null
     }
 }
 
-
-document.querySelectorAll('#desktop-menu a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-
-        if (targetElement) {
-            const headerOffset = 0; // Adjust if you have a fixed header
-            const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-            const offsetPosition = elementPosition - headerOffset;
-
-            // Use Lenis scrollTo method
-            lenis.scrollTo(offsetPosition, {
-                duration: 0.5, // Adjust as needed
-                // easing: 'easeInOutQuad', // Check the documentation for available options
-            });
-        }
-    });
-});
-
+// Initial check when the page loads
 initLenisForLargeScreens();
 
+// Recheck when the window is resized
 window.addEventListener("resize", function () {
     initLenisForLargeScreens();
 });
+
 
   function sliders() {
     $("#banner-slider").owlCarousel({
