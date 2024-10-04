@@ -3,88 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GSAP ScrollTrigger with Tailwind CSS</title>
-
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- GSAP CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-    <style>
-        /* Additional styling */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f7fafc;
-        }
-    </style>
+    <title>Smooth Scroll with Lenis</title>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis"></script>
 </head>
 <body>
 
-    <div class="container mx-auto my-10">
-        <div class="grid grid-cols-3 gap-6">
-            <!-- Left Column -->
-            <div class="left-col space-y-20">
-                <div class="section h-screen bg-red-100 flex items-center justify-center">
-                    <h2 class="text-3xl font-bold">Left Text Section 1</h2>
-                </div>
-                <div class="section h-screen bg-red-200 flex items-center justify-center">
-                    <h2 class="text-3xl font-bold">Left Text Section 2</h2>
-                </div>
-                <div class="section h-screen bg-red-300 flex items-center justify-center">
-                    <h2 class="text-3xl font-bold">Left Text Section 3</h2>
-                </div>
-            </div>
-            
-            <!-- Middle Column (Pinned initially, scrolls later) -->
-            <div class="middle-col bg-yellow-100 text-center flex items-center justify-center h-screen">
-                <h1 class="text-4xl font-bold">Middle Column (Pinned)</h1>
-            </div>
-            
-            <!-- Right Column -->
-            <div class="right-col space-y-20">
-                <div class="section h-screen bg-blue-100 flex items-center justify-center">
-                    <h2 class="text-3xl font-bold">Right Text Section 1</h2>
-                </div>
-                <div class="section h-screen bg-blue-200 flex items-center justify-center">
-                    <h2 class="text-3xl font-bold">Right Text Section 2</h2>
-                </div>
-                <div class="section h-screen bg-blue-300 flex items-center justify-center">
-                    <h2 class="text-3xl font-bold">Right Text Section 3</h2>
-                </div>
-            </div>
-        </div>
-    </div>
+<header>
+    <nav>
+        <a href="#section1">Section 1</a>
+        <a href="#section2">Section 2</a>
+        <a href="#process-section">Process Section</a>
+    </nav>
+</header>
 
-    <!-- GSAP Animation Script -->
-    <script>
-        // Register ScrollTrigger plugin with GSAP
-        gsap.registerPlugin(ScrollTrigger);
+<section id="section1" style="height: 100vh; background: lightblue;">Section 1</section>
+<section id="section2" style="height: 100vh; background: lightgreen;">Section 2</section>
+<section id="process-section" style="height: 100vh; background: lightcoral;">Process Section</section>
 
-        // Animate the left and right columns
-        gsap.utils.toArray('.left-col .section, .right-col .section').forEach((section, i) => {
-            gsap.from(section, {
-                y: 100,
-                opacity: 0,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: section,
-                    start: 'top 80%',
-                    end: 'top 20%',
-                    scrub: true
-                }
-            });
+<script>
+    // Initialize Lenis
+    const lenis = new Lenis({
+        duration: 1.0,
+        easing: (t) => t,
+        smooth: true,
+    });
+
+    // Animation frame loop for Lenis
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // Smooth scroll on link click
+    document.querySelectorAll('header a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                const headerOffset = 0; // Adjust if you have a fixed header
+                const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+                const offsetPosition = elementPosition - headerOffset;
+
+                // Use Lenis scrollTo method
+                lenis.scrollTo(offsetPosition, {
+                    duration: 1, // Adjust as needed
+                    // easing: 'easeInOutQuad', // Check the documentation for available options
+                });
+            }
         });
-
-        // Pin the middle column, but release it when scrolling reaches the end of the sections
-        ScrollTrigger.create({
-            trigger: '.middle-col',
-            pin: true,
-            start: 'top top',
-            end: () => `+=${document.querySelector('.left-col').scrollHeight - window.innerHeight}`, // Pin until the scrolling content finishes
-            scrub: true
-        });
-    </script>
-
+    });
+</script>
 </body>
 </html>

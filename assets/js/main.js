@@ -1,52 +1,74 @@
-// Register the ScrollTrigger plugin
+
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
+
 $(document).ready(function () {
-  // Create a simple animation
-  // gsap.from(".box", {
-  //   scrollTrigger: {
-  //     trigger: ".box", // Element that triggers the animation
-  //     start: "top 80%", // Trigger point (top of the box, 80% of the viewport)
-  //     end: "bottom 20%", // End point of the trigger (bottom of the box, 20% of the viewport)
-  //     scrub: true, // Smooth scroll animation
-  //     markers: true, // Debug markers (remove in production)
-  //   },
-  //   x: -200, // Move the element 200px to the left
-  //   rotation: 360, // Rotate the element
-  //   duration: 2, // Duration of the animation
-  // });
 
-  function lenis() {
-    // Initialize Lenis for smooth scrolling
-    const lenis = new Lenis({
-      duration: 1.2, // Scrolling duration (in seconds)
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Easing function
-      smoothWheel: true, // Smooth scrolling for the mouse wheel
-      smoothTouch: true, // Smooth scrolling for touch devices
+  function mobileMenu() {
+    const menu = document.getElementById("mobile-menu");
+    const menuToggle = document.getElementById("menuToggle");
+    let menuOpen = false;
+
+    menuToggle.addEventListener("click", () => {
+      if (!menuOpen) {
+        gsap.to(menu, { x: "0%", duration: 0.7 });
+        // gsap.to("body", { overflowY: 'hidden', duration: 0.7 },);
+      } else {
+        gsap.to(menu, { x: "-100%", duration: 0.5 });
+        // gsap.to("body", { overflowY: 'scroll', duration: 0.7 },);
+      }
+      menuOpen = !menuOpen;
     });
+  }
+  mobileMenu();
 
+  function lenisScroll() {
+    const lenis = new Lenis({
+      duration: 1.2, 
+      easing: (t) => t,
+      easing: (t) => Math.min(1, 1.008 - Math.pow(2, -5 * t)),
+      smoothWheel: true, 
+      smoothTouch: true,
+    });
     function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
+        lenis.raf(time);
+        requestAnimationFrame(raf);
     }
-
     requestAnimationFrame(raf);
-  }
+}
 
-  // Function to check the viewport width and apply Lenis only if >= 1024px
-  function initLenisForLargeScreens() {
+function initLenisForLargeScreens() {
     if (window.innerWidth >= 1024) {
-      lenis();
+        lenisScroll();
     }
-  }
+}
 
-  // Initial check when the page loads
-  initLenisForLargeScreens();
 
-  // Recheck when the window is resized
-  window.addEventListener("resize", function () {
+document.querySelectorAll('#desktop-menu a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+            const headerOffset = 0; // Adjust if you have a fixed header
+            const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+            const offsetPosition = elementPosition - headerOffset;
+
+            // Use Lenis scrollTo method
+            lenis.scrollTo(offsetPosition, {
+                duration: 0.5, // Adjust as needed
+                // easing: 'easeInOutQuad', // Check the documentation for available options
+            });
+        }
+    });
+});
+
+initLenisForLargeScreens();
+
+window.addEventListener("resize", function () {
     initLenisForLargeScreens();
-  });
+});
 
   function sliders() {
     $("#banner-slider").owlCarousel({
@@ -303,8 +325,6 @@ $(document).ready(function () {
       scrub: true,
     });
   }
-
-  // Initial call to process
   process();
 
   function recipeTabs(containerSelector) {
@@ -313,24 +333,25 @@ $(document).ready(function () {
 
     // Show corresponding content when clicking carousel item
     if ($container.attr("id") == "desktop-section") {
-
-      if ($container.length) {  
+      if ($container.length) {
         // Set the first item's background to yellow on page load
         // $container.find('.item').first().find('.bg-orange_').css('background', 'yellow');
-         var firstItem = $container.find('.owl-item.active').first().find('.bg-orange_').css('background', '#e99d23'); 
+        var firstItem = $container
+          .find(".owl-item.active")
+          .first()
+          .find(".bg-orange_")
+          .css("background", "#e99d23");
         // Set up click event for items
-        $container.find('.item').on('click', function() {
-            // Reset background color for all items to the default color
-            $container.find('.bg-orange_').css('background', ''); // Reset to default
-            // Change the background of the clicked item to yellow
-            $(this).find('.bg-orange_').css('background', '#e99d23'); 
+        $container.find(".item").on("click", function () {
+          // Reset background color for all items to the default color
+          $container.find(".bg-orange_").css("background", ""); // Reset to default
+          // Change the background of the clicked item to yellow
+          $(this).find(".bg-orange_").css("background", "#e99d23");
         });
-    }
+      }
 
       $container.find(".item").on("click", function () {
         var itemId = $(this).data("item");
-        
-        
 
         // Deactivate all items in this container and activate the clicked item
         $container.find(".content-item").removeClass("active-item");
@@ -375,28 +396,10 @@ $(document).ready(function () {
       .addClass("active"); // Ensure first button is active
     $container.find("#btn-content-1-1").show(); // Show the first button content by default
   }
+  recipeTabs("#desktop-section");
+  recipeTabs("#mobile-section"); // For small screens (or mobile)
 
-  // Initialize the tabs for both desktop and mobile sections
-  recipeTabs("#desktop-section"); // For desktop
-  // recipeTabs("#mobile-section"); // For small screens (or mobile)
 
-  function mobileMenu() {
-    const menu = document.getElementById("mobile-menu");
-    const menuToggle = document.getElementById("menuToggle");
-    let menuOpen = false;
-
-    menuToggle.addEventListener("click", () => {
-      if (!menuOpen) {
-        gsap.to(menu, { x: "0%", duration: 0.7 });
-        // gsap.to("body", { overflowY: 'hidden', duration: 0.7 },);
-      } else {
-        gsap.to(menu, { x: "-100%", duration: 0.5 });
-        // gsap.to("body", { overflowY: 'scroll', duration: 0.7 },);
-      }
-      menuOpen = !menuOpen;
-    });
-  }
-  mobileMenu();
 
   function accordian($parentClass) {
     // Show the first content by default
@@ -415,54 +418,5 @@ $(document).ready(function () {
       }
     });
   }
-
-  // Apply the accordion to a specific section
   accordian(".process-section");
 });
-
-// Select process section links specifically
-// document.querySelectorAll('a[href^="#process-section"]').forEach((anchor) => {
-//   anchor.addEventListener("click", function (e) {
-//     e.preventDefault();
-//     let targetElement = document.querySelector(this.getAttribute("href"));
-    
-//     if (targetElement) {
-//       const headerHeight = document.querySelector('.header-top-wrapper').offsetHeight; // Adjust if necessary
-//       const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
-
-//       gsap.to(window, {
-//         scrollTo: {
-//           y: targetPosition,
-//           autoKill: true,
-//         },
-//         duration: 1,
-//         onStart: () => {
-//           // Disable only relevant ScrollTriggers instead of all
-//           ScrollTrigger.getAll().forEach((t) => {
-//             if (t.trigger.classList.contains('process-items-left') || t.trigger.classList.contains('process-items-right')) {
-//               t.disable(); // Disable only the relevant ones
-//             }
-//           });
-//         },
-//         onComplete: () => {
-//           setTimeout(() => {
-//             // Enable only the relevant ScrollTriggers
-//             ScrollTrigger.getAll().forEach((t) => {
-//               if (t.trigger.classList.contains('process-items-left') || t.trigger.classList.contains('process-items-right')) {
-//                 t.enable();
-//               }
-//             });
-//             ScrollTrigger.refresh(); // Refresh to reinitialize the positions
-//           }, 500); // Adjust timeout as needed
-//         },
-//       });
-
-//       // Call process function to ensure items are ready
-//       process(); 
-//     }
-//   });
-// });
-
-
-
-

@@ -70,7 +70,7 @@
 
 <body class="bg-darkMehroon">
     <!-- ========= lg Header =========== -->
-    <header class="custom-width hidden lg:block">
+    <header class="custom-width hidden lg:block" id="desktop-menu">
         <div class="header-top-wrapper mt-[4vh] mb-[6vh]">
             <div class="flex justify-between">
                 <div class="cta-header flex items-center gap-x-[2vh]">
@@ -222,6 +222,9 @@
                         <a href="#about-section" class="text-white text-[3vh] px-[3vh]">Our Story</a>
                     </li>
                     <li>
+                        <a href="#process-section" class="text-white text-[3vh] px-[3vh]">Our Process</a>
+                    </li>
+                    <li>
                         <a href="#product-section" class="text-white text-[3vh] px-[3vh]">Our Products</a>
                     </li>
                     <li>
@@ -261,7 +264,7 @@
         </div>
     </header>
     <div class="custom-width relative">
-        <div class="absolute left-[0vh] top-[3vh] z-40 w-[50%] md:w-[25%] block lg:hidden">
+        <div class="absolute left-[0vh] top-[3vh] z-40 w-[60%] md:w-[25%] block lg:hidden">
             <a href="index.html">
                 <img src="assets/img/svg/header-logo.svg" alt="header-logo" class="">
             </a>
@@ -318,6 +321,7 @@
                     <div class="wheat-img-wrapper lg:mr-[13vw] relative">
                         <img src="assets/img/wheat.webp" alt="wheat" class="hidden md:block">
                         <div class="absolute left-[50%] top-[70%] w-[75%] hidden lg:block">
+                            <!-- green wheat -->
                             <img src="assets/img/green-wheat.webp" alt="green-wheat">
                         </div>
                     </div>
@@ -328,7 +332,8 @@
                         class="text-yellow uppercase text-[4vh] leading-[5vh] md:text-[5.5vh] md:leading-[7vh] font-bold">
                         We lead the way<br> in the agriculture market</h2>
                     <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] mb-[4vh] mt-[1vh]">
-                    <p class="text-white text-[2.2vh] mb-[4vh]">
+                    <img src="assets/img/wheat.webp" alt="wheat" class="block md:hidden">
+                    <p class="text-white text-[2.2vh] mb-[4vh] mt-[5vh] md:mt-[0vh]">
                         At Aaryabhog, we honor the rich heritage of Indian agriculture by providing exceptional
                         whole wheat flour that reflects purity and tradition. Our dedication to quality is
                         embodied in our promise of "0% Maida, 100% Whole Wheat Goodness," ensuring that
@@ -345,7 +350,7 @@
                         authentic lifestyle.
 
                     </p>
-                    <img src="assets/img/wheat.webp" alt="wheat" class="block md:hidden">
+                   
                     <!-- <div class="hidden md:grid grid-cols-2 mt-[4vh]">
                         <div class="flex items-center">
                             <span class="w-[4vw] h-[4vw] bg-yellow block rounded-full mr-[1vh]"></span>
@@ -542,12 +547,19 @@
             </div>
             <!-- accordian -->
             <div class="block lg:hidden accordion">
+                <div class="text-center w-[95%] max-w-xl. m-auto">
+                    <span class="uppercase text-white text-[2.2vh]">Our Methodology</span>
+                    <h2 class="text-yellow uppercase text-[4vh] leading-[5vh] md:text-[5.5vh] md:leading-[7vh] font-bold">
+                        Excellence in<br> Every Step
+                    </h2>
+                    <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] mt-[1vh] mb-[8vh] m-auto">
+                </div>
                 <!-- Accordion 1 -->
                 <div class="accordion-wrapper">
                     <div class="accordion-header">
-                        <h2 class="text-darkMehroon uppercase md:text-[4.5vh] md:leading-[5vh] font-bold">Fine Grinding
+                        <h2 class="text-darkMehroon uppercase text-[3vh] leading-[4vh] md:text-[4.5vh] md:leading-[5vh] font-bold">Fine Grinding
                             and Sortex</h2>
-                        <i class="fas fa-chevron-down icon text-darkMehroon text-[5vh]"></i>
+                        <i class="fas fa-chevron-down icon text-darkMehroon text-[3vh]"></i>
                     </div>
                     <div class="accordion-content">
                         <img src="assets/img/svg/red-village.svg" alt="red-village" class="mt-[2vh] mb-[5vh]">
@@ -574,9 +586,9 @@
                 <!-- Accordion 2 -->
                 <div class="accordion-wrapper">
                     <div class="accordion-header">
-                        <h2 class="text-darkMehroon uppercase md:text-[4.5vh] md:leading-[5vh] font-bold">Moisturizing
+                        <h2 class="text-darkMehroon uppercase text-[3vh] leading-[4vh] md:text-[4.5vh] md:leading-[5vh] font-bold">Moisturizing
                             the Wheat</h2>
-                        <i class="fas fa-chevron-down icon text-darkMehroon text-[5vh]"></i>
+                        <i class="fas fa-chevron-down icon text-darkMehroon text-[3vh]"></i>
                     </div>
                     <div class="accordion-content">
                         <img src="assets/img/svg/red-village.svg" alt="red-village" class="mt-[2vh] mb-[5vh]">
@@ -601,9 +613,9 @@
                 <!-- Accordion3 -->
                 <div class="accordion-wrapper">
                     <div class="accordion-header">
-                        <h2 class="text-darkMehroon uppercase md:text-[4.5vh] md:leading-[5vh] font-bold">Traditional
+                        <h2 class="text-darkMehroon uppercase text-[3vh] leading-[4vh] md:text-[4.5vh] md:leading-[5vh] font-bold">Traditional
                             Stone-Chakki</h2>
-                        <i class="fas fa-chevron-down icon text-darkMehroon text-[5vh]"></i>
+                        <i class="fas fa-chevron-down icon text-darkMehroon text-[3vh]"></i>
                     </div>
                     <div class="accordion-content">
                         <img src="assets/img/svg/red-village.svg" alt="red-village" class="mt-[2vh] mb-[5vh]">
@@ -630,10 +642,10 @@
                 <!-- Accordion 4 -->
                 <div class="accordion-wrapper">
                     <div class="accordion-header">
-                        <h2 class="text-darkMehroon uppercase md:text-[4.5vh] md:leading-[5vh] font-bold">Cold Pressed
+                        <h2 class="text-darkMehroon uppercase text-[3vh] leading-[4vh] md:text-[4.5vh] md:leading-[5vh] font-bold">Cold Pressed
                             and Hygienically Packed
                         </h2>
-                        <i class="fas fa-chevron-down icon text-darkMehroon text-[5vh]"></i>
+                        <i class="fas fa-chevron-down icon text-darkMehroon text-[3vh]"></i>
                     </div>
                     <div class="accordion-content">
                         <img src="assets/img/svg/red-village.svg" alt="red-village" class="mt-[2vh] mb-[5vh]">
@@ -661,9 +673,9 @@
                 <!-- Accordion 5-->
                 <div class="accordion-wrapper">
                     <div class="accordion-header">
-                        <h2 class="text-darkMehroon uppercase md:text-[4.5vh] md:leading-[5vh] font-bold">Hands-Free
+                        <h2 class="text-darkMehroon uppercase text-[3vh] leading-[4vh] md:text-[4.5vh] md:leading-[5vh] font-bold">Hands-Free
                             Process</h2>
-                        <i class="fas fa-chevron-down icon text-darkMehroon text-[5vh]"></i>
+                        <i class="fas fa-chevron-down icon text-darkMehroon text-[3vh]"></i>
                     </div>
                     <div class="accordion-content">
                         <img src="assets/img/svg/red-village.svg" alt="red-village" class="mt-[2vh] mb-[5vh]">
@@ -739,7 +751,7 @@
                                 Superior Select Whole<br> wheat aata
                             </span>
                             <div class="block md:hidden mt-[6vh]">
-                                <img src="assets/img/aaryabhog-pack.webp" alt="aaryabhog-pack">
+                                <img src="assets/img/chakki-ata.webp" alt="aaryabhog-pack">
                             </div>
                             <p class="text-[2.2vh] text-darkMehroon mt-[3vh] font-medium leading-[3.5vh] md:w-[80%]">
                                 There are many
@@ -1301,7 +1313,7 @@
 
 
         <!-- sm slider -->
-        <section class="recipe-section pb-[6vh] pt-[6vh] py-[0vh] md:py-[12vh] block md:hidden" id="mobile-section">
+        <section class="recipe-section pb-[3vh] pt-[6vh] py-[0vh] md:py-[12vh] block md:hidden" id="mobile-section">
             <div class="custom-width">
                 <div class="text-center md:w-[40%] m-auto pin-box1">
                     <span class="uppercase text-white text-[2.2vh]">CHECK OUT</span>
@@ -1331,7 +1343,7 @@
                                     <h2 class="text-yellow uppercase text-[3.5vh] leading-[4vh] font-bold">
                                         Aloo Paratha</h2>
                                     <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] mt-[1vh] mb-[3vh]">
-                                    <ul class="list-none text-white text-[2.2vh] leading-[3vh] text-justify pr-[2vh]">
+                                    <ul class="list-none text-white text-[2.2vh] pr-[2vh]">
                                         <li>Mix whole wheat flour, salt, and oil in a bowl.</li>
                                         <li>Gradually add water while mixing the flour.</li>
                                         <li>Knead thoroughly until the dough becomes soft and smooth.</li>
@@ -1346,7 +1358,7 @@
                                     <h2 class="text-yellow uppercase text-[3.5vh] leading-[4vh] font-bold">
                                         Aloo Paratha</h2>
                                     <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] mt-[1vh] mb-[3vh]">
-                                    <ul class="list-none text-white text-[2.2vh] leading-[3vh] text-justify pr-[2vh]">
+                                    <ul class="list-none text-white text-[2.2vh] pr-[2vh]">
                                         <li>Mash the boiled potatoes until lump-free and smooth.</li>
                                         <li>Add chopped green chilies and cumin seeds.</li>
                                         <li>Mix in red chili powder, garam masala, and chaat masala.</li>
@@ -1360,7 +1372,7 @@
                                     <h2 class="text-yellow uppercase text-[3.5vh] leading-[4vh] font-bold">
                                         Aloo Paratha</h2>
                                     <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] mt-[1vh] mb-[3vh]">
-                                    <ul class="list-none text-white text-[2.2vh] leading-[3vh] text-justify pr-[2vh]">
+                                    <ul class="list-none text-white text-[2.2vh] pr-[2vh]">
                                         <li>Divide the rested dough into small, equal-sized balls.</li>
                                         <li>Roll each ball into a small round circle.</li>
                                         <li>Place 2-3 tablespoons of the potato filling in the center.</li>
@@ -1374,7 +1386,7 @@
                                     <h2 class="text-yellow uppercase text-[3.5vh] leading-[4vh] font-bold">
                                         Aloo Paratha</h2>
                                     <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] mt-[1vh] mb-[3vh]">
-                                    <ul class="list-none text-white text-[2.2vh] leading-[3vh] text-justify pr-[2vh]">
+                                    <ul class="list-none text-white text-[2.2vh] pr-[2vh]">
                                         <li>Heat a tawa (griddle) until moderately hot.</li>
                                         <li>Place the rolled paratha on the tawa and cook.</li>
                                         <li>Flip when bubbles appear and apply ghee or butter.</li>
@@ -1388,7 +1400,7 @@
                                     <h2 class="text-yellow uppercase text-[3.5vh] leading-[4vh] font-bold">
                                         Aloo Paratha</h2>
                                     <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] mt-[1vh] mb-[3vh]">
-                                    <ul class="list-none text-white text-[2.2vh] leading-[3vh] text-justify pr-[2vh]">
+                                    <ul class="list-none text-white text-[2.2vh] pr-[2vh]">
                                         <li>Remove the hot paratha from the tawa once done.</li>
                                         <li>Optionally brush with more butter or ghee.</li>
                                         <li>Serve immediately for the best taste.</li>
@@ -1685,7 +1697,7 @@
 
 
         <!-- ========= Testimonial =========== -->
-        <section class="testimonial-section relative min-h-screen:  z-30 bg-yellow mt-[10vh]" id="testimonial-section">
+        <section class="testimonial-section relative min-h-screen:  z-30 bg-yellow mt-[0vh]" id="testimonial-section">
 
             <!-- bottom-[-15vh] mt-[-15vh] -->
             <div class="custom-width">
@@ -1782,7 +1794,7 @@
                 <div class="col-span-1 md:col-span-12 lg:col-span-3 ">
                     <a href="index.html">
                         <img src="assets/img/svg/header-logo.svg" alt="header-logo"
-                            class="w-[40%] md:w-[20%] lg:w-[70%] 2xl:w-[80%] m-auto lg:m-0 lg:mr-auto">
+                            class="w-[75%] md:w-[20%] lg:w-[70%] 2xl:w-[85%] m-auto lg:m-0 lg:mr-auto">
                     </a>
                     <p
                         class="text-white text-center lg:text-start text-[2.2vh] mt-[4vh] leading-[2] md:w-[75%] lg:w-full m-auto lg:mr-auto">

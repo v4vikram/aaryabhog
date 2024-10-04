@@ -488,7 +488,7 @@ img {
     padding: 10px;
     border: 1px solid #ccc;
     margin-top: 5px;
-    border: 0.8vh solid var(--yellow);
+    border: 0.8vh solid transparent;
     margin-bottom: 1.5vh;
 }
 
@@ -503,7 +503,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-block: 3vh;
+    padding-block: 2vh;
 }
 
 .accordion-header i {
@@ -551,9 +551,7 @@ img {
         background-size: contain;
 
     }
-    ul.list-none li {
-        margin-bottom: 2vh;
-    }
+
 
     .footer-bg {
         height: 135vh;
@@ -606,7 +604,8 @@ img {
         height: 100%;
     }
     section#mobile-section ul li {
-        line-height: 4vh;
+        line-height: 3vh;
+        margin-bottom: 2vh;
     }
 }
 
