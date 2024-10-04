@@ -36,7 +36,7 @@ $(document).ready(function () {
   // Function to check the viewport width and apply Lenis only if >= 1024px
   function initLenisForLargeScreens() {
     if (window.innerWidth >= 1024) {
-      // lenis();
+      lenis();
     }
   }
 
@@ -298,7 +298,7 @@ $(document).ready(function () {
       trigger: ".pin-box2",
       pin: true,
       start: "0 1%",
-      markers: true,
+      // markers: true,
       end: `+=${totalHeight}`, // Pin until the total height of all process items
       scrub: true,
     });
@@ -378,7 +378,7 @@ $(document).ready(function () {
 
   // Initialize the tabs for both desktop and mobile sections
   recipeTabs("#desktop-section"); // For desktop
-  recipeTabs("#mobile-section"); // For small screens (or mobile)
+  // recipeTabs("#mobile-section"); // For small screens (or mobile)
 
   function mobileMenu() {
     const menu = document.getElementById("mobile-menu");
@@ -420,17 +420,49 @@ $(document).ready(function () {
   accordian(".process-section");
 });
 
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    let targetElement = document.querySelector(this.getAttribute("href"));
-    if (targetElement) {
-      gsap.to(window, {
-        scrollTo: targetElement,
-        duration: 1,
-        onStart: () => ScrollTrigger.getAll().forEach((t) => t.disable()), // Disable ScrollTrigger
-        onComplete: () => ScrollTrigger.getAll().forEach((t) => t.enable()), // Re-enable ScrollTrigger
-      });
-    }
-  });
-});
+// Select process section links specifically
+// document.querySelectorAll('a[href^="#process-section"]').forEach((anchor) => {
+//   anchor.addEventListener("click", function (e) {
+//     e.preventDefault();
+//     let targetElement = document.querySelector(this.getAttribute("href"));
+    
+//     if (targetElement) {
+//       const headerHeight = document.querySelector('.header-top-wrapper').offsetHeight; // Adjust if necessary
+//       const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+//       gsap.to(window, {
+//         scrollTo: {
+//           y: targetPosition,
+//           autoKill: true,
+//         },
+//         duration: 1,
+//         onStart: () => {
+//           // Disable only relevant ScrollTriggers instead of all
+//           ScrollTrigger.getAll().forEach((t) => {
+//             if (t.trigger.classList.contains('process-items-left') || t.trigger.classList.contains('process-items-right')) {
+//               t.disable(); // Disable only the relevant ones
+//             }
+//           });
+//         },
+//         onComplete: () => {
+//           setTimeout(() => {
+//             // Enable only the relevant ScrollTriggers
+//             ScrollTrigger.getAll().forEach((t) => {
+//               if (t.trigger.classList.contains('process-items-left') || t.trigger.classList.contains('process-items-right')) {
+//                 t.enable();
+//               }
+//             });
+//             ScrollTrigger.refresh(); // Refresh to reinitialize the positions
+//           }, 500); // Adjust timeout as needed
+//         },
+//       });
+
+//       // Call process function to ensure items are ready
+//       process(); 
+//     }
+//   });
+// });
+
+
+
+

@@ -86,7 +86,7 @@
                 </div>
                 <div>
                     <a href="index.html">
-                        <img src="assets/img/svg/header-logo.svg" alt="header-logo" class="w-[75%]">
+                        <img src="assets/img/svg/header-logo.svg" alt="header-logo" class="w-[75%] 2xl:w-[85%]">
                     </a>
                 </div>
                 <div class="social-header flex items-center gap-x-[2vh]">
@@ -183,6 +183,9 @@
                     </li>
                     <li>
                         <a href="#about-section" class="text-white text-[2.2vh] px-[3vh]">Our Story</a>
+                    </li>
+                    <li>
+                        <a href="#process-section" class="text-white text-[2.2vh] px-[3vh]">Our Process</a>
                     </li>
                     <li>
                         <a href="#product-section" class="text-white text-[2.2vh] px-[3vh]">Our Products</a>
@@ -308,7 +311,7 @@
             </div>
         </section>
         <!-- ========= About =========== -->
-        <section class="custom-width min-h-screen pt-[8vh] md:pt-[16vh]" id="about-section">
+        <section class="custom-width min-h-screen mt-[8vh] md:mt-[16vh]" id="about-section">
 
             <div class="flex flex-col-reverse md:grid md:grid-cols-2 lg:grid-cols-2 gap-6">
                 <div class="">
@@ -380,8 +383,8 @@
         </section>
         <!-- ========= Proccess =========== -->
         <section
-            class="custom-width process-section pt-[8vh] md:pt-[12vh] 2xl:pt-[20vh] pb-[15vh] md:pb-[30vh] lg:pb-[25vh] 2xl:pb-[25vh]"
-            id="proccess-section">
+            class="custom-width process-section mt-[8vh] md:mt-[12vh] 2xl:mt-[20vh] mb-[15vh] md:mb-[30vh] lg:mb-[25vh] 2xl:mb-[25vh]"
+            id="process-section">
   
 
             <div class="hidden lg:grid grid-cols-3 mt-[4vh] gap-4">
@@ -692,7 +695,7 @@
         <!-- ========= Product =========== -->
 
         <section
-            class="custom-width container2 product-section min-h-[92vh] pt-[5vh] md:pt-[11vh] px-[2vh] md:px-[6vh] lg:pl-[13vh] pb-[0vh] md:pb-[0vh]">
+            class="custom-width container2 product-section min-h-[92vh]. pt-[5vh] md:pt-[11vh] px-[2vh] md:px-[6vh] lg:pl-[13vh] pb-[0vh] md:pb-[0vh]">
             <h2 class="text-darkMehroon uppercase  text-[5vh] leading-[5vh] md:text-[5.5vh] md:leading-[7vh] font-bold text-center md:text-start"
                 id="product-section">
                 OUR
@@ -760,6 +763,539 @@
         </section>
 
         <!-- ========= Recipe =========== -->
+        <section class="recipe-section mt-[12vh] hidden md:block" id="desktop-section">
+            <div class="custom-width">
+                <div class="text-center md:w-[40%] m-auto pin-box1">
+                    <span class="uppercase text-white text-[2.2vh]">CHECK OUT</span>
+
+                    <h2
+                        class=" text-yellow uppercase text-[4vh] leading-[5vh] md:text-[5.5vh] md:leading-[7vh] font-bold">
+                        OUR FAVOURITE<br>
+                        RECIPES</h2>
+                    <img src="assets/img/orange-leaf.webp" alt="orange-leaf" class="w-[18vh] mt-[1vh] mb-[3vh] mb-[8vh] m-auto">
+                </div>
+            </div>
+            <!-- Recipe Slider -->
+            <div class="custom-width">
+                <!-- Owl Carousel -->
+                <div class="owl-carousel owl-theme recipe-slider">
+                    <div class="item  cursor-pointer" data-item="1">
+                        <img src="assets/img/aloo-paratha.jpg" alt="aloo-paratha"
+                            class="w-full card-image rounded-tr-[14vh]">
+                        <div class="bg-orange_ py-[3vh] pl-[3vh]">
+                            <h3 class="text-[3vh]  md:text-[4vh] text-white">Aloo Paratha</h3>
+                        </div>
+
+
+                    </div>
+                    <div class="item  cursor-pointer" data-item="2">
+                        <img src="assets/img/pizza.jpg" alt="pizza"
+                            class="w-full card-image rounded-tr-[14vh]">
+                        <div class="bg-orange_ py-[3vh] pl-[3vh]">
+                            <h3 class="text-[3vh]  md:text-[4vh] text-white">Pizza</h3>
+                        </div>
+                    </div>
+                    <div class="item cursor-pointer" data-item="3">
+                        <img src="assets/img/dosa.jpg" alt="dosa"
+                            class="w-full card-image rounded-tr-[14vh]">
+                        <div class="bg-orange_ py-[3vh] pl-[3vh]">
+                            <h3 class="text-[3vh]  md:text-[4vh] text-white">Dosa</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-mehroon mt-[-12.2vh]  pb-[10vh] recipe-container">
+                <div class="custom-width pt-[10.5vh]">
+                    <!-- Content Section -->
+                    <div id="content-container" class="mt-8">
+                        <div id="content-1" class=" content-item active-item">
+                            <!-- First button's content displayed by default -->
+                            <div id="btn-content-1-1" class="mt-4">
+                                <div class="col-span-12 grid grid-cols-12">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                            Aloo<br>
+                                            Paratha</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] mt-[1vh] mb-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Mix whole wheat flour, salt, and oil in a bowl.</li>
+                                            <li>Gradually add water while mixing the flour.</li>
+                                            <li>Knead thoroughly until the dough becomes soft and smooth.</li>
+                                            <li>Cover the dough with a damp cloth for resting.</li>
+                                            <li>Let the dough rest for 15 minutes to soften.</li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-content-1-2" class="mt-4 hidden">
+                                <div class="col-span-12 grid grid-cols-12 tab-link">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                            Aloo<br>
+                                            Paratha</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] mt-[1vh] mb-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Mash the boiled potatoes until lump-free and smooth.</li>
+                                            <li>Add chopped green chilies and cumin seeds.</li>
+                                            <li>Mix in red chili powder, garam masala, and chaat masala.</li>
+                                            <li>Add freshly chopped coriander leaves for flavor.</li>
+                                            <li>Combine everything thoroughly to create the spiced potato mixture.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-content-1-3" class="mt-4 hidden">
+                                <div class="col-span-12 grid grid-cols-12 tab-link">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                            Aloo<br>
+                                            Paratha</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] mt-[1vh] mb-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Divide the rested dough into small, equal-sized balls.</li>
+                                            <li>Roll each ball into a small round circle.</li>
+                                            <li>Place 2-3 tablespoons of the potato filling in the center.</li>
+                                            <li>Gather the edges and seal tightly around the filling.</li>
+                                            <li>Roll the stuffed dough ball into a flat paratha.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-content-1-4" class="mt-4 hidden">
+                                <div class="col-span-12 grid grid-cols-12 tab-link">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                            Aloo<br>
+                                            Paratha</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] mt-[1vh] mb-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Heat a tawa (griddle) until moderately hot.</li>
+                                            <li>Place the rolled paratha on the tawa and cook.</li>
+                                            <li>Flip when bubbles appear and apply ghee or butter.</li>
+                                            <li>Flip again, adding ghee, cooking both sides until golden.</li>
+                                            <li>Cook until crispy and fully cooked through.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-content-1-5" class="mt-4 hidden">
+                                <div class="col-span-12 grid grid-cols-12 tab-link">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                            Aloo<br>
+                                            Paratha</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] mt-[1vh] mb-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Remove the hot paratha from the tawa once done.</li>
+                                            <li>Optionally brush with more butter or ghee.</li>
+                                            <li>Serve immediately for the best taste.</li>
+                                            <li>Pair with cooling yogurt, tangy chutney, or spicy pickle.</li>
+                                            <li>Enjoy your delicious, fresh Aloo Paratha!</li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="tabs grid grid-cols-5 gap-x-[2vh] mt-[5vh]">
+                                <!-- 1st -->
+                                <button class="btn-content active bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="1-1">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        1</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Prepare<br> the Dough</p>
+                                </button>
+                                <!-- 2ndt -->
+                                <button class="btn-content bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="1-2">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        2</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Prepare the Aloo<br>
+                                        (Potato) Stuffing</p>
+                                </button>
+                                <!-- 3rd -->
+                                <button class="btn-content bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="1-3">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        3</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Shape Parathas</p>
+                                </button>
+                                <!-- 4th -->
+                                <button class="btn-content bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="1-4">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        4</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Cook<br>
+                                        the Parathas</p>
+                                </button>
+                                <!-- 5th -->
+                                <button class="btn-content bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="1-5">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        5</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Serve</p>
+                                </button>
+
+                            </div>
+                        </div>
+
+                        <div id="content-2" class=" content-item">
+                            <div id="btn-content-2-1" class="mt-4">
+                                <div class="col-span-12 grid grid-cols-12">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                            Pizza</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] mt-[1vh] mb-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Combine flour, yeast, sugar, and salt in a bowl.</li>
+                                            <li>Gradually add warm water and olive oil.</li>
+                                            <li>Mix and knead until a smooth, elastic dough forms.</li>
+                                            <li>Cover the dough and let it rise in a warm place for 1-1.5 hours.</li>
+                                            <li>Punch down the dough and divide it into portions.</li>
+                                        </ul>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-content-2-2" class="mt-4 hidden">
+                                <div class="col-span-12 grid grid-cols-12 tab-link">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                           Pizza</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] mt-[1vh] mb-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Heat olive oil in a pan, sauté garlic until fragrant.</li>
+                                            <li>Add crushed tomatoes, salt, pepper, and Italian herbs.</li>
+                                            <li>Simmer the sauce for 15-20 minutes, stirring occasionally.</li>
+                                            <li>Add a pinch of sugar to balance acidity if needed.</li>
+                                            <li>Let the sauce cool before using.</li>
+                                        </ul>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-content-2-3" class="mt-4 hidden">
+                                <div class="col-span-12 grid grid-cols-12 tab-link">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                            Pizza</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] mt-[1vh] mb-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Preheat oven to 475°F (245°C).</li>
+                                            <li>Roll out the dough to your desired thickness on a floured surface.</li>
+                                            <li>Spread a thin layer of sauce on the dough.</li>
+                                            <li>Add your choice of toppings: mozzarella, pepperoni, veggies, etc.</li>
+                                            <li>Sprinkle with fresh basil and drizzle olive oil on top.</li>
+                                        </ul>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-content-2-4" class="mt-4 hidden">
+                                <div class="col-span-12 grid grid-cols-12 tab-link">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                            Pizza</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] mt-[1vh] mb-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Transfer the pizza to a preheated pizza stone or baking tray.</li>
+                                            <li>Bake in the oven for 10-12 minutes or until the crust is golden.</li>
+                                            <li>Ensure the cheese is bubbly and slightly browned.</li>
+                                            <li>Remove from the oven and allow it to cool slightly.</li>
+                                            <li>Cut into slices and serve hot.</li>
+                                        </ul>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-content-2-5" class="mt-4 hidden">
+                                <div class="col-span-12 grid grid-cols-12 tab-link">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                            Pizza</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] mt-[1vh] mb-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Garnish with extra basil, parmesan, or chili flakes if desired.</li>
+                                            <li>Serve immediately while hot.</li>
+                                            <li>Pair with a side salad or garlic bread for a complete meal.</li>
+                                            <li>Enjoy your homemade pizza with friends or family!</li>
+                                        </ul>
+                                        
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="tabs grid grid-cols-5 gap-x-[2vh] mt-[5vh]">
+                                <!-- 1st -->
+                                <button class="btn-content active bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="2-1">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        1</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Prepare<br> the Dough</p>
+                                </button>
+                                <!-- 2ndt -->
+                                <button class="btn-content bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="2-2">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        2</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Make Sauce</p>
+                                </button>
+                                <!-- 3rd -->
+                                <button class="btn-content bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="2-3">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        3</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Assemble <br>Pizza</p>
+                                </button>
+                                <!-- 4th -->
+                                <button class="btn-content bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="2-4">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        4</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Bake Pizza</p>
+                                </button>
+                                <!-- 5th -->
+                                <button class="btn-content bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="2-5">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        5</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Serve</p>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <div id="content-3" class=" content-item">
+                            <div id="btn-content-3-1" class="mt-4">
+                                <div class="col-span-12 grid grid-cols-12">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                            Dosa</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] mt-[1vh] mb-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Soak 1 cup of rice and 1/2 cup of urad dal separately for 4-6 hours.</li>
+                                            <li>Grind the soaked rice and urad dal into a smooth batter.</li>
+                                            <li>Add salt and mix thoroughly to incorporate.</li>
+                                            <li>Cover the batter and let it ferment overnight, about 8-12 hours.</li>
+                                            <li>After fermentation, the batter should be airy and slightly sour.</li>
+                                        </ul>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-content-3-2" class="mt-4 hidden">
+                                <div class="col-span-12 grid grid-cols-12 tab-link">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                            Dosa</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] mt-[1vh] mb-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Heat a non-stick tawa (griddle) over medium heat until hot.</li>
+                                            <li>Lightly grease the tawa with oil or butter.</li>
+                                            <li>Pour a ladle of batter in the center and spread it outwards in a circular motion.</li>
+                                            <li>Drizzle some oil or ghee around the edges to enhance crispiness.</li>
+                                            <li>Cook until the edges turn golden brown and the center is set.</li>
+                                        </ul>
+                                        
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-content-3-3" class="mt-4 hidden">
+                                <div class="col-span-12 grid grid-cols-12 tab-link">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                            Dosa</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] mt-[1vh] mb-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Flip the dosa if you prefer it fully cooked on both sides.</li>
+                                            <li>If not flipping, let it cook until it's crispy on the bottom.</li>
+                                            <li>Cook for an additional minute or two after flipping.</li>
+                                            <li>Remove the dosa from the tawa once it is evenly cooked and crispy.</li>
+                                            <li>Repeat the process for the remaining batter, adjusting the heat as needed.</li>
+                                        </ul>
+                                        
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-content-3-4" class="mt-4 hidden">
+                                <div class="col-span-12 grid grid-cols-12 tab-link">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                           Dosa</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] mt-[1vh] mb-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Sauté mustard seeds, curry leaves, and chopped onions in oil until fragrant.</li>
+                                            <li>Add boiled and mashed potatoes, mixing thoroughly with spices.</li>
+                                            <li>Season with turmeric powder, salt, and green chilies for flavor.</li>
+                                            <li>Stir well and cook for a few minutes until heated through.</li>
+                                            <li>This spiced potato mixture can be used as a filling for masala dosa.</li>
+                                        </ul>
+                                        
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-content-3-5" class="mt-4 hidden">
+                                <div class="col-span-12 grid grid-cols-12 tab-link">
+                                    <div class="col-span-4">
+                                        <h2 class="text-yellow uppercase md:text-[5.5vh] md:leading-[7vh] font-bold">
+                                            Dosa</h2>
+                                        <img src="assets/img/orange-leaf.webp" alt="orange-leaf"
+                                            class="w-[18vh] mt-[1vh] mb-[3vh]">
+                                    </div>
+                                    <div class="col-span-8">
+                                        <ul class="list-disc text-white text-[2.2vh] leading-[5vh]">
+                                            <li>Serve the hot dosa immediately with coconut chutney and sambar.</li>
+                                            <li>For masala dosa, place the potato filling in the center and fold.</li>
+                                            <li>Pair with your favorite chutneys or pickles for added flavor.</li>
+                                            <li>Enjoy your crispy, delicious dosa fresh off the tawa!</li>
+                                            <li>Perfect for breakfast, lunch, or dinner!</li>
+                                        </ul>
+                                        
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="tabs grid grid-cols-5 gap-x-[2vh] mt-[5vh]">
+                                <!-- 1st -->
+                                <button class="btn-content active bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="3-1">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        1</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Prepare<br> Dosa</p>
+                                </button>
+                                <!-- 2ndt -->
+                                <button class="btn-content bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="3-2">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        2</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Make Dosa</p>
+                                </button>
+                                <!-- 3rd -->
+                                <button class="btn-content bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="3-3">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        3</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Flip and<br> Cook</p>
+                                </button>
+                                <!-- 4th -->
+                                <button class="btn-content bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="3-4">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        4</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Prepare<br> Filling</p>
+                                </button>
+                                <!-- 5th -->
+                                <button class="btn-content bg-yellow pt-[5vh] px-[1vh] lg:px-[2vh] pb-[2vh]"
+                                    data-btn="3-5">
+                                    <div
+                                        class="recipe-number w-[7vh] h-[7vh] rounded-full p-[4vh] text-mehroon bg-white flex justify-center items-center leading-[7vh] text-[5vh] font-semibold">
+                                        5</div>
+                                    <p
+                                        class="uppercase text-mehroon text-[2vh] ld:text-[2.2vh] text-left font-semibold ld:font-extrabold leading-[2.8vh] mt-[2.5vh]">
+                                        Serve</p>
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
          
       
 
@@ -1149,7 +1685,7 @@
 
 
         <!-- ========= Testimonial =========== -->
-        <section class="testimonial-section relative min-h-screen:  z-30 bg-yellow" id="testimonial-section">
+        <section class="testimonial-section relative min-h-screen:  z-30 bg-yellow mt-[10vh]" id="testimonial-section">
 
             <!-- bottom-[-15vh] mt-[-15vh] -->
             <div class="custom-width">
@@ -1237,16 +1773,16 @@
 
         </section>
     </main>
-    <footer class="min-h-screen bg-darkMehroon relative overflow-hidden z-20" id="footer-section">
+    <footer class="min-h-screen. bg-darkMehroon relative overflow-hidden z-20" id="footer-section">
 
 
         <div class="custom-width">
             <div class="footer-bg"></div>
-            <div class="grid grid-cols-1 md:grid-cols-12  mt-[32vh] md:mt-[40vh] lg:mt-[30vh]">
+            <div class="grid grid-cols-1 md:grid-cols-12  mt-[32vh] md:mt-[40vh] lg:mt-[15vh]">
                 <div class="col-span-1 md:col-span-12 lg:col-span-3 ">
                     <a href="index.html">
                         <img src="assets/img/svg/header-logo.svg" alt="header-logo"
-                            class="w-[40%] md:w-[20%] lg:w-[70%] m-auto lg:m-0 lg:mr-auto">
+                            class="w-[40%] md:w-[20%] lg:w-[70%] 2xl:w-[80%] m-auto lg:m-0 lg:mr-auto">
                     </a>
                     <p
                         class="text-white text-center lg:text-start text-[2.2vh] mt-[4vh] leading-[2] md:w-[75%] lg:w-full m-auto lg:mr-auto">
@@ -1301,7 +1837,7 @@
                 </div>
             </div>
             <p
-                class="text-[2.2vh] text-white text-center lg:absolute bottom-[6vh] lg:left-1/2 lg:transform lg:-translate-x-1/2 pt-[5vh] pb-[3vh]  lg:pb-[0vh]">
+                class="text-[2.2vh] text-white text-center pt-[5vh] pb-[3vh]">
                 ©
                 Copyright 2018. "Aaryabhog" by <a href="https://www.expandbuzz.com/"
                     class="text-[2.2vh] text-white">expandbuzz</a>. All rights reserved.</p>
