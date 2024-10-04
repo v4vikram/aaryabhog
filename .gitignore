@@ -2,6 +2,7 @@
 node_modules/
 .pnp/
 .pnp.js
+/content/
 
 # Tailwind CSS build output
 dist/
