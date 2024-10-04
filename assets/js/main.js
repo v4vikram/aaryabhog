@@ -24,30 +24,29 @@ $(document).ready(function () {
       smoothWheel: true, // Smooth scrolling for the mouse wheel
       smoothTouch: true, // Smooth scrolling for touch devices
     });
-  
+
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
-  
+
     requestAnimationFrame(raf);
   }
-  
+
   // Function to check the viewport width and apply Lenis only if >= 1024px
   function initLenisForLargeScreens() {
     if (window.innerWidth >= 1024) {
-      lenis();
+      // lenis();
     }
   }
-  
+
   // Initial check when the page loads
   initLenisForLargeScreens();
-  
+
   // Recheck when the window is resized
-  window.addEventListener('resize', function () {
+  window.addEventListener("resize", function () {
     initLenisForLargeScreens();
   });
-  
 
   function sliders() {
     $("#banner-slider").owlCarousel({
@@ -77,73 +76,67 @@ $(document).ready(function () {
     });
     function productInitializeCarousel() {
       var windowWidth = $(window).width(); // Get the current window width
-  
-      // Set fade animation for large screens, slide animation for small screens
-      var animateIn = (windowWidth >= 769) ? "fadeIn" : false;
-      var animateOut = (windowWidth >= 769) ? "fadeOut" : false;
-      console.log(animateIn,animateOut,)
-  
-      $(".product-slider").owlCarousel({
-          autoplay: false,
-          smartSpeed: 1000,
-          items: 1,
-          stagePadding: 0,
-          center: true,
-          nav: true,
-          margin: 10,
-          dots: true,
-          loop: true,
-          touchDrag: true,
-          pullDrag: true,
-          mouseDrag: (windowWidth >= 769) ? false : true,  // Disable mouse drag on large screens
-          animateIn: animateIn,   // Fade animation on large screens
-          animateOut: animateOut, // Fade animation on large screens
-          dotsContainer: ".custom-dots",
-  
-          responsive: {
-              375: {
-                  items: 1,
-                   
-              },
-              425: {
-                  items: 1,
-                   
-              },
-              576: {
-                  items: 1,
-              },
-               
-              768: {
-                  items: 1,
-                   
-              },
-              1024: {
-                  items: 1,
-                  nav: false,
-              },
-              1366: {
-                  items: 1,
-                  nav: false,
-              },
-              1600: {
-                  items: 1,
-                  nav: false,
-              },
-              
 
-          }
+      // Set fade animation for large screens, slide animation for small screens
+      var animateIn = windowWidth >= 769 ? "fadeIn" : false;
+      var animateOut = windowWidth >= 769 ? "fadeOut" : false;
+      console.log(animateIn, animateOut);
+
+      $(".product-slider").owlCarousel({
+        autoplay: false,
+        smartSpeed: 1000,
+        items: 1,
+        stagePadding: 0,
+        center: true,
+        nav: true,
+        margin: 10,
+        dots: true,
+        loop: true,
+        touchDrag: true,
+        pullDrag: true,
+        mouseDrag: windowWidth >= 769 ? false : true, // Disable mouse drag on large screens
+        animateIn: animateIn, // Fade animation on large screens
+        animateOut: animateOut, // Fade animation on large screens
+        dotsContainer: ".custom-dots",
+
+        responsive: {
+          375: {
+            items: 1,
+          },
+          425: {
+            items: 1,
+          },
+          576: {
+            items: 1,
+          },
+
+          768: {
+            items: 1,
+          },
+          1024: {
+            items: 1,
+            nav: false,
+          },
+          1366: {
+            items: 1,
+            nav: false,
+          },
+          1600: {
+            items: 1,
+            nav: false,
+          },
+        },
       });
-  }
-  
-  // Initialize the carousel on page load
-  productInitializeCarousel();
-  
-  // Reinitialize carousel when window is resized
-  $(window).resize(function() {
-      $('.product-slider').trigger('destroy.owl.carousel'); // Destroy current instance
+    }
+
+    // Initialize the carousel on page load
+    productInitializeCarousel();
+
+    // Reinitialize carousel when window is resized
+    $(window).resize(function () {
+      $(".product-slider").trigger("destroy.owl.carousel"); // Destroy current instance
       productInitializeCarousel(); // Reinitialize with new settings
-  });
-  
+    });
 
     const vhMargin = window.innerHeight * 0.02; // Calculate margin based on viewport height
     // recipe slider
@@ -239,15 +232,23 @@ $(document).ready(function () {
   sliders();
 
   function process() {
-    // Get all the process items
-    const processItems = gsap.utils.toArray(".process-items");
+    const processItemsLeft = document.querySelectorAll(".process-items-left");
+    const processItemsRight = document.querySelectorAll(".process-items-right");
+
+    // Combine the two NodeLists into one array
+    const processItems = [...processItemsLeft, ...processItemsRight];
 
     processItems.forEach((section, i) => {
-      // Animate each section
+      // Check if this is the last section in the left or right items
+      const isLastLeft =
+        section.classList.contains("process-items-left") &&
+        i === processItemsLeft.length - 1;
+      const isLastRight =
+        section.classList.contains("process-items-right") &&
+        i === processItemsLeft.length + processItemsRight.length - 1;
+
       gsap.from(section, {
         y: 100,
-        // opacity: 0,
-        // duration: 1,
         scrollTrigger: {
           trigger: section,
           start: "top 80%",
@@ -258,26 +259,30 @@ $(document).ready(function () {
             gsap.to(section, { opacity: 1, duration: 1 });
 
             // If there is a previous section, fade it out
-            if (i > 0) {
+            if (i > 0 && !(isLastLeft || isLastRight)) {
               gsap.to(processItems[i - 1], { opacity: 0, duration: 0.5 });
             }
           },
           onLeave: () => {
-            // When the section leaves (scrolls past), fade it out
-            gsap.to(section, { opacity: 0, duration: 0.5 });
+            // Fade out except for the last left or right section
+            if (!(isLastLeft || isLastRight)) {
+              gsap.to(section, { opacity: 0, duration: 0.5 });
+            }
           },
           onEnterBack: () => {
             // When scrolling back, fade the section in
             gsap.to(section, { opacity: 1, duration: 1 });
 
             // If there is a next section, fade it out
-            if (i < processItems.length - 1) {
+            if (i < processItems.length - 1 && !(isLastLeft || isLastRight)) {
               gsap.to(processItems[i + 1], { opacity: 0, duration: 0.5 });
             }
           },
           onLeaveBack: () => {
-            // When scrolling back past the section, fade it out
-            gsap.to(section, { opacity: 0, duration: 1 });
+            // When scrolling back past the section, fade it out except for the last left or right section
+            if (!(isLastLeft || isLastRight)) {
+              gsap.to(section, { opacity: 0, duration: 1 });
+            }
           },
         },
       });
@@ -287,13 +292,13 @@ $(document).ready(function () {
     const processWrapper = document.querySelector(".process-left-wrapper");
 
     // Calculate total height, adjusting based on viewport height
-    const totalHeight = processWrapper.scrollHeight - window.innerHeight * 0.86;
+    const totalHeight = processWrapper.scrollHeight - window.innerHeight * 0.8;
 
     ScrollTrigger.create({
       trigger: ".pin-box2",
       pin: true,
-      start: "center center",
-      // markers: true,
+      start: "0 1%",
+      markers: true,
       end: `+=${totalHeight}`, // Pin until the total height of all process items
       scrub: true,
     });
@@ -308,8 +313,24 @@ $(document).ready(function () {
 
     // Show corresponding content when clicking carousel item
     if ($container.attr("id") == "desktop-section") {
+
+      if ($container.length) {  
+        // Set the first item's background to yellow on page load
+        // $container.find('.item').first().find('.bg-orange_').css('background', 'yellow');
+         var firstItem = $container.find('.owl-item.active').first().find('.bg-orange_').css('background', '#e99d23'); 
+        // Set up click event for items
+        $container.find('.item').on('click', function() {
+            // Reset background color for all items to the default color
+            $container.find('.bg-orange_').css('background', ''); // Reset to default
+            // Change the background of the clicked item to yellow
+            $(this).find('.bg-orange_').css('background', '#e99d23'); 
+        });
+    }
+
       $container.find(".item").on("click", function () {
         var itemId = $(this).data("item");
+        
+        
 
         // Deactivate all items in this container and activate the clicked item
         $container.find(".content-item").removeClass("active-item");
@@ -399,18 +420,17 @@ $(document).ready(function () {
   accordian(".process-section");
 });
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      let targetElement = document.querySelector(this.getAttribute('href'));
-      if (targetElement) {
-          gsap.to(window, {
-              scrollTo: targetElement,
-              duration: 1,
-              onStart: () => ScrollTrigger.getAll().forEach(t => t.disable()), // Disable ScrollTrigger
-              onComplete: () => ScrollTrigger.getAll().forEach(t => t.enable()) // Re-enable ScrollTrigger
-          });
-      }
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    let targetElement = document.querySelector(this.getAttribute("href"));
+    if (targetElement) {
+      gsap.to(window, {
+        scrollTo: targetElement,
+        duration: 1,
+        onStart: () => ScrollTrigger.getAll().forEach((t) => t.disable()), // Disable ScrollTrigger
+        onComplete: () => ScrollTrigger.getAll().forEach((t) => t.enable()), // Re-enable ScrollTrigger
+      });
+    }
   });
 });
-

@@ -125,7 +125,7 @@ img {
 .banner-owl-wrapper::before {
     background: url('../img/red-shape-1.webp');
     /* background: url('../img/svg/red-shape-1.svg'); */
-    /* background-repeat: repeat-x; */
+    background-repeat: repeat-x;
     position: absolute;
     content: "";
     top: 0px;
@@ -404,7 +404,7 @@ img {
 .textimonial-bg::after {
     content: "";
     position: absolute;
-    bottom: 15vh;
+    bottom: 10vh;
     left: 0;
     /* background-color: red; */
     background: url(../img/svg/red-shape-4.svg);
