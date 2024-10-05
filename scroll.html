@@ -1,60 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smooth Scroll with Lenis</title>
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis"></script>
 </head>
+
 <body>
 
-<header>
-    <nav>
-        <a href="#section1">Section 1</a>
-        <a href="#section2">Section 2</a>
-        <a href="#process-section">Process Section</a>
-    </nav>
-</header>
+    <header>
+        <nav>
+            <a href="#section1">Section 1</a>
+            <a href="#section2">Section 2</a>
+            <a href="#process-section">Process Section</a>
+        </nav>
+    </header>
 
-<section id="section1" style="height: 100vh; background: lightblue;">Section 1</section>
-<section id="section2" style="height: 100vh; background: lightgreen;">Section 2</section>
-<section id="process-section" style="height: 100vh; background: lightcoral;">Process Section</section>
+    <section id="section1" style="height: 100vh; background: lightblue;">Section 1</section>
+    <section id="section2" style="height: 100vh; background: lightgreen;">Section 2</section>
+    <section id="process-section" style="height: 100vh; background: lightcoral;">Process Section</section>
 
-<script>
-    // Initialize Lenis
-    const lenis = new Lenis({
-        duration: 1.0,
-        easing: (t) => t,
-        smooth: true,
-    });
-
-    // Animation frame loop for Lenis
-    function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
-    // Smooth scroll on link click
-    document.querySelectorAll('header a').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-
-            if (targetElement) {
-                const headerOffset = 0; // Adjust if you have a fixed header
-                const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-                const offsetPosition = elementPosition - headerOffset;
-
-                // Use Lenis scrollTo method
-                lenis.scrollTo(offsetPosition, {
-                    duration: 1, // Adjust as needed
-                    // easing: 'easeInOutQuad', // Check the documentation for available options
-                });
-            }
+    <script>
+        // Initialize Lenis
+        const lenis = new Lenis({
+            duration: 1.0,
+            easing: (t) => t,
+            smooth: true,
         });
-    });
-</script>
+
+        // Animation frame loop for Lenis
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // Smooth scroll on link click
+        document.querySelectorAll('header a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    const headerOffset = 0; // Adjust if you have a fixed header
+                    const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+                    const offsetPosition = elementPosition - headerOffset;
+
+                    // Use Lenis scrollTo method
+                    lenis.scrollTo(offsetPosition, {
+                        duration: 1, // Adjust as needed
+                        // easing: 'easeInOutQuad', // Check the documentation for available options
+                    });
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>

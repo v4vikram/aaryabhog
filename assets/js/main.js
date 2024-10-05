@@ -45,7 +45,7 @@ function initLenisForLargeScreens() {
     if (window.innerWidth >= 1024) {
         lenisScroll(); // Initialize and start Lenis for large screens
 
-        document.querySelectorAll('#desktop-menu a').forEach(anchor => {
+        document.querySelectorAll('#desktop-menu a, .footer-links ul a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
