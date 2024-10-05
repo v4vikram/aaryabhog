@@ -579,7 +579,7 @@ img {
 
 @media(max-width: 767px) {
     .banner-owl-wrapper .owl-items {
-        border-bottom-right-radius: 0vh;
+        border-bottom-right-radius: 32vh;
         
     }
     .owl-items-content{
