@@ -586,8 +586,8 @@ img {
         top: 33%;
         text-align: center;
         width: 100% !important;
-        margin: 0;
-        padding-inline: 4rem;
+        margin: 0px !important;
+        padding-inline: 3rem;
     }
     .mob-banner{
         display: block !important;

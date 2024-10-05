@@ -81,9 +81,9 @@ window.addEventListener("resize", function () {
   function sliders() {
     $("#banner-slider").owlCarousel({
       autoplay: false,
-      autoplaySpeed: 2000,
-      autoplayTimeout: 2000,
-      smartSpeed: 2000,
+      autoplaySpeed: 1000,
+      autoplayTimeout: 1000,
+      smartSpeed: 1000,
       items: 1,
       stagePadding: 0,
       center: true,
