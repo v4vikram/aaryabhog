@@ -331,8 +331,28 @@ img {
 }
 #mobile-section .owl-nav {
     position: absolute;
-    top: -4%;
-    right: 0;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    /* background-color: red; */
+    justify-content: space-between;
+    display: flex;
+    z-index: 99;
+}
+#mobile-section .owl-nav button::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    z-index: -1;
+    width: 7vh;
+    height: 7vh;
+    background-color: var(--yellow);
+    top: 55%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+}
+#mobile-section .owl-nav button{
+    position: relative;
 }
 
 
@@ -341,7 +361,7 @@ img {
 }
 #mobile-section .owl-nav span {
     font-size: 8vh;
-    color: var(--yellow);
+    color: var(--dark-brown);
 }
 
 .product-slider .owl-nav {
